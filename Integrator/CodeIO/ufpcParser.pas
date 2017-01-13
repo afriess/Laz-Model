@@ -109,9 +109,9 @@ function DelQuot(s:String):String;
 
 constructor TSimpleEngine.Create;
 begin
+ inherited;
   self.InterfaceOnly := True;
   self.NeedComments := True;
- inherited;
 end;
 
 function TSimpleEngine.CreateElement(AClass: TPTreeElement;
@@ -184,9 +184,12 @@ begin
    FUnit.Documentation.Description := M.DocComment;
    FUnit.Visibility := viPublic;
    intf := M.InterfaceSection;
-   GetUnits(intf.UsesList);
-   GetTypes(intf.Types);
-   GetClasses(intf.Classes);
+   if Assigned(intf) then
+      begin
+         GetUnits(intf.UsesList);
+         GetTypes(intf.Types);
+         GetClasses(intf.Classes);
+      end;
 
 end;
 
@@ -755,13 +758,13 @@ begin
   begin
      E.InterfaceOnly := false;
      TSImpleEngine(E).IsProgram := True;
-     pp:= ParseSource(E, self.Filename ,'WINDOWS' ,'i386', True) as TPasProgram;
+     pp:= ParseSource(E, self.Filename + ' -Sd' ,'WINDOWS' ,'i386', True) as TPasProgram;
      ParseProject (pp);
      FreeAndNil(E);
   end
   else
   begin
-     M := ParseSource(E, self.Filename ,'WINDOWS' ,'i386', True);
+     M := ParseSource(E, self.Filename  + ' -Sd' ,'WINDOWS' ,'i386', True);
      ParseUnit(M);
      FreeAndNil(M);
   end;

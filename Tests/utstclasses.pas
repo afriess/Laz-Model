@@ -1,3 +1,8 @@
+{
+ MODEL   STATUS Working.
+ DOC     STATUS Not Implemented.
+ CODEGEN STATUS Not Implemented.
+}
 unit utstClasses;
 
 {$mode objfpc}{$H+}
