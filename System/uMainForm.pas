@@ -26,8 +26,8 @@ interface
 
 
 uses
-  LCLIntf, LCLType, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, Menus, uMainModule,  Buttons;
+  Classes, Math, Forms, ExtCtrls, Menus, Buttons,
+  uMainModule, uClassTreeEditForm, uConst;
 
 type
 
@@ -67,14 +67,14 @@ type
     Previewdocumentation1: TMenuItem;
     OpenFolderAction1: TMenuItem;
     ExportmodeltoEMXfile1: TMenuItem;
+    procedure Exit1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var aAction: TCloseAction);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
-    { Private declarations }
-    Created : boolean;
+
   public
-    { Public declarations }
+
   end;
 
 var
@@ -82,31 +82,32 @@ var
 
 implementation
 
-uses uConst, Math;
-
 {$R *.lfm}
-
-
-procedure TMainForm.FormClose(Sender: TObject; var aAction: TCloseAction);
-begin
-  //Free här istället för destroy, annars visas inte savechanged-dialog för diagram
-  MainModule.Free;
-end;
-
-procedure TMainForm.FormActivate(Sender: TObject);
-begin
-  if not Created then
-  begin
-    Created := True;
-    Caption := uConst.ProgName;
-    MainModule := TMainModule.Create(Self);
-  end;
-end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
   Height := Max( Round(Screen.Height * 0.75), 480 );
   Width := Max( Round(Screen.Width * 0.75) , 640 );
+  {$IFDEF DEBUG}
+  ClassTreeEditForm := TClassTreeEditForm.Create(Self);
+  {$ENDIF DEBUG}
+  MainModule := TMainModule.Create(Nil);
+end;
+
+procedure TMainForm.FormActivate(Sender: TObject);
+begin
+  Caption := uConst.ProgName;
+end;
+
+procedure TMainForm.FormClose(Sender: TObject; var aAction: TCloseAction);
+begin
+  // Free here istead of FormDestroy, otherwise SaveChanged-dialog for a diagram will not show.
+  MainModule.Free;
+end;
+
+procedure TMainForm.Exit1Click(Sender: TObject);
+begin
+  Close;
 end;
 
 end.

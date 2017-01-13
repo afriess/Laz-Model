@@ -25,9 +25,9 @@ unit essConnectPanel;
 interface
 
 uses
-
-  LCLIntf, LCLType, {windows,} Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls,Contnrs, uViewIntegrator;
+  Classes, SysUtils, Contnrs, Math,
+  LCLIntf, LCLType, Messages, Graphics, Controls, Forms, Dialogs, ExtCtrls,
+  uViewIntegrator;
 
 
 type
@@ -88,7 +88,6 @@ type
     fNeedCheckSize: Boolean;
     procedure SetSelectedOnly(const Value : boolean);
   protected
-    { Protected declarations }
     FManagedObjects: TList;
     FConnections: TObjectList;
 
@@ -115,7 +114,6 @@ type
     procedure Paint; override;
   public
     OnContentChanged : TNotifyEvent;
-    { Public declarations }
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
 
@@ -161,7 +159,6 @@ type
     //Only draw selected
     property SelectedOnly : boolean read FSelectedOnly write SetSelectedOnly;
   published
-    { Published declarations }
     property Align;
     property Alignment;
     property Anchors;
@@ -216,7 +213,8 @@ type
 procedure Register;
 
 implementation
-uses Math, uRtfdComponents, uConfig;
+
+uses uRtfdComponents;
 
 type
   TCrackControl = class(TControl) end;

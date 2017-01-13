@@ -25,8 +25,7 @@ unit uSettingsForm;
 interface
 
 uses
-  LCLIntf, LCLType, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls;
+  Forms, StdCtrls;
 
 
 type
@@ -45,17 +44,16 @@ type
     procedure ShellCheckClick(Sender: TObject);
     procedure OkButtonClick(Sender: TObject);
   private
-    { Private declarations }
     ShellChanged,IDEChanged : boolean;
     procedure ReadSettings;
     procedure SaveSettings;
   public
-    { Public declarations }
+
   end;
 
 implementation
 
-uses uIntegrator, uConfig;
+uses uConfig;
 
 {$R *.lfm}
 

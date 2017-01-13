@@ -25,8 +25,8 @@ unit uZoomFrame;
 interface
 
 uses
-  LCLIntf, LCLType, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  uViewIntegrator, ExtCtrls;
+  Classes, Controls, Forms, ExtCtrls,
+  uViewIntegrator;
 
 type
   TZoomFrame = class(TFrame)
@@ -39,14 +39,12 @@ type
       Y: Integer);
     procedure FrameResize(Sender: TObject);
   private
-    { Private declarations }
     Diagram : TDiagramIntegrator;
     procedure OnUpdateZoom(Sender : TObject);
     procedure SyncScroll(X,Y : integer);
     procedure RedrawZoom;
   public
     constructor Create(AOwner: TComponent; ADiagram : TDiagramIntegrator); reintroduce;
-    { Public declarations }
   end;
 
 implementation

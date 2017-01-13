@@ -25,8 +25,7 @@ unit uAboutForm;
 interface
 
 uses
-  LCLIntf, LCLType, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, StdCtrls;
+  Forms, ExtCtrls, StdCtrls, uConst;
 
 
 type
@@ -42,16 +41,14 @@ type
     Label1: TLabel;
     procedure FormActivate(Sender: TObject);
   private
-    { Private declarations }
+
   public
-    { Public declarations }
+
   end;
 
 implementation
 
 {$R *.lfm}
-
-uses uConst, uConfig;
 
 procedure TAboutForm.FormActivate(Sender: TObject);
 begin

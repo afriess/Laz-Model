@@ -24,10 +24,9 @@ unit uRtfdDiagramFrame;
 
 interface
 
-
 uses
-  LCLIntf, LCLType, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  uDiagramFrame, ActnList, uRtfdDiagram, Menus, ExtCtrls, Buttons;
+  Classes, ExtCtrls,
+  uDiagramFrame, uRtfdDiagram;
 
 type
   TRtfdDiagramFrame = class(TDiagramFrame)
@@ -37,18 +36,14 @@ type
     VisProtectedImage: TImage;
     procedure OpenSelectedPackageActionExecute(Sender: TObject);
   private
-    { Private declarations }
+
   public
-    { Public declarations }
     constructor Create(AOwner: TComponent; ADiagram: TRtfdDiagram); reintroduce;
   end;
 
 implementation
 
-uses uError;
-
 {$R *.lfm}
-
 
 
 { TRtfdDiagramFrame }

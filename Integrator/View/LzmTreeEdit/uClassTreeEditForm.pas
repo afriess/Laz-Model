@@ -5,8 +5,9 @@ unit uClassTreeEditForm;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, RTTIGrids, Forms, Controls, Graphics, Dialogs, typinfo,
-  ComCtrls, ExtCtrls, uModel, uModelEntity, uIterators, uViewIntegrator ;
+  Classes, Forms, typinfo,
+  RTTIGrids, ComCtrls, ExtCtrls,
+  uModel, uModelEntity, uIterators;
 
 type
 
@@ -19,7 +20,6 @@ type
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure TreeView1SelectionChanged(Sender: TObject);
   private
-    { private declarations }
     FModel: TObjectModel;
     FModelObject: TModelEntity;
     procedure SetObject(AValue: TModelEntity);
@@ -30,7 +30,6 @@ type
     procedure InitTreeFromDataType;
     procedure DisplayEnums(ParentNode: TTreeNode; Enum: TEnumeration);
   public
-    { public declarations }
     property Model: TObjectModel write SetModel;
     property ModelObject: TModelEntity write SetObject;
   end;
@@ -43,7 +42,6 @@ implementation
 {$R *.lfm}
 
 { TClassTreeEditForm }
-
 
 procedure TClassTreeEditForm.FormCloseQuery(Sender: TObject;
   var CanClose: boolean);
