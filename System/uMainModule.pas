@@ -469,7 +469,7 @@ begin
 
   if not Assigned(D) then
   begin
-    D := TOpenDialog.Create(MainForm);
+    D := TOpenDialog.Create(Self);
     D.Filter := Filter;
   end;
   if D.Execute then
@@ -563,7 +563,7 @@ begin
   SetLength(Items,RecentFiles.Count);
   for I := 0 to RecentFiles.Count-1 do
   begin
-    M := TMenuItem.Create(MainForm);
+    M := TMenuItem.Create(MainForm.ReopenMenuItem);
     M.Caption := '&' + IntToStr(I) + ' ' + RecentFiles[I];
     M.OnClick := @OnRecentFilesClicked;
     M.Tag := I;
@@ -583,7 +583,7 @@ const
 begin
   if not Assigned(D) then
   begin
-    D := TSaveDialog.Create(MainForm);
+    D := TSaveDialog.Create(Self);
     D.InitialDir := ExtractFilePath( Model.ModelRoot.GetConfigFile );
     D.Filter := 'PNG files (*.png)|All files (*.*)|*.*';
   end;
