@@ -61,8 +61,6 @@ type
     TreePanel: TPanel;
     Splitter2: TSplitter;
     Panel1: TPanel;
-    Panel2: TPanel;
-    OpenButton: TSpeedButton;
     Saveaspicture1: TMenuItem;
     Previewdocumentation1: TMenuItem;
     OpenFolderAction1: TMenuItem;
