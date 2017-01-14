@@ -300,7 +300,7 @@ begin
 
   NeedW := 0;
   NeedH := (ClassShadowWidth * 2) + 4;
-  Inc(NeedH, TRtfdStereotype.Create(Self, Entity, 'enumeration').Height);
+  TRtfdStereotype.Create(Self, Entity, 'enumeration');
   Inc(NeedH, TRtfdEnumName.Create(Self, Entity, 16).Height);
 
 
@@ -907,7 +907,7 @@ begin
   NeedW := 0;
   NeedH := (ClassShadowWidth * 2) + 4;
 
-  Inc(NeedH, TRtfdStereotype.Create(Self, Entity, 'interface').Height);
+  TRtfdStereotype.Create(Self, Entity, 'interface');
   Inc(NeedH, TRtfdInterfaceName.Create(Self, Entity, 16).Height);
 
   //Get names in visibility order

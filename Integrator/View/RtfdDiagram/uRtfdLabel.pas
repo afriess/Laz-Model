@@ -30,12 +30,8 @@ type
   Left will be global EnitiyLeftMargin
   It will calculate it's Height which will be available to the parent
   after the parents calls its WidthNeeded method which the parent
-  can ignore as
-  it will be told it's Width at draw time.
+  can ignore as it will be told it's Width at draw time.
 }
-
-{ TRtfdODLabel }
-
 TRtfdODLabel = class(TComponent, IModelEntityListener)
 private
   FOwner: TCustomControl;

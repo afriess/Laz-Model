@@ -1,3 +1,8 @@
+{
+ MODEL   STATUS Not Working.
+ DOC     STATUS Not Implemented.
+ CODEGEN STATUS Not Implemented.
+}
 unit utstrecordtypes;
 
 {
