@@ -26,7 +26,8 @@ interface
 
 uses
   SysUtils,
-  uIntegrator, uModel, uModelEntity;
+  uIntegrator, uModel, uModelEntity, uIterators, uUseful, uConst;
+
 
 type
   //Baseclass for documenation generators.
@@ -53,11 +54,8 @@ type
 
 implementation
 
-uses uIterators,
-  uHtmlDocGen,
-  uUseful,
-  uConst;
-
+uses
+  uHtmlDocGen;
 
 { TDocGen }
 

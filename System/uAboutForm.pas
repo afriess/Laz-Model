@@ -25,7 +25,8 @@ unit uAboutForm;
 interface
 
 uses
-  Forms, ExtCtrls, StdCtrls, uConst;
+  Forms, ExtCtrls, StdCtrls,
+  uConst;
 
 
 type

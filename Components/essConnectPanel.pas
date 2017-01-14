@@ -27,8 +27,7 @@ interface
 uses
   Classes, SysUtils, Contnrs, Math,
   LCLIntf, LCLType, Messages, Graphics, Controls, Forms, Dialogs, ExtCtrls,
-  uViewIntegrator;
-
+  uViewIntegrator, uRtfdComponents;
 
 type
   // Available linestyles
@@ -213,8 +212,6 @@ type
 procedure Register;
 
 implementation
-
-uses uRtfdComponents;
 
 type
   TCrackControl = class(TControl) end;

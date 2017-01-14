@@ -25,8 +25,8 @@ unit uSettingsForm;
 interface
 
 uses
-  Forms, StdCtrls;
-
+  Forms, StdCtrls,
+  uConfig;
 
 type
   TSettingsForm = class(TForm)
@@ -52,8 +52,6 @@ type
   end;
 
 implementation
-
-uses uConfig;
 
 {$R *.lfm}
 

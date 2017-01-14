@@ -27,8 +27,8 @@ interface
 uses
   Classes, SysUtils, contnrs, Math, Types,
   Controls, Graphics, LCLIntf, LCLType, IniFiles, Dialogs,
-  uViewIntegrator, essConnectPanel, uModelEntity, uModel, uListeners,
-  uDiagramFrame, uRtfdComponents, uFeedback;
+  uViewIntegrator, essConnectPanel, uModelEntity, uModel, uListeners, EssLayout,
+  uDiagramFrame, uRtfdComponents, uIterators, uFeedback, uError, uConfig;
 
 
 type
@@ -92,7 +92,7 @@ type
 implementation
 
 uses
-  uRtfdDiagramFrame, uError, uIterators, EssLayout, uConfig;
+  uRtfdDiagramFrame;
 
 
 { TRtfdDiagram }

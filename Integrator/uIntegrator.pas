@@ -26,7 +26,7 @@ interface
 
 uses
   Classes, Contnrs, SysUtils, Dialogs,
-  uModel, uCodeProvider;
+  uModel, uCodeProvider, uError, uUseful, uCodeParser;
 
 type
   {
@@ -108,8 +108,6 @@ type
 function Integrators : TIntegrators;
 
 implementation
-
-uses uError, uUseful, uCodeParser;
 
 var
   _Integrators : TIntegrators = nil;

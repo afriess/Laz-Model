@@ -28,9 +28,12 @@ uses
   SysUtils, Classes, Contnrs,
   LCLIntf, LCLType, Graphics, Controls, ExtCtrls, Forms, Dialogs, Menus, Clipbrd,
   Printers, ActnList,
+  {$IFDEF DRAG_SUPPORT}DropSource, DropTarget,{$ENDIF}
   uModel, uIntegrator, ufpcIntegrator, uViewIntegrator,
-  {$IFDEF DRAG_SUPPORT}DropSource, DropTarget, {$ENDIF}uFeedback,
-  uClassTreeEditIntegrator, uClassTreeEditForm, uTreeViewIntegrator;
+  uFeedback, uClassTreeEditIntegrator, uClassTreeEditForm, uTreeViewIntegrator,
+  uFileProvider, uDocGen, uConfig, uJavaClassImport, uJavaParser,
+  {$IFDEF ARGO_XMI}uXmiExportArgoUML, {$ELSE}uXmiExport, {$ENDIF}
+  uConst, uError, uAboutForm, uSettingsForm, uZoomFrame, uEmxExport;
 
 type
 
@@ -102,19 +105,8 @@ var
 
 implementation
 
-uses uMainForm,
-  uFileProvider,
-  uDocGen,
-  uConfig,
-  uJavaClassImport,
-  uJavaParser,
-  {$IFDEF ARGO_XMI}uXmiExportArgoUML, {$ELSE}uXmiExport, {$ENDIF}
-  uConst,
-  uError,
-  uAboutForm,
-  uSettingsForm,
-  uZoomFrame,
-  uEmxExport;
+uses
+  uMainForm;
 
 {$R *.lfm}
 

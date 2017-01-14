@@ -27,7 +27,7 @@ interface
 uses
   Classes, SysUtils, Contnrs, Types, IniFiles, math,
   Controls, Forms, Graphics,
-  uIntegrator, uModel, uModelEntity, uFeedback;
+  uIntegrator, uModel, uModelEntity, uFeedback, uConfig;
 
 type
 
@@ -95,7 +95,7 @@ type
 
 implementation
 
-uses uRtfdDiagram, uConfig;
+uses uRtfdDiagram;
 
 var
   _CurrentEntity : TModelEntity = nil;

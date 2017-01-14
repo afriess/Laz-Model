@@ -25,7 +25,9 @@ unit uFileProvider;
 interface
 
 uses
-  Classes, SysUtils, uCodeProvider;
+  Classes, SysUtils,
+  uCodeProvider, uConfig;
+
 
 type
 
@@ -43,8 +45,6 @@ type
   end;
 
 implementation
-
-uses uConfig;
 
 { TFileProvider }
 

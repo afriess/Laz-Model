@@ -24,8 +24,8 @@ unit uRtfdComponents;
 
 interface
 uses
-  Classes, Math, LCLIntf, LCLType, ExtCtrls, Graphics,
-  uModel, uModelEntity, Controls, uListeners, uViewIntegrator, uDiagramFrame, uRtfdLabel;
+  Classes, Math, LCLIntf, LCLType, Controls, ExtCtrls, Graphics,
+  uModel, uModelEntity, uListeners, uDiagramFrame, uRtfdLabel, uIterators, uConfig;
 
 type
 
@@ -211,7 +211,7 @@ type
 implementation
 
 uses
-  uError, essConnectPanel, uIterators, uConfig, uRtfdDiagramFrame;
+  essConnectPanel, uRtfdDiagramFrame;
 
 { TRtfdEnumLiteral }
 

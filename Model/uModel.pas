@@ -30,7 +30,7 @@ interface
 
 uses
   Classes, SysUtils, Contnrs,
-  uListeners, uModelEntity, uIterators;
+  uListeners, uModelEntity, uIterators, uError;
 
 const
 
@@ -360,11 +360,7 @@ type
 
 implementation
 
-uses uError;
-
-
 Var
-
 _AllClassesPackage : TAbstractPackage = nil;
 
 

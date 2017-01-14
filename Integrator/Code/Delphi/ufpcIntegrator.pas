@@ -25,7 +25,7 @@ interface
 
 uses
   Classes, SysUtils,
-  uIntegrator, uModel, ufpcParser, uCodeProvider, uCodeParser;
+  uIntegrator, uModel, ufpcParser, uCodeProvider, uCodeParser, uError;
 
 type
 
@@ -44,8 +44,6 @@ type
 
 
 implementation
-
-uses uError;
 
 { TfpcImporter }
 

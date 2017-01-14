@@ -26,7 +26,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, {ComObj,}
-  uDocGen, uModel, uModelEntity, uXmiExport;
+  uDocGen, uModel, uModelEntity, uXmiExport, uViewIntegrator;
 
 type
   //Html documentation generator
@@ -45,10 +45,6 @@ type
   end;
 
 implementation
-
-uses
-  uViewIntegrator;
-
 
 {$IFDEF false}
 function MakeDOM : variant;
