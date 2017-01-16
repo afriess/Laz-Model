@@ -42,6 +42,9 @@ type
     FDiShowAssoc: boolean;
     FDiVisibilityFilter: integer;
     FEditorCommandLine: String;
+    FDocGenImages: boolean;
+    FProjectName: string;
+    FDocsDir: string;
   public
     constructor Create;
     destructor Destroy; override;
@@ -64,6 +67,9 @@ type
     property DiSave : TDiSaveSetting read FDiSave write FDiSave;
     property DiShowAssoc : boolean read FDiShowAssoc write FDiShowAssoc;
     property DiVisibilityFilter : integer read FDiVisibilityFilter write FDiVisibilityFilter;
+    property ProjectName: string read FProjectName write FProjectName;
+    property DocGenImages: boolean read FDocGenImages write FDocGenImages default True;
+    property DocsDir: string read FDocsDir write FDocsDir;
   end;
 
 var
@@ -92,6 +98,11 @@ begin
   FDiShowAssoc := ReadInt('DiShowAssoc',0)<>0;
   FDiVisibilityFilter := ReadInt('DiVisibilityFilter',0);
   FEditorCommandLine := ReadStr('EditorCommandLine','');
+
+  // TODO PROJECT SETTINGS
+  FProjectName := 'Laz-Model';
+  FDocsDir := 'FPDoc';
+
 end;
 
 destructor TConfig.Destroy;

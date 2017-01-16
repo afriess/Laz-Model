@@ -16,7 +16,7 @@ object MainForm: TMainForm
   OnCreate = FormCreate
   Position = poScreenCenter
   ShowHint = True
-  LCLVersion = '1.7'
+  LCLVersion = '1.6.0.4'
   object Panel1: TPanel
     Left = 0
     Height = 479
@@ -118,8 +118,7 @@ object MainForm: TMainForm
         Action = MainModule.PrintDiagramAction
       end
       object Generatedocumentation1: TMenuItem
-        Caption = 'Generate documentation'
-        Enabled = False
+        Action = MainModule.DocGenAction
       end
       object Previewdocumentation1: TMenuItem
         Caption = 'Preview documentation'

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uFileProvider">
+      <descr/>
+      <element name="TFileProvider">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uCodeProvider.TCodeProvider">TCodeProvider {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TFileProvider.HookChanges">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFileProvider.LoadStream">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFileProvider.LocateFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFileProvider.SaveStream">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFileProvider.UnhookChanges">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

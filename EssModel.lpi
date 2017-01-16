@@ -15,6 +15,7 @@
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
+    <LazDoc Paths=".\FPDoc\en" PackageName="Laz-Model"/>
     <i18n>
       <EnableI18N LFM="False"/>
     </i18n>
@@ -70,7 +71,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="46">
+    <Units Count="47">
       <Unit0>
         <Filename Value="EssModel.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -282,6 +283,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit45>
+      <Unit46>
+        <Filename Value="Integrator\Doc\uFPDocGen.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit46>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -323,9 +328,8 @@
     </Linking>
     <Other>
       <CustomOptions Value="-dDEBUG"/>
-      <OtherDefines Count="2">
+      <OtherDefines Count="1">
         <Define0 Value="DEBUG"/>
-        <Define1 Value="VerboseMouseCapture"/>
       </OtherDefines>
     </Other>
   </CompilerOptions>

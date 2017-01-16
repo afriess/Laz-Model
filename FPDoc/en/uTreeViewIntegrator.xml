@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uTreeViewIntegrator">
+      <descr/>
+      <element name="TTreeViewIntegrator">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uViewIntegrator.TViewIntegrator">TViewIntegrator {Parent of}</link>
+          <link id="uIntegrator.TTwowayIntegrator">TTwowayIntegrator {Parent of}</link>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TTreeViewIntegrator.Frame">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewIntegrator.BuildAllClassesView">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewIntegrator.BuildClassView">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewIntegrator.BuildInterfaceView">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewIntegrator.BuildLogicPackageView">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewIntegrator.BuildUnitPackageView">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewIntegrator.Change">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewIntegrator.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewIntegrator.CurrentEntityChanged">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewIntegrator.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewIntegrator.InitFromModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewIntegrator.tvModelAddition">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewIntegrator.tvModelChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewIntegrator.tvModelCreateNodeClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewNode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewNode.FIsImplementation">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewNode.IsImplementation">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewNode.AfterConstruction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewNode.BeforeDestruction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewNode.LocateNode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

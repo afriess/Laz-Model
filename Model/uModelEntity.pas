@@ -46,6 +46,9 @@ type
 
     This is documented in Section 7.8.9 of the Formal Spec.
 
+    This is inherently a PackageableElement [7.4.3.3] as its visibility may
+    change depending on the owning package.
+
     The original code seems to assume that all NamedElements are owned at
     the package level and derive the NameSpace heirarchy from package ownership.
 
@@ -127,9 +130,6 @@ implementation
 
 uses uListeners;
 
-
-{ TModelEntity }
-
 constructor TModelEntity.Create(AOwner: TModelEntity);
 begin
   inherited Create;
@@ -170,7 +170,6 @@ procedure TModelEntity.RemoveListener(Listener: IUnknown);
 begin
   self.Listeners.Remove(Listener);
 end;
-
 
 procedure TModelEntity.SetName(const Value: string);
 var

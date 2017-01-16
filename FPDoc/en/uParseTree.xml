@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uParseTree">
+      <descr/>
+      <element name="TDelphiParseTree">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uParseTree.TParseTree">TParseTree {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TDelphiParseTree.Code">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDelphiParseTree.FCode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDelphiParseTree.Add">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDelphiParseTree.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDelphiParseTree.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDelphiParseTree.IndentAfter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDelphiParseTree.Insert">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDelphiParseTree.SaveToFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDelphiParseTree.UndentAfter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.ChildCount">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.Children">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.FChildren">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.FEntity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.FIsImportant">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.FModelEntity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.FOwner">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.Important">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.ModelEntity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.Parent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.Add">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.GetChildCount">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.GetChildren">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.Insert">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.SetChildren">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParseTree.SetOwner">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

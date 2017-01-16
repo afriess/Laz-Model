@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uFPDocGen">
+      <descr/>
+      <element name="TFPDocGen">
+        <short/>
+        <descr/>
+        <seealso>
+        </seealso>
+      </element>
+      <element name="TFPDocGen.FConfigFile">
+        <short>Holds the config file for the language being processed. Filename FPDoc.xml.</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.FDescriptionsNode">
+        <short>The docproject ::  packages ::  package :: descriptions  node in the Config file cached for efficiency.</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.FDirs">
+        <short>Holds a list of directories found under the configured documentation root. This only contains directories of 2 chars (less ..).</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.FModuleNode">
+        <short>The fpdoc-descriptions :: package :: module node where all the documentation classifiers are stored.</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.FPackageFile">
+        <short>Holds the documentation description file for the current unit in the current language.</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.FPackageName">
+        <short>The Package name being processed.</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.FUnitsNode">
+        <short>The docproject :: packages :: package :: units  node in the Config file cached for efficiency.</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.AddEntity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.AddEnumLiterals">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.AddParentLinks">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.AddSkeletonConfig">
+        <short>Fleshes out a new instance of FConfigFile with basic defaults.</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.AddSkeletonPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.CheckConfigForUnit">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.DocFinished">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.DocStart">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.GetConfigFile">
+        <short>Gets the config file for the language being processed. Creates a skeleton file if it does not exist. Sets FConfigFile, FUnitsNode and FDescriptionsNode.</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.GetPackageElement">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.GetPackageFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.GetValidSubDirs">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.HasPackageElement">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.PackageDone">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.ProcessDataTypes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.ProcessPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.SaveConfigFile">
+        <short>Saves the config file after all units are processed for current language.</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.SavePackageFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.TraverseModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.UnitInConfig">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.WriteClassDetail">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.WriteInterfaceDetail">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFPDocGen.GetConfigFile.SubDir">
+        <short>subdirectories should be 2 letter ISO contry code.</short>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

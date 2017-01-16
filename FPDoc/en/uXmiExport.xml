@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uXmiExport">
+      <descr/>
+      <element name="TXMIExporter">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIntegrator.TExportIntegrator">TExportIntegrator {Parent of}</link>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TXMIExporter.Feedback">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.Ids">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.LaterList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.NextId">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.Output">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.FlushLaterList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.GetXmi">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.GetXMIId">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.InitFromModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.MakeAbstract">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.MakeGeneral">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.MakeId">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.MakeTypeRef">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.SaveTo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.ShowSaveDialog">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.Write">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.WriteClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.WriteDataType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.WriteEntityHeader">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.WriteFeatures">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.WriteInterface">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.WriteLogicPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.WritePackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.WriteUnitPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.Xml">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.XmlClose">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporter.XmlOpen">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

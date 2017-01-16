@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uZoomFrame">
+      <descr/>
+      <element name="TZoomFrame">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TZoomFrame.Diagram">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TZoomFrame.ZoomImage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TZoomFrame.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TZoomFrame.FrameMouseMove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TZoomFrame.FrameMouseUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TZoomFrame.FrameResize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TZoomFrame.OnUpdateZoom">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TZoomFrame.RedrawZoom">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TZoomFrame.SyncScroll">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TZoomFrame.ZoomImageMouseDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

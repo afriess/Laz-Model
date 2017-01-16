@@ -25,7 +25,7 @@ unit uUseful;
 interface
 
 
-uses Classes, SysUtils, Forms, Controls, ComCtrls;
+uses Classes, SysUtils, Forms, Controls, Dialogs, ComCtrls;
 
 type
   IEldeanProgress = interface(IUnknown)
@@ -49,7 +49,7 @@ type
     FTitle,FPath : string;
   public
     property Title: string read FTitle write FTitle;
-//    function Execute: Boolean;
+    function Execute: Boolean;
     property Path: string read FPath write FPath;
   end;
 
@@ -57,6 +57,8 @@ type
 
 implementation
 
+var
+  RecentOpenFolderPath : string;
 
 constructor TEldeanProgress.Create(Text: string; Max: integer);
 begin
@@ -94,53 +96,28 @@ begin
   Application.ProcessMessages;
 end;
 
-
-
-{$IFDEF Win32}
-{
-function SetSelProc(Wnd: HWND; uMsg: UINT; lParam, lpData: LPARAM): Integer stdcall;
-begin
-  if uMsg=BFFM_INITIALIZED then
-    SendMessage(Wnd, BFFM_SETSELECTION, 1, lpData );
-  Result := 0;
-end;
-
 function TBrowseForFolderDialog.Execute: Boolean;
 var
-  bi: TBROWSEINFO;
-  pIDListItem: PItemIDList;
-  str: array[0..1024] of Char;
-  pStr: PChar;
+  F : TSelectDirectoryDialog;
 begin
-  Str[0]:=#0;
-  FillChar(Bi,SizeOf(Bi),0);
-  bi.lpszTitle := PChar(FTitle);
-  bi.hwndOwner := GetActiveWindow;
-  bi.pidlRoot := nil;
-  bi.pszDisplayName := @str;
-  bi.ulFlags := BIF_RETURNONLYFSDIRS;
 
-  if FPath<>'' then
-  begin
-    bi.lpfn := SetSelProc;
-    bi.lParam := Integer( PChar(FPath) );
-  end;
-
-  pIDListItem := SHBrowseForFolder(bi);
-  if pIDListItem <> nil then
-  begin
-    pStr := @Str;
-    SHGetPathFromIDList(pIDListItem, pStr);
-    CoTaskMemFree(pIDListItem);
-    FPath := Copy(pStr,1,Length(PStr));
-    Result := True;
-  end
+  F := TSelectDirectoryDialog.Create(Application.MainForm);
+  if Length(FPath) > 0 then
+      F.InitialDir := FPath
+    else
+      F.InitialDir := RecentOpenFolderPath;
+  F.Title := Title;
+  if F.Execute then
+    begin
+      FPath := f.FileName;
+      RecentOpenFolderPath := FPath;
+      Result := True;
+    end
   else
     Result := False;
-end; }
-{$ENDIF}
 
-
+  F.Free;
+end;
 
 var
   CleanUp : TStringList;

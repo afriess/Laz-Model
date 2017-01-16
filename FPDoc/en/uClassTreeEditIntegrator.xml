@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uClassTreeEditIntegrator">
+      <descr/>
+      <element name="TClassTreeEditIntegrator">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uViewIntegrator.TViewIntegrator">TViewIntegrator {Parent of}</link>
+          <link id="uIntegrator.TTwowayIntegrator">TTwowayIntegrator {Parent of}</link>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TClassTreeEditIntegrator.MyForm">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassTreeEditIntegrator.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassTreeEditIntegrator.CurrentEntityChanged">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassTreeEditIntegrator.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="essConnectPanel">
+      <descr/>
+      <element name="TessConnectionArrowStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectionArrowStyle.asEmptyOpen">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectionArrowStyle.asEmptyClosed">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectionStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectionStyle.csThin">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectionStyle.csNormal">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectionStyle.csThinDash">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConnection">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConnection.ArrowStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConnection.FConnectStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConnection.FFrom">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConnection.FTo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.Align">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.Alignment">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.Anchors">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.BackBitmap">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.BevelInner">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.BevelOuter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.BevelWidth">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.BiDiMode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.BorderStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.BorderWidth">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.Caption">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.ClientDragging">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.Color">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.Constraints">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.DockSite">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.DragCursor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.DragKind">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.DragMode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.Enabled">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FBackBitmap">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FConnections">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FIsModified">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FIsMoving">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FIsRectSelecting">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FManagedObjects">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FMemMousePos">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.fNeedCheckSize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.Font">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FSelectedOnly">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FSelectRect">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FullRepaint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.IsModified">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnConstrainedResize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnContentChanged">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnContextPopup">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnDblClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnDockDrop">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnDockOver">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnDragDrop">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnDragOver">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnEndDock">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnEndDrag">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnEnter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnExit">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnGetSiteInfo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnMouseDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnMouseMove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnMouseUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnResize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnStartDock">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnStartDrag">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnUnDock">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.ParentBiDiMode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.ParentColor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.ParentFont">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.ParentShowHint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.PopupMenu">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.SelectedOnly">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.ShowHint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.TabOrder">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.TabStop">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.TempHidden">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.UseDockManager">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.Visible">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.AddManagedObject">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.ChildMouseDrag">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.ClearManagedObjects">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.ClearSelection">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.Click">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.ConnectObjects">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.CreateParams">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FindManagedControl">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.GetConnections">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.GetFirstSelected">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.GetManagedObjects">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.GetSelectedControls">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.MouseDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.MouseMove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.MouseUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnManagedObjectClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnManagedObjectDblClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnManagedObjectMouseDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnManagedObjectMouseMove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.OnManagedObjectMouseUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.Paint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.RecalcSize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.SelectObjectsInRect">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.SetFocus">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.SetSelectedOnly">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.WMEraseBkgnd">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TManagedObject">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TManagedObject.FControl">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TManagedObject.FOnClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TManagedObject.FOnDblClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TManagedObject.FOnMouseDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TManagedObject.FOnMouseMove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TManagedObject.FOnMouseUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TManagedObject.FSelected">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TManagedObject.Selected">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TManagedObject.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TManagedObject.SetSelected">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

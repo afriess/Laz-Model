@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="essLayout">
+      <descr/>
+      <element name="TEssLayout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEssLayout.Panel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEssLayout.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEssLayout.CreateLayout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEssLayout.Execute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uFeedback">
+      <descr/>
+      <element name="IEldeanFeedback">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IEldeanFeedback.Message">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TGuiFeedback">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TGuiFeedback.P">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TGuiFeedback.T">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TGuiFeedback.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TGuiFeedback.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TGuiFeedback.Message">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TGuiFeedback.OnTimer">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

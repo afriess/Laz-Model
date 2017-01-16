@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<docproject>
+  <options>
+    <option ostarget="Linux"/>
+    <option cputarget="x86_64"/>
+    <option show-private="true"/>
+    <option stop-on-parser-error="false"/>
+  </options>
+  <packages>
+    <package name="Laz-Model" output="Laz-Model-en">
+      <units>
+        <unit file="..\..\Components\essConnectPanel.pas"/>
+        <unit file="..\..\Components\essLayout.pas"/>
+        <unit file="..\..\EssModel.lpr"/>
+        <unit file="..\..\Components\SugiyamaLayout.pas"/>
+        <unit file="..\..\System\uAboutForm.pas"/>
+        <unit file="..\..\Integrator\View\LzmTreeEdit\uClassTreeEditForm.pas"/>
+        <unit file="..\..\Integrator\View\LzmTreeEdit\uClassTreeEditIntegrator.pas"/>
+        <unit file="..\..\Integrator\Code\uCodeIntegrator.pas"/>
+        <unit file="..\..\Integrator\CodeIO\uCodeParser.pas"/>
+        <unit file="..\..\CodeProvider\uCodeProvider.pas"/>
+        <unit file="..\..\System\uConfig.pas"/>
+        <unit file="..\..\System\uConst.pas"/>
+        <unit file="..\..\Integrator\View\uDiagramFrame.pas"/>
+        <unit file="..\..\Integrator\Doc\uDocGen.pas"/>
+        <unit file="..\..\Model\uDocumentation.pas"/>
+        <unit file="..\..\Integrator\Export\uEmxExport.pas"/>
+        <unit file="..\..\System\uError.pas"/>
+        <unit file="..\..\System\uFeedback.pas"/>
+        <unit file="..\..\CodeProvider\uFileProvider.pas"/>
+        <unit file="..\..\Integrator\CodeIO\ufpcParser.pas"/>
+        <unit file="..\..\Integrator\Doc\uFPDocGen.pas"/>
+        <unit file="..\..\Integrator\Doc\uHtmlDocGen.pas"/>
+        <unit file="..\..\Integrator\uIntegrator.pas"/>
+        <unit file="..\..\Model\uIterators.pas"/>
+        <unit file="..\..\Integrator\CodeIO\JavaClass\uJavaClass.pas"/>
+        <unit file="..\..\Integrator\CodeIO\JavaClass\uJavaClassImport.pas"/>
+        <unit file="..\..\Integrator\CodeIO\uJavaParser.pas"/>
+        <unit file="..\..\Model\uListeners.pas"/>
+        <unit file="..\..\System\uMainForm.pas"/>
+        <unit file="..\..\System\uMainModule.pas"/>
+        <unit file="..\..\Model\uModel.pas"/>
+        <unit file="..\..\Model\uModelEntity.pas"/>
+        <unit file="..\..\Integrator\CodeIO\uParseTree.pas"/>
+        <unit file="..\..\Integrator\View\RtfdDiagram\uRtfdComponents.pas"/>
+        <unit file="..\..\Integrator\View\RtfdDiagram\uRtfdDiagram.pas"/>
+        <unit file="..\..\Integrator\View\RtfdDiagram\uRtfdDiagramFrame.pas"/>
+        <unit file="..\..\Integrator\View\RtfdDiagram\uRtfdLabel.pas"/>
+        <unit file="..\..\System\uSettingsForm.pas"/>
+        <unit file="..\..\Integrator\View\uTreeViewFrame.pas"/>
+        <unit file="..\..\Integrator\View\uTreeViewIntegrator.pas"/>
+        <unit file="..\..\System\uUseful.pas"/>
+        <unit file="..\..\Integrator\View\uViewIntegrator.pas"/>
+        <unit file="..\..\Integrator\Export\uXmiExport.pas"/>
+        <unit file="..\..\Integrator\Export\uXmiExportArgoUML.pas"/>
+        <unit file="..\..\System\uZoomFrame.pas"/>
+      </units>
+      <descriptions>
+        <description file="essConnectPanel.xml"/>
+        <description file="essLayout.xml"/>
+        <description file="EssModel.xml"/>
+        <description file="SugiyamaLayout.xml"/>
+        <description file="uAboutForm.xml"/>
+        <description file="uClassTreeEditForm.xml"/>
+        <description file="uClassTreeEditIntegrator.xml"/>
+        <description file="uCodeIntegrator.xml"/>
+        <description file="uCodeParser.xml"/>
+        <description file="uCodeProvider.xml"/>
+        <description file="uConfig.xml"/>
+        <description file="uConst.xml"/>
+        <description file="uDiagramFrame.xml"/>
+        <description file="uDocGen.xml"/>
+        <description file="uDocumentation.xml"/>
+        <description file="uEmxExport.xml"/>
+        <description file="uError.xml"/>
+        <description file="uFeedback.xml"/>
+        <description file="uFileProvider.xml"/>
+        <description file="ufpcParser.xml"/>
+        <description file="uFPDocGen.xml"/>
+        <description file="uHtmlDocGen.xml"/>
+        <description file="uIntegrator.xml"/>
+        <description file="uIterators.xml"/>
+        <description file="uJavaClass.xml"/>
+        <description file="uJavaClassImport.xml"/>
+        <description file="uJavaParser.xml"/>
+        <description file="uListeners.xml"/>
+        <description file="uMainForm.xml"/>
+        <description file="uMainModule.xml"/>
+        <description file="uModel.xml"/>
+        <description file="uModelEntity.xml"/>
+        <description file="uParseTree.xml"/>
+        <description file="uRtfdComponents.xml"/>
+        <description file="uRtfdDiagram.xml"/>
+        <description file="uRtfdDiagramFrame.xml"/>
+        <description file="uRtfdLabel.xml"/>
+        <description file="uSettingsForm.xml"/>
+        <description file="uTreeViewFrame.xml"/>
+        <description file="uTreeViewIntegrator.xml"/>
+        <description file="uUseful.xml"/>
+        <description file="uViewIntegrator.xml"/>
+        <description file="uXmiExport.xml"/>
+        <description file="uXmiExportArgoUML.xml"/>
+        <description file="uZoomFrame.xml"/>
+      </descriptions>
+    </package>
+  </packages>
+</docproject>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uCodeParser">
+      <descr/>
+      <element name="EParseError">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNeedPackageEvent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeParser">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeParser.FModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeParser.FNeedPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeParser.NeedPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeParser.ParseStream">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeParser.StreamToMemory">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

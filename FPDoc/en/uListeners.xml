@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uListeners">
+      <descr/>
+      <element name="IAbstractPackageListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IAfterAttributeListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IAttributeListener">IAttributeListener {Parent of}</link>
+          <link id="uListeners.IFeatureListener">IFeatureListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IAfterClassListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IClassListener">IClassListener {Parent of}</link>
+          <link id="uListeners.IClassifierListener">IClassifierListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IAfterDatatypeListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IDatatypeListener">IDatatypeListener {Parent of}</link>
+          <link id="uListeners.IClassifierListener">IClassifierListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IAfterEnumerationListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IEnumerationListener">IEnumerationListener {Parent of}</link>
+          <link id="uListeners.IClassifierListener">IClassifierListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IAfterFeatureListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IFeatureListener">IFeatureListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IAfterInterfaceListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IInterfaceListener">IInterfaceListener {Parent of}</link>
+          <link id="uListeners.IClassifierListener">IClassifierListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IAfterLogicPackageListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.ILogicPackageListener">ILogicPackageListener {Parent of}</link>
+          <link id="uListeners.IAbstractPackageListener">IAbstractPackageListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IAfterObjectModelListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IAfterOperationListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IOperationListener">IOperationListener {Parent of}</link>
+          <link id="uListeners.IFeatureListener">IFeatureListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IAfterParameterListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IParameterListener">IParameterListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IAfterPropertyListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IPropertyListener">IPropertyListener {Parent of}</link>
+          <link id="uListeners.IAttributeListener">IAttributeListener {Parent of}</link>
+          <link id="uListeners.IFeatureListener">IFeatureListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IAfterUnitPackageListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IUnitPackageListener">IUnitPackageListener {Parent of}</link>
+          <link id="uListeners.IAbstractPackageListener">IAbstractPackageListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IAttributeListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IFeatureListener">IFeatureListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IBeforeAttributeListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IAttributeListener">IAttributeListener {Parent of}</link>
+          <link id="uListeners.IFeatureListener">IFeatureListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IBeforeClassListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IClassListener">IClassListener {Parent of}</link>
+          <link id="uListeners.IClassifierListener">IClassifierListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IBeforeDatatypeListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IDatatypeListener">IDatatypeListener {Parent of}</link>
+          <link id="uListeners.IClassifierListener">IClassifierListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IBeforeEnumerationListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IEnumerationListener">IEnumerationListener {Parent of}</link>
+          <link id="uListeners.IClassifierListener">IClassifierListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IBeforeFeatureListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IFeatureListener">IFeatureListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IBeforeInterfaceListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IInterfaceListener">IInterfaceListener {Parent of}</link>
+          <link id="uListeners.IClassifierListener">IClassifierListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IBeforeLogicPackageListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.ILogicPackageListener">ILogicPackageListener {Parent of}</link>
+          <link id="uListeners.IAbstractPackageListener">IAbstractPackageListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IBeforeObjectModelListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IBeforeOperationListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IOperationListener">IOperationListener {Parent of}</link>
+          <link id="uListeners.IFeatureListener">IFeatureListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IBeforeParameterListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IParameterListener">IParameterListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IBeforePropertyListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IPropertyListener">IPropertyListener {Parent of}</link>
+          <link id="uListeners.IAttributeListener">IAttributeListener {Parent of}</link>
+          <link id="uListeners.IFeatureListener">IFeatureListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IBeforeUnitPackageListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IUnitPackageListener">IUnitPackageListener {Parent of}</link>
+          <link id="uListeners.IAbstractPackageListener">IAbstractPackageListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IClassifierListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IClassListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IClassifierListener">IClassifierListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IDatatypeListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IClassifierListener">IClassifierListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IEnumerationListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IClassifierListener">IClassifierListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IFeatureListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IInterfaceListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IClassifierListener">IClassifierListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="ILogicPackageListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IAbstractPackageListener">IAbstractPackageListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IModelEntityListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IModelEntityListener.AddChild">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IModelEntityListener.EntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IModelEntityListener.Remove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IObjectModelListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IObjectModelListener.Change">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IOperationListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IFeatureListener">IFeatureListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IParameterListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IPropertyListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IAttributeListener">IAttributeListener {Parent of}</link>
+          <link id="uListeners.IFeatureListener">IFeatureListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="IUnitPackageListener">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uListeners.IAbstractPackageListener">IAbstractPackageListener {Parent of}</link>
+          <link id="uListeners.IModelEntityListener">IModelEntityListener {Parent of}</link>
+          <link id="uListeners.IObjectModelListener">IObjectModelListener {Parent of}</link>
+        </seealso>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

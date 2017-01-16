@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uJavaClass">
+      <descr/>
+      <element name="TAttrInfoArray">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstArray">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFieldInfoArray">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodInfoArray">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData.isAbstract">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData.isFinal">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData.isInterface">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData.isNative">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData.isPrivate">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData.isProtected">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData.isPublic">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData.isStatic">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData.isStrict">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData.isSuper">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData.isSync">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData.isTransient">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAccData.isVolatile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttrFactory">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttrFactory.AllocAttr">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttrFactory.Skip_data">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttrInfo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttrInfo.AttrName">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttrInfo.Len">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttrInfo.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttrInfo.GetName">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassAttrSec">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassAttrSec.classAttrTab">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassAttrSec.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassDeclSec">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassDeclSec.accessFlags">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassDeclSec.interfaces">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassDeclSec.superClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassDeclSec.thisClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassDeclSec.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassDeclSec.GetClassName">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFieldSec">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFieldSec.classFields">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFieldSec.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFile.classAttrs">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFile.classConstPool">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFile.classDecl">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFile.classFields">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFile.classMethods">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFile.clsName">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFile.header">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFile.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFile.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFileHeader">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFileHeader.magic">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFileHeader.major_version">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFileHeader.minor_version">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassFileHeader.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassMethodSec">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassMethodSec.classMethods">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassMethodSec.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassMethodSec.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstBase">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstBase.tag">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstBase.getString">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstBase.Read">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstBase.set_ref">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstClass_or_String">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uJavaClass.TConstBase">TConstBase {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TConstClass_or_String.index">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstClass_or_String.Utf8">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstClass_or_String.GetString">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstClass_or_String.Read">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstClass_or_String.set_ref">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstDouble">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uJavaClass.TConstLongConvert">TConstLongConvert {Parent of}</link>
+          <link id="uJavaClass.TConstBase">TConstBase {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TConstDouble.d">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstDouble.Read">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstFloat">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uJavaClass.TConstBase">TConstBase {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TConstFloat.f">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstFloat.Read">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstInt">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uJavaClass.TConstBase">TConstBase {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TConstInt.val">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstInt.Read">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstLong">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uJavaClass.TConstLongConvert">TConstLongConvert {Parent of}</link>
+          <link id="uJavaClass.TConstBase">TConstBase {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TConstLong.longVal">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstLong.Read">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstLongConvert">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uJavaClass.TConstBase">TConstBase {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TConstLongConvert.readLong">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstLongConvert.toLong">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstName_and_Type_info">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uJavaClass.TConstClass_or_String">TConstClass_or_String {Parent of}</link>
+          <link id="uJavaClass.TConstBase">TConstBase {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TConstName_and_Type_info.descriptor_index">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstName_and_Type_info.descriptor_Utf8">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstName_and_Type_info.Read">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstName_and_Type_info.set_ref">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstPool">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstPool.constPool">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstPool.constPoolCnt">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstPool.allocConstEntry">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstPool.ConstPoolElem">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstPool.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstPool.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstPool.readConstPool">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstPool.resolveConstPool">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstRef">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uJavaClass.TConstBase">TConstBase {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TConstRef.class_ref">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstRef.index">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstRef.name_and_type_index">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstRef.name_ref">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstRef.Read">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstRef.set_ref">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstUtf8">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uJavaClass.TConstBase">TConstBase {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TConstUtf8.str">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstUtf8.GetString">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConstUtf8.Read">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFieldInfo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFieldInfo.access_flags">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFieldInfo.attributes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFieldInfo.descriptor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFieldInfo.name">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFieldInfo.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodInfo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodInfo.access_flags">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodInfo.attributes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodInfo.descriptor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodInfo.name">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodInfo.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodInfo.isConstructor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjNameFormat">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjNameFormat.ToDotSeparator">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

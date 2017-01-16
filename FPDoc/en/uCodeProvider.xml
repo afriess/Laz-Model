@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uCodeProvider">
+      <descr/>
+      <element name="TCodeChangeEvent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeChangeType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeChangeType.cctAdd">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeChangeType.cctRemove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeChangeType.cctChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.Active">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.FActive">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.Feedback">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.FOnCodeChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.FSearchPath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.FWatched">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.LoadedCount">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.OnCodeChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.SearchPath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.AddChangeWatch">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.AddSearchPath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.HookChanges">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.LoadStream">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.LocateFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.SaveStream">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.SetActive">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeProvider.UnhookChanges">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

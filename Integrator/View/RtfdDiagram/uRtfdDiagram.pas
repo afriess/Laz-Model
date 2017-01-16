@@ -342,6 +342,8 @@ begin
               Panel.AddManagedObject( InCreateBox(A.TypeClassifier,TRtfdClass) );
             if A.TypeClassifier is TInterface then
               Panel.AddManagedObject( InCreateBox(A.TypeClassifier,TRtfdInterface) );
+            if A.TypeClassifier is TEnumeration then
+              Panel.AddManagedObject( InCreateBox(A.TypeClassifier,TRtfdEnumeration) );
           end;
         end;
       end;

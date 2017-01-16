@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uJavaParser">
+      <descr/>
+      <element name="TJavaImporter">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIntegrator.TImportIntegrator">TImportIntegrator {Parent of}</link>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TJavaImporter.GetFileExtensions">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaImporter.ImportOneFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaImporter.NeedPackageHandler">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uCodeParser.TCodeParser">TCodeParser {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TJavaParser.ClassImports">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.Comment">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.FCurrPos">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.FFilename">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.Filename">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.FOM">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.FSourcePos">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.FStream">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.FTokenPos">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.FullImports">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.FUnit">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.ModAbstract">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.ModVisibility">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.NameCache">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.Token">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.TokenPosLocked">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.DoAttribute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.DoOperation">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.EatWhiteSpace">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.GetChar">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.GetNextToken">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.GetTypeName">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.NeedClassifier">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.NeedSource">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.ParseClassDeclaration">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.ParseCompilationUnit">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.ParseInterfaceDeclaration">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.ParseModifiersOpt">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.ParseStream">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.ParseTypeDeclaration">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.SetVisibility">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.SkipPair">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaParser.SkipToken">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

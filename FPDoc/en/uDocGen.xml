@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uDocGen">
+      <descr/>
+      <element name="TDocGen">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIntegrator.TExportIntegrator">TExportIntegrator {Parent of}</link>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TDocGen.DestPath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocGen.IsPreview">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocGen.Packages">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocGen.DocFinished">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocGen.DocStart">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocGen.InitFromModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocGen.SelectDestPath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocGen.TraverseModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocGen.WriteClassDetail">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocGen.WriteInterfaceDetail">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocGen.WriteOverview">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocGen.WritePackageDetail">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

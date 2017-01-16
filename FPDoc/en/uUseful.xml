@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uUseful">
+      <descr/>
+      <element name="IEldeanProgress">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IEldeanProgress.Tick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TBrowseForFolderDialog">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TBrowseForFolderDialog.FPath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TBrowseForFolderDialog.FTitle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TBrowseForFolderDialog.Path">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TBrowseForFolderDialog.Title">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TBrowseForFolderDialog.Execute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEldeanProgress">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEldeanProgress.AbortNext">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEldeanProgress.F">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEldeanProgress.P">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEldeanProgress.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEldeanProgress.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEldeanProgress.Tick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

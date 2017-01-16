@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uIterators">
+      <descr/>
+      <element name="TClassAndVisibilityFilter">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIterators.TIteratorFilter">TIteratorFilter {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TClassAndVisibilityFilter.MinVisibility">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassAndVisibilityFilter.OneClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassAndVisibilityFilter.Accept">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassAndVisibilityFilter.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDataTypeFilter">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIterators.TIteratorFilter">TIteratorFilter {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TDataTypeFilter.Accept">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEntitySkipFilter">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIterators.TIteratorFilter">TIteratorFilter {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TEntitySkipFilter.SkipEntity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEntitySkipFilter.Accept">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEntitySkipFilter.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIteratorFilter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIteratorFilter.Accept">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelIterator">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelIterator.FHasNext">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelIterator.FItems">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelIterator.FNext">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelIterator.NextI">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelIterator.OwnsItems">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelIterator.Advance">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelIterator.Count">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelIterator.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelIterator.HasNext">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelIterator.Init">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelIterator.Next">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelIterator.Reset">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

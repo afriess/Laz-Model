@@ -48,6 +48,7 @@ uses
   uRtfdLabel in 'Integrator\View\RtfdDiagram\uRtfdLabel.pas',
   uIterators in 'Model\uIterators.pas',
   uDocGen in 'Integrator\Doc\uDocGen.pas',
+  uFPDocGen in 'Integrator\Doc\uFPDocGen.pas',
   uDocumentation in 'Model\uDocumentation.pas',
   uJavaClassImport in 'Integrator\CodeIO\JavaClass\uJavaClassImport.pas',
   uJavaClass in 'Integrator\CodeIO\JavaClass\uJavaClass.pas',

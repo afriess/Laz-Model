@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uSettingsForm">
+      <descr/>
+      <element name="TSettingsForm">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.Button2">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.DiSaveCombo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.eEditorCommandLine">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.IDEChanged">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.Label1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.Label2">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.Label3">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.OkButton">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.ShellChanged">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.ShowAssocCheck">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.VisibilityCombo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.DelphiIDECheckClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.FormCreate">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.OkButtonClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.ReadSettings">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.SaveSettings">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.ShellCheckClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>
