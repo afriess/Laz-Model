@@ -269,6 +269,7 @@ type
   private
     FAncestor: TClass;
     FImplements: TObjectList;
+    FForwardSourceY: integer;
     procedure SetAncestor(const Value: TClass);
     //Ancestorlisteners
     procedure AncestorChange(Sender: TModelEntity);
@@ -292,6 +293,9 @@ type
     function GetImplements : IModelIterator;
     function GetDescendants : IModelIterator;
     function FindOperation(O : TOperation) : TOperation;
+    function HasForward: boolean;
+  published
+    property ForwardSourceY: Integer read FForwardSourceY write FForwardSourceY;
   end;
 
 
@@ -988,6 +992,11 @@ begin
     Break;
   Skip:
   end;
+end;
+
+function TClass.HasForward: boolean;
+begin
+  Result := (FForwardSourceY > 0);
 end;
 
 

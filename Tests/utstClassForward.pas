@@ -25,8 +25,16 @@ type
 
   TForward = class(TObject)
    public
-    function GetMe: string;
+    FString : string;
   end;
+  
+  TCanSeeEverthing = class(TObject)
+   public 
+    FForward : TForward;
+    FOther : TOther;
+  end;  
+   
+   
 
 
 implementation

@@ -27,12 +27,12 @@
         <seealso/>
       </element>
       <element name="TDocGen.DocFinished">
-        <short/>
+        <short>Allows child classes to clean up after processing the whole model.</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TDocGen.DocStart">
-        <short/>
+        <short>Allows child classes to initialse themselves before pushing data.</short>
         <descr/>
         <seealso/>
       </element>
@@ -47,17 +47,17 @@
         <seealso/>
       </element>
       <element name="TDocGen.TraverseModel">
-        <short/>
+        <short>Basic full model iteration for Classes and Interfaces.</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TDocGen.WriteClassDetail">
-        <short/>
+        <short>Iterates through all Classes for a pascal unit.</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TDocGen.WriteInterfaceDetail">
-        <short/>
+        <short>Iterates through all Interfaces for a pascal unit.</short>
         <descr/>
         <seealso/>
       </element>

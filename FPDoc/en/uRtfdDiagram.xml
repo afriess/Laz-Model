@@ -54,7 +54,7 @@
         <seealso/>
       </element>
       <element name="TRtfdDiagram.AddBox">
-        <short/>
+        <short>Add a 'Box' to the diagram (class/interface/package). </short>
         <descr/>
         <seealso/>
       </element>
@@ -99,7 +99,7 @@
         <seealso/>
       </element>
       <element name="TRtfdDiagram.GetClickAreas">
-        <short/>
+        <short>Returns list with str = 'x1,y1,x2,y2', obj = modelentity  </short>
         <descr/>
         <seealso/>
       </element>
@@ -169,7 +169,7 @@
         <seealso/>
       </element>
       <element name="TRtfdDiagram.ResolveAssociations">
-        <short/>
+        <short>Make arrows between boxes  </short>
         <descr/>
         <seealso/>
       </element>

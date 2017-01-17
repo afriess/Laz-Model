@@ -43,7 +43,7 @@ type
   public
     constructor Create(om: TObjectModel; AParent: TWinControl; AFeedback : IEldeanFeedback = nil); virtual;
     destructor Destroy; override;
-    //Current entity, all view integratros share the same instance
+    //Current entity, all view integrators share the same instance
     property CurrentEntity : TModelEntity read GetCurrentEntity write SetCurrentEntity;
   end;
 

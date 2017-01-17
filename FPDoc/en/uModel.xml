@@ -1039,6 +1039,9 @@
         <descr/>
         <seealso/>
       </element>
+    <element name="TClass.ForwardSourceY"><short>The line number in the source code this class was declared as forward.</short>
+      </element><element name="TClass.FForwardSourceY" link="#Laz-Model.uModel.TClass.ForwardSourceY"/><element name="TClass.HasForward"><short>Does this class have a forward declaration in the source.</short><descr>This is only intended for use when reading existing source. Generation from a new model will have to work out if and where a forward is needed.</descr>
+      </element>
     </module>
   </package>
 </fpdoc-descriptions>

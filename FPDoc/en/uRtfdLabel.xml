@@ -4,8 +4,15 @@
     <module name="uRtfdLabel">
       <descr/>
       <element name="TRtfdODLabel">
-        <short/>
-        <descr/>
+        <short>A lightwieght owner drawn label which inherits from TComponent instead of TControl.</short>
+        <descr>
+          <p>Created because there are no controls in Lazarus which have no mouse eventing.</p>
+          <p>This label will be given it's Top at create</p>
+          <p>Left will be global EnitiyLeftMargin</p>
+          <p>It will calculate it's Height which will be available to the parent
+  after the parents calls its WidthNeeded method which the parent
+  can ignore as it will be told it's Width at draw time.</p>
+        </descr>
         <seealso/>
       </element>
       <element name="TRtfdODLabel.Alignment">

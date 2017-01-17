@@ -2,10 +2,23 @@
 <fpdoc-descriptions>
   <package name="Laz-Model">
     <module name="uFPDocGen">
-      <descr/>
+      <short>Unit for maintaining FPDoc style documentation.</short>
+      <descr>/<p><b>How it works.</b>
+        </p><p>From the programmers point of view, Click the menu! Thats it!</p><p>What happens is that the program looks in the configured DocRoot directory (selectable via directory dialog, with a default in Config of ProjectRoot/FPDoc).
+It searches the directory for subdirs with 2 letters (ISO country codes, only by convention). These are the languages this run will generate for.</p><code>For each language
+  get or create a FPDoc project file (FPDoc.xml).
+  For each Unit in Model
+    check project for inclusion, add entries if not there.
+    get or create a Unit descriptions file {unitname}.xml
+        check for or create element entries for all classifiers in the unit.
+</code><p>As you can see you can safely run and rerun this adding new items to
+be documented as you go along. (Future feature some mechanism to remove entries which are no longer in the codebase, probably only needed to be used just before a release. Not a hard thing to do.)</p><p>Source control should store only the lang directories.
+(Future feature) Diagrams to be generated in DocRoot/images with links auto inserted into description files.</p><p>To generate docs for a language a symlink is made below the lang dir to the images dir. This is a workaround for FPDoc not generating all doc types properly unless images is a subdir of where the project/desc files are.</p><p>If you need to support another language just add an empty directory, generate and let your new collaborators at it.</p><img file="images/pFPDocGen.png" caption="FPDocGen Package Diagram"/>
+      </descr>
       <element name="TFPDocGen">
         <short/>
-        <descr/>
+        <descr><img file="images/cFPDocGen.png" caption="TFPDocGen Class Diagram"/>
+        </descr>
         <seealso>
         </seealso>
       </element>
@@ -35,8 +48,9 @@
         <seealso/>
       </element>
       <element name="TFPDocGen.FPackageName">
-        <short>The Package name being processed.</short>
-        <descr/>
+        <short>The FPDoc package name being processed. </short>
+        <descr><p>All FPDoc items belong to a package. #LCL and #FCL are common packages used in Lazarus.</p>
+        </descr>
         <seealso/>
       </element>
       <element name="TFPDocGen.FUnitsNode">
@@ -45,33 +59,44 @@
         <seealso/>
       </element>
       <element name="TFPDocGen.AddEntity">
-        <short/>
+        <short>Creates xml nodes for a classifier in the package description file.</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TFPDocGen.AddEnumLiterals">
-        <short/>
+        <short>Add entries for the members of an Enumeration DataType to the package description file.</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TFPDocGen.AddParentLinks">
-        <short/>
+        <short>Create a set of links to parent classes/ interfaces contained within the project. (unused testing)</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TFPDocGen.AddSkeletonConfig">
         <short>Fleshes out a new instance of FConfigFile with basic defaults.</short>
-        <descr/>
+        <descr><p>Adds the following elements to the empty xml document</p><ul><li>docproject</li><li>options</li><li>option * 4</li><li>packages</li><li>package</li><li>units</li><li>descriptions</li>
+          </ul><p>Called By</p><p><link id="TFPDocGen.GetConfigFile">GetConfigFile</link>
+          </p>
+        </descr>
         <seealso/>
       </element>
       <element name="TFPDocGen.AddSkeletonPackage">
-        <short/>
-        <descr/>
+        <short>Fleshes out a new instance of FPackageFile with basic defaults.</short>
+        <descr><p>Adds the following elements to the empty xml document</p><ul><li>fpdoc-descriptions</li><li>package</li><li>module</li><li>descr</li>
+          </ul><p><b>Called By</b>
+          </p><p><link id="TFPDocGen.GetPackageFile">GetPackageFile</link>
+          </p><p/>
+        </descr>
         <seealso/>
       </element>
       <element name="TFPDocGen.CheckConfigForUnit">
-        <short/>
-        <descr/>
+        <short>Checks the FPDoc.xml file for existance of unit file. </short>
+        <descr><p>If the unit does not exist in the FPDoc.xml file it creates the following elements</p><ul><li>description</li><li>unit</li>
+          </ul><p><b>Calls</b>
+          </p><p><link id="TFPDocGen.UnitInConfig">UnitInConfig</link>
+          </p>
+        </descr>
         <seealso/>
       </element>
       <element name="TFPDocGen.Destroy">
@@ -84,83 +109,107 @@
         <descr/>
         <seealso/>
       </element>
-      <element name="TFPDocGen.DocStart">
-        <short/>
+      <element name="TFPDocGen.DocStart" link="#Laz-Model.uDocGen.TDocGen.DocStart">
+        <short>Here is where we work out what languages to process before data arrives.</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TFPDocGen.GetConfigFile">
         <short>Gets the config file for the language being processed. Creates a skeleton file if it does not exist. Sets FConfigFile, FUnitsNode and FDescriptionsNode.</short>
-        <descr/>
+        <descr><p><b>Calls</b>
+          </p><p><link id="TFPDocGen.AddSkeletonConfig">AddSkeletonConfig</link>
+          </p>
+  
+            <p>Called By</p><p><link id="TFPDocGen.TraverseModel">TraverseModel</link>
+          </p>
+        </descr>
         <seealso/>
       </element>
       <element name="TFPDocGen.GetPackageElement">
-        <short/>
+        <short>Retrieves a classifier entry in the package file for further processing.</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TFPDocGen.GetPackageFile">
-        <short/>
-        <descr/>
+        <short>Retrieves or creates a package description file for the unit being processed.</short>
+        <descr><p><b>Calls</b>
+          </p><p><link id="TFPDocGen.AddSkeletonPackage">AddSkeletonPackage</link>
+          </p><p>Called By</p><p><link id="TFPDocGen.ProcessPackage">ProcessPackage</link>
+          </p>
+        </descr>
         <seealso/>
       </element>
       <element name="TFPDocGen.GetValidSubDirs">
-        <short/>
+        <short>Searches for 2 character directories  in the DestPath (ignoring ..) to use as language directories. Populates FDirs.</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TFPDocGen.HasPackageElement">
-        <short/>
+        <short>Queries the description file for the existance of a classifier.</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TFPDocGen.PackageDone">
-        <short/>
+        <short>Called when all classifiers / links have been processed.</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TFPDocGen.ProcessDataTypes">
-        <short/>
+        <short>Check and create any entries for DataTypes in the unit description file.</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TFPDocGen.ProcessPackage">
-        <short/>
+        <short>Entry procedure which creates any unknown classifiers or links in the unit descriptions file. </short>
         <descr/>
         <seealso/>
       </element>
       <element name="TFPDocGen.SaveConfigFile">
         <short>Saves the config file after all units are processed for current language.</short>
-        <descr/>
+        <descr><p>Called By</p><p><link id="TFPDocGen.TraverseModel">TraverseModel</link>
+          </p>
+        </descr>
         <seealso/>
       </element>
       <element name="TFPDocGen.SavePackageFile">
-        <short/>
+        <short>Save the completed package description file.</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TFPDocGen.TraverseModel">
-        <short/>
+        <short>Reworked model traversal to handle languages and DataTypes.</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TFPDocGen.UnitInConfig">
+        <short>Queries the FPDoc config file for the existance of a unit.</short>
+        
+        <seealso/>
+        <descr><p>Called By</p><p><link id="TFPDocGen.CheckConfigForUnit">CheckConfigForUnit</link>
+          </p>
+        </descr>
+      </element>
+      <element name="TFPDocGen.WriteClassDetail" link="#Laz-Model.uDocGen.TDocGen.WriteClassDetail">
         <short/>
         <descr/>
         <seealso/>
       </element>
-      <element name="TFPDocGen.WriteClassDetail">
-        <short/>
-        <descr/>
-        <seealso/>
-      </element>
-      <element name="TFPDocGen.WriteInterfaceDetail">
+      <element name="TFPDocGen.WriteInterfaceDetail" link="#Laz-Model.uDocGen.TDocGen.WriteInterfaceDetail">
         <short/>
         <descr/>
         <seealso/>
       </element>
       <element name="TFPDocGen.GetConfigFile.SubDir">
-        <short>subdirectories should be 2 letter ISO contry code.</short>
+        <short>Subdirectories should be 2 letter ISO contry code.</short>
+      </element>
+    <element name="TFPDocGen.SaveConfigFile.SubDir">
+      <short>subdirectories should be 2 letters ISO contry code.</short>
+      </element>
+    <element name="TFPDocGen.AddSkeletonPackage.pname"><short>Name of the unit which will documented by this file.</short>
+      </element><element name="TFPDocGen.SALinkExists"><short>Checks for the existence of a link in the given seealso section.</short><descr><p><b>Called By</b>
+          </p><p><link id="TFPDocGen.AddParentLinks">AddParentLinks</link>
+          </p>
+        </descr>
       </element>
     </module>
   </package>

@@ -24,9 +24,8 @@ unit uConst;
 
 interface
 
-
 const
-  ProgName = 'Eldean ESS-Model';
+  ProgName = 'Laz-Model';
   ProgVersion = '2.2';
 
   ProgMail = 'essmodel@eldean.se';
@@ -39,8 +38,6 @@ const
   {$ENDIF}
 
   RegKey = 'Software\Eldean\EssModel';
-
-  PathDelim = {$ifdef WIN32}'\'{$else}'/'{$endif};
 
 implementation
 

@@ -36,6 +36,7 @@ type
   TSimpleEngine = class(TPasTreeContainer)
   private
     fIsProgram: boolean;
+    CurModule: TPasModule;
   public
     constructor Create;
     function CreateElement(AClass: TPTreeElement; const AName: String;
@@ -56,13 +57,13 @@ type
       FUnit: TUnitPackage;
       fFilename: string;
       FGlobalDefines: TStringList;
-
+      FForwards: TStringList;
       function getVisibility(vis: TPasMemberVisibility): TVisibility;
       function getProcType(pt: TProcType): TOperationType;
-      function getClassifier(s: String): TClassifier;
+      function getClassifier(s: String; pType: TPasType = nil): TClassifier;
       function getInterfaceRef(s: string): TInterface;
       function GetDefaultValue(exp: TPasExpr):string;
-
+      function FindInForwards(clsName: string): TClass;
       procedure FillEnum(tp: TPasEnumType; te: TEnumeration);
 
       procedure AddOpDirectives(op: TOperation; Mods:TProcedureModifiers);
@@ -81,6 +82,8 @@ type
       procedure AddFunction(op: TOperation; proc: TPasFunction);
       procedure AddProperty(prop: TProperty; pproc: TPasProperty);
     public
+      constructor Create;
+      destructor Destroy; override;
       procedure ParseFileWithDefines( AModel: TAbstractPackage; AOM: TObjectModel; const GlobalDefines: TStringList );
     published
       property Filename: string read fFilename write fFilename;
@@ -121,13 +124,51 @@ begin
   Result := AClass.Create(AName, AParent);
   Result.Visibility := AVisibility;
   Result.SourceFilename := ASourceFilename;
+  if AClass.InheritsFrom(TPasModule) then
+    CurModule := TPasModule(Result);
   Result.SourceLinenumber := ASourceLinenumber;
   Result.DocComment := CurrentParser.SavedComments;
 end;
 
 function TSimpleEngine.FindElement(const AName: String): TPasElement;
+
+  function FindInModule(AModule: TPasModule; const LocalName: String): TPasElement;
+
+  var
+    l: TFPList;
+    i: Integer;
+
+  begin
+    If assigned(AModule.InterfaceSection) and
+       Assigned(AModule.InterfaceSection.Declarations) then
+      begin
+      l:=AModule.InterfaceSection.Declarations;
+      for i := 0 to l.Count - 1 do
+        begin
+        Result := TPasElement(l[i]);
+        if  CompareText(Result.Name, LocalName) = 0 then
+          exit;
+        end;
+      end;
+    Result := nil;
+  end;
+
+var
+  i: Integer;
+  Module: TPasElement;
 begin
-  Result := nil;
+  Result := FindInModule(CurModule, AName);
+  if not Assigned(Result) and assigned (CurModule.InterfaceSection) then
+    for i := CurModule.InterfaceSection.UsesList.Count - 1 downto 0 do
+    begin
+      Module := TPasElement(CurModule.InterfaceSection.UsesList[i]);
+      if Module.ClassType.InheritsFrom(TPasModule) then
+      begin
+        Result := FindInModule(TPasModule(Module), AName);
+        if Assigned(Result) then
+          exit;
+      end;
+    end;
 end;
 
 function TSimpleEngine.FindModule(const AName: String): TPasModule;
@@ -252,7 +293,9 @@ begin
         case cls.ObjKind of
           okObject, okClass:
           begin
-            ths := FUnit.AddClass(cls.Name);
+            ths := FindInForwards(cls.Name);
+            if not Assigned(ths) then
+              ths := FUnit.AddClass(cls.Name);
             ths.SourceY := cls.SourceLinenumber;
             ths.Documentation.Description := cls.DocComment;
             ths.Visibility := viPublic;
@@ -413,7 +456,7 @@ begin
            begin
               vari :=  TPasVariable(mems.Items[i]);
               attr := ths.AddAttribute(vari.Name);
-              attr.TypeClassifier := getClassifier(vari.VarType.name);
+              attr.TypeClassifier := getClassifier(vari.VarType.name,vari.VarType);
               attr.Visibility := getVisibility(vari.Visibility);
               attr.SourceY := TPasType(mems.Items[i]).SourceLinenumber;
               if (vmClass in vari.VarModifiers) then
@@ -498,8 +541,12 @@ end;
 // Generate a Class in the unknown bucket instead of a DataType style
 // Primitive. Otherwise we would have to chase the full heirachy all the way
 // down into the fcl.
-function TfpcParser.getClassifier(s: String): TClassifier;
+function TfpcParser.getClassifier(s: String; pType: TPasType): TClassifier;
+var
+  createForward: boolean;
 begin
+  createForward := False;
+
   if s = '' then s := 'Unidentified datatype';
   Result := FUnit.FindClassifier(s);
   if not Assigned(Result) then
@@ -508,14 +555,38 @@ begin
        Result := FOM.UnknownPackage.FindClassifier(s, False, TClass);
   if not Assigned(Result) then
      Result := FOM.UnknownPackage.FindClassifier(s);
+
+  // need to check for forwards
   if not Assigned(Result) then
   begin
-    if s[1] ='T' then   // HACK ALERT
-        Result := FOM.UnknownPackage.AddClass(s)
-    else
-        Result := FOM.UnknownPackage.AddDatatype(s);
-    // As we have had to create this in the unknown bucket
-    Result.IsPlaceholder := True;
+    if Assigned(ptype) then
+       case pType.ClassName of
+         'TPasClassType': createForward := TPasClassType(pType).IsForward;
+       end;
+
+
+    if createForward then
+      begin
+        if (pType is TPasClassType) then
+          begin
+            Result := FUnit.AddClass(s);
+            TClass(Result).ForwardSourceY := ptype.SourceLinenumber;
+          end
+         else
+           Result := FUnit.AddDatatype(s);
+         //TODO work out exactly what datatypes can be forwarded.
+         //TDataType(Result).ForwardSourceY := ptype.SourceLinenumber;
+        FForwards.AddObject(Result.Name, Result);
+      end
+    else // add to unknown package.
+      begin
+        if s[1] ='T' then   // HACK ALERT
+            Result := FOM.UnknownPackage.AddClass(s)
+        else
+            Result := FOM.UnknownPackage.AddDatatype(s);
+        // As we have had to create this in the unknown bucket
+        Result.IsPlaceholder := True;
+      end;
   end;
 end;
 
@@ -557,6 +628,20 @@ begin
     pekInherited:;
     pekSelf:;
   end;
+end;
+
+function TfpcParser.FindInForwards(clsName: string): TClass;
+var
+  index: integer;
+begin
+  index := FForwards.IndexOf(clsName);
+  if index > -1 then
+    begin
+      Result := TClass(FForwards.Objects[index]);
+      FForwards.Delete(index);
+    end
+  else
+    Result := nil;
 end;
 
 procedure TfpcParser.FillEnum(tp: TPasEnumType; te: TEnumeration);
@@ -647,7 +732,7 @@ begin
      par := op.AddParameter(arg.Name);
      par.SourceY := arg.SourceLinenumber;
      if Assigned (arg.ArgType) then
-       par.TypeClassifier := getClassifier(arg.ArgType.Name);
+       par.TypeClassifier := getClassifier(arg.ArgType.Name,arg.ArgType);
      if arg.Access = argConst then
        par.IsConst:= True;
      if Assigned(arg.ValueExpr) then
@@ -692,7 +777,7 @@ begin
      par := op.AddParameter(arg.Name);
      par.SourceY := arg.SourceLinenumber;
      if Assigned (arg.ArgType) then
-       par.TypeClassifier := getClassifier(arg.ArgType.Name);
+       par.TypeClassifier := getClassifier(arg.ArgType.Name, arg.ArgType);
   end;
   AddOpDirectives(op,proc.Modifiers);
 end;
@@ -725,7 +810,7 @@ begin
        argVar:par.Direction:=dkInOut;
      end;
      If Assigned (arg.ArgType) then
-       par.TypeClassifier := getClassifier(arg.ArgType.Name);
+       par.TypeClassifier := getClassifier(arg.ArgType.Name, arg.ArgType);
   end;
   AddOpDirectives(op,proc.Modifiers);
   op.ReturnValue := getClassifier(TPasFunctionType(proc.ProcType).ResultEl.ResultType.Name);
@@ -735,7 +820,18 @@ procedure TfpcParser.AddProperty(prop: TProperty; pproc: TPasProperty);
 begin
    prop.Visibility := getVisibility(pproc.Visibility);
    If Assigned (pproc.VarType) then
-     prop.TypeClassifier := getClassifier(pproc.VarType.Name);
+     prop.TypeClassifier := getClassifier(pproc.VarType.Name, pproc.VarType);
+end;
+
+constructor TfpcParser.Create;
+begin
+  FForwards := TStringList.Create;
+end;
+
+destructor TfpcParser.Destroy;
+begin
+  FreeAndNil(FForwards);
+  inherited Destroy;
 end;
 
 

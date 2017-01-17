@@ -32,6 +32,7 @@ uses
 
 
 type
+
   TRtfdDiagram = class(TDiagramIntegrator,
       IBeforeObjectModelListener, IAfterObjectModelListener,
       IAfterUnitPackageListener)
@@ -94,8 +95,6 @@ implementation
 uses
   uRtfdDiagramFrame;
 
-
-{ TRtfdDiagram }
 
 constructor TRtfdDiagram.Create(om: TObjectModel; AParent: TWinControl; AFeedback : IEldeanFeedback = nil);
 begin
@@ -232,8 +231,6 @@ begin
   FHasChanged := False;
 end;
 
-
-
 procedure TRtfdDiagram.ModelBeforeChange(Sender: TModelEntity);
 begin
   ErrorHandler.Trace(Format('%s : %s', ['ModelBeforeChange', ClassName]));
@@ -242,13 +239,11 @@ begin
   ClearDiagram;
 end;
 
-
 procedure TRtfdDiagram.ModelAfterChange(Sender: TModelEntity);
 begin
   ErrorHandler.Trace(Format('%s : %s', ['ModelAfterChange', ClassName]));
   InitFromModel;
 end;
-
 
 procedure TRtfdDiagram.PaintTo(Canvas: TCanvas; X, Y: integer; SelectedOnly : boolean);
 var
@@ -271,7 +266,6 @@ begin
   Panel.BackBitmap := OldBit;
 end;
 
-
 procedure TRtfdDiagram.ClearDiagram;
 begin
   if not (csDestroying in Panel.ComponentState) then
@@ -284,9 +278,6 @@ begin
   FHasChanged := False;
 end;
 
-
-
-//Add a 'Box' to the diagram (class/interface/package).
 procedure TRtfdDiagram.AddBox(E: TModelEntity);
 var
   Mi : IModelIterator;
@@ -372,8 +363,6 @@ begin
 
 end;
 
-
-//Make arrows between boxes
 procedure TRtfdDiagram.ResolveAssociations;
 var
   I : integer;
@@ -454,7 +443,6 @@ begin
     end;
 end;
 
-
 procedure TRtfdDiagram.SetPackage(const Value: TAbstractPackage);
 begin
   if Assigned(FPackage) and HasChanged then
@@ -470,7 +458,6 @@ begin
     Frame.ScrollBox.VertScrollBar.Position := 0;
   end;
 end;
-
 
 procedure TRtfdDiagram.UnitPackageAfterAddChild(Sender, NewChild: TModelEntity);
 begin
@@ -510,7 +497,6 @@ begin
     CurrentEntity := Package;
   end;
 end;
-
 
 function TRtfdDiagram.HasChanged: boolean;
 begin
@@ -625,7 +611,6 @@ begin
     end;
 end;
 
-
 procedure TRtfdDiagram.DoLayout;
 var
   Layout : TEssLayout;
@@ -646,7 +631,6 @@ begin
   end;
 end;
 
-
 function TRtfdDiagram.GetBox(const S: string): TRtfdBox;
 var
   I : integer;
@@ -657,8 +641,6 @@ begin
   else
     Result := BoxNames.Objects[I] as TRtfdBox;
 end;
-
-
 
 procedure TRtfdDiagram.SetVisibilityFilter(const Value: TVisibility);
 var
@@ -676,14 +658,12 @@ begin
   end;
 end;
 
-
 procedure TRtfdDiagram.GetDiagramSize(var W, H: integer);
 begin
   W := Panel.Width;
   H := Panel.Height;
 end;
 
-//Returns list with str = 'x1,y1,x2,y2', obj = modelentity
 function TRtfdDiagram.GetClickAreas: TStringList;
 var
   I : integer;
@@ -699,7 +679,6 @@ begin
     Result.AddObject(S,Box.Entity);
   end;
 end;
-
 
 procedure TRtfdDiagram.HideSelectedDiagramElements;
 var
@@ -806,7 +785,6 @@ begin
   end;
 end;
 
-
 procedure TRtfdDiagram.SetZoomedScroll(ScrollX, ScrollY, W, H: integer);
 var
   ScaleX,ScaleY,Scale : double;
@@ -877,7 +855,6 @@ begin
   end;
   L.Free;
 end;
-
 
 procedure TRtfdDiagram.ScreenCenterEntity(E: TModelEntity);
 var

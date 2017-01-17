@@ -31,8 +31,6 @@ uses
 
 type
 
-  { TMainForm }
-
   TMainForm = class(TForm)
     MainMenu1: TMainMenu;
     File1: TMenuItem;

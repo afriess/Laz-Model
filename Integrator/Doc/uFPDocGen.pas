@@ -1,5 +1,5 @@
 {
-  ESS-Model
+  Laz-Model
   Copyright (C) 2017 Peter Dyson. Initial Lazarus port
   Portions (C) 2002  Eldean AB, Peter Söderman, Ville Krumlinde
 
@@ -24,7 +24,7 @@ unit uFPDocGen;
 interface
 uses
   Classes, SysUtils, laz2_dom, laz2_XMLRead, laz2_XMLWrite,
-  uUseful, uModelEntity, uModel, uDocGen, uIterators;
+  uUseful, uModelEntity, uModel, uDocGen, uIterators, uConfig;
 
 type
 
@@ -49,6 +49,7 @@ type
       procedure ProcessPackage(P: TUnitPackage; Dir: string);
       procedure PackageDone(P: TUnitPackage; Dir: string);
       procedure ProcessDataTypes(P: TUnitPackage);
+      function SALinkExists(lnkName: string; seeNode: TDOMNode): boolean;
       procedure GetPackageFile(fname: string);
       procedure SavePackageFile(fname: string);
       procedure AddEnumLiterals(ent: TEnumeration);
@@ -59,14 +60,12 @@ type
       procedure TraverseModel; override;
       procedure WriteClassDetail(C : TClass); override;
       procedure WriteInterfaceDetail(I: TInterface); override;
-      procedure DocFinished; override;
     public
       destructor Destroy; override;
   end;
 
 
 implementation
-uses uConfig;
 
 procedure TFPDocGen.GetConfigFile(SubDir: String);
 var
@@ -117,8 +116,6 @@ procedure TFPDocGen.SaveConfigFile(SubDir: String);
 var
   fname: string;
 begin
-
-  // subdirectories should be 2 letters ISO contry code.
   if Length(SubDir) = 2 then
      fname := DestPath + SubDir + PathDelim + 'FPDoc.xml'
    else
@@ -298,6 +295,27 @@ begin
     end;
 end;
 
+function TFPDocGen.SALinkExists(lnkName: string; seeNode: TDOMNode): boolean;
+var
+  nod: TDOMNode;
+  attr: TDOMNode;
+begin
+  Result := False;
+  nod := seeNode.FirstChild;
+  while nod <> nil do
+  begin
+     attr := nod.Attributes.GetNamedItem('id');
+     if Assigned(attr) then
+       if TDOMAttr(attr).Value = lnkName then
+       begin
+          Result := True;
+          Break;
+       end;
+     nod := nod.NextSibling;
+  end;
+
+end;
+
 procedure TFPDocGen.SavePackageFile(fname: string);
 begin
   WriteXMLFile(FPackageFile, fname);
@@ -358,12 +376,15 @@ begin
 
   if (Assigned(par)) and (par.Owner<>Model.UnknownPackage) then
   begin
-    linkNode := FPackageFile.CreateElement('link');
     lnkName := par.Owner.Name + '.' + par.Name;
-    TDOMElement(linkNode).SetAttribute('id', lnkName);
-    TDOMElement(linkNode).TextContent := par.Name + ' {Parent of}';
-    seeNode.AppendChild(linkNode);
-    AddParentLinks(par,seeNode);
+    if not SALinkExists(lnkName, seeNode) then
+    begin
+      linkNode := FPackageFile.CreateElement('link');
+      TDOMElement(linkNode).SetAttribute('id', lnkName);
+      TDOMElement(linkNode).TextContent := par.Name + ' {Parent of}';
+      seeNode.AppendChild(linkNode);
+      AddParentLinks(par,seeNode);
+    end;
   end;
 
 end;
@@ -435,9 +456,7 @@ begin
     end;
 
     SaveConfigFile(FDirs[i]);
-
   end;
-
 end;
 
 procedure TFPDocGen.WriteClassDetail(C: TClass);
@@ -505,11 +524,6 @@ begin
       if not HasPackageElement(I.Name + '.' + ent.Name) then
            AddEntity(I.Name + '.' + ent.Name);
     end;
-
-end;
-
-procedure TFPDocGen.DocFinished;
-begin
 
 end;
 

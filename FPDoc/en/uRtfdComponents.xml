@@ -385,7 +385,7 @@
         <seealso/>
       </element>
       <element name="TRtfdUnitPackageDiagram">
-        <short/>
+        <short>Class to display mame of package at upper-left corner in a unitpackage diagram </short>
         <descr/>
         <seealso>
           <link id="uRtfdComponents.TRtfdCustomLabel">TRtfdCustomLabel {Parent of}</link>
@@ -451,7 +451,7 @@
         <seealso/>
       </element>
       <element name="TVisibilityLabel">
-        <short/>
+        <short>Left-justified label with visibility-icon </short>
         <descr/>
         <seealso>
           <link id="uRtfdComponents.TRtfdCustomLabel">TRtfdCustomLabel {Parent of}</link>
@@ -467,6 +467,8 @@
         <short/>
         <descr/>
         <seealso/>
+      </element>
+    <element name="TRtfdBoxClass"><short>Baseclass for a diagram-panel</short>
       </element>
     </module>
   </package>
