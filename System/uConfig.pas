@@ -25,7 +25,9 @@ unit uConfig;
 interface
 
 uses
-  Classes, IniFiles;
+  SysUtils, IniFiles,
+  LResources;
+
 
 type
   //Save changed diagram layout setting
@@ -40,6 +42,10 @@ type
     FDiShowAssoc: boolean;
     FDiVisibilityFilter: integer;
     FEditorCommandLine: String;
+    FDocGenImages: boolean;
+    FDocsFromFPDoc: boolean;
+    FProjectName: string;
+    FDocsDir: string;
   public
     constructor Create;
     destructor Destroy; override;
@@ -62,15 +68,16 @@ type
     property DiSave : TDiSaveSetting read FDiSave write FDiSave;
     property DiShowAssoc : boolean read FDiShowAssoc write FDiShowAssoc;
     property DiVisibilityFilter : integer read FDiVisibilityFilter write FDiVisibilityFilter;
+    property ProjectName: string read FProjectName write FProjectName;
+    property DocGenImages: boolean read FDocGenImages write FDocGenImages default True;
+    property DocsDir: string read FDocsDir write FDocsDir;
+    property DocsFromFPDoc: boolean read FDocsFromFPDoc write FDocsFromFPDoc default True;
   end;
 
 var
   Config: TConfig;
 
 implementation
-
-uses
-  Forms, SysUtils, LResources;
 
 const
   cSettings = 'Settings';
@@ -93,6 +100,11 @@ begin
   FDiShowAssoc := ReadInt('DiShowAssoc',0)<>0;
   FDiVisibilityFilter := ReadInt('DiVisibilityFilter',0);
   FEditorCommandLine := ReadStr('EditorCommandLine','');
+
+  // TODO PROJECT SETTINGS
+  FProjectName := 'Laz-Model';
+  FDocsDir := 'FPDoc';
+
 end;
 
 destructor TConfig.Destroy;

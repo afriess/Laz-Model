@@ -24,8 +24,10 @@ unit uViewIntegrator;
 
 interface
 
-uses uIntegrator, uModel, uModelEntity, Controls, Graphics,
-      IniFiles, Classes, uFeedback, Contnrs, Types;
+uses
+  Classes, SysUtils, Contnrs, Types, IniFiles, math,
+  Controls, Forms, Graphics,
+  uIntegrator, uModel, uModelEntity, uFeedback, uConfig;
 
 type
 
@@ -41,7 +43,7 @@ type
   public
     constructor Create(om: TObjectModel; AParent: TWinControl; AFeedback : IEldeanFeedback = nil); virtual;
     destructor Destroy; override;
-    //Current entity, all view integratros share the same instance
+    //Current entity, all view integrators share the same instance
     property CurrentEntity : TModelEntity read GetCurrentEntity write SetCurrentEntity;
   end;
 
@@ -93,7 +95,7 @@ type
 
 implementation
 
-uses uRtfdDiagram, SysUtils, Forms,  math, uConfig;
+uses uRtfdDiagram;
 
 var
   _CurrentEntity : TModelEntity = nil;

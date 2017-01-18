@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uCodeIntegrator">
+      <descr/>
+      <element name="TCodeIntegrator">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIntegrator.TTwowayIntegrator">TTwowayIntegrator {Parent of}</link>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TCodeIntegrator.CodeProvider">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeIntegrator.FCodeProvider">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCodeIntegrator.SetCodeProvider">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

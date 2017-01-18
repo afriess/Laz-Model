@@ -30,7 +30,9 @@ unit uModelEntity;
 
 interface
 
-uses Classes, uDocumentation;
+uses
+  Classes, Sysutils, LCLIntf, LCLType,
+  uDocumentation;
 
 type
   TListenerMethodType = (mtBeforeChange, mtBeforeAddChild, mtBeforeRemove, mtBeforeEntityChange,
@@ -38,7 +40,20 @@ type
 
   TVisibility = (viPrivate, viProtected, viPublic, viPublished);
 
-  TModelEntity = class(TInterfacedObject)
+
+  {
+    TModelEntity is the representation of UML 2.5 NamedElement abstract class.
+
+    This is documented in Section 7.8.9 of the Formal Spec.
+
+    This is inherently a PackageableElement [7.4.3.3] as its visibility may
+    change depending on the owning package.
+
+    The original code seems to assume that all NamedElements are owned at
+    the package level and derive the NameSpace heirarchy from package ownership.
+
+  }
+  TModelEntity = class(TInterfacedPersistent)
   private
     function GetRoot: TModelEntity;
   protected
@@ -60,6 +75,7 @@ type
     procedure Fire(Method: TListenerMethodType; Info: TModelEntity = nil); virtual;
     function GetSourcefilename: String; virtual;
     procedure SetSourcefilename(const Value: String); virtual;
+    function GetDescription: string;
     {IUnknown, behövs för att kunna vara lyssnare}
     function QueryInterface(const IID: TGUID; out Obj): HResult;
     function _AddRef: Integer;
@@ -69,16 +85,20 @@ type
     destructor Destroy; override;
     procedure AddListener(NewListener: IUnknown);
     procedure RemoveListener(Listener: IUnknown);
-    property Name: string read FName write SetName;
     property FullName: string read GetFullName;
     property Owner: TModelEntity read FOwner write FOwner;
-    property Visibility: TVisibility read FVisibility write SetVisibility;
     property Locked: boolean read GetLocked write FLocked;
     property Root : TModelEntity read GetRoot;
     property Documentation : TDocumentation read FDocumentation;
-    property Sourcefilename: String read GetSourcefilename write SetSourcefilename;
     property SourceX: Integer read FSourceX write FSourceX;
+  published
+    property Name: string read FName write SetName;
+    property Visibility: TVisibility read FVisibility write SetVisibility;
+
+    // TODO These are read only so are only here while developing Model
+    property Sourcefilename: String read GetSourcefilename write SetSourcefilename;
     property SourceY: Integer read FSourceY write FSourceY;
+    property Description : string read GetDescription;
   end;
 
   TModelEntityClass = class of TModelEntity;
@@ -105,12 +125,10 @@ var
   CurrentSourcefilename: PString;
   CurrentSourceX: PInteger;
   CurrentSourceY: PInteger;
+
 implementation
 
-uses Sysutils, LCLIntf, LCLType, uListeners ;
-
-
-{ TModelEntity }
+uses uListeners;
 
 constructor TModelEntity.Create(AOwner: TModelEntity);
 begin
@@ -152,7 +170,6 @@ procedure TModelEntity.RemoveListener(Listener: IUnknown);
 begin
   self.Listeners.Remove(Listener);
 end;
-
 
 procedure TModelEntity.SetName(const Value: string);
 var
@@ -225,7 +242,6 @@ begin
     end;
 end;
 
-
 function TModelEntity.QueryInterface(const IID: TGUID; out Obj): HResult;
 begin
   if GetInterface(IID, Obj) then Result := S_OK
@@ -268,6 +284,11 @@ end;
 procedure TModelEntity.SetSourcefilename(const Value: String);
 begin
  if Owner <> nil then Owner.Sourcefilename := Value;
+end;
+
+function TModelEntity.GetDescription: string;
+begin
+  Result := FDocumentation.Description;
 end;
 
 initialization

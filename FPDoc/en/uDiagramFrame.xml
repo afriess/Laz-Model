@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uDiagramFrame">
+      <descr/>
+      <element name="TDiagramFrame">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.ActionList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.Bypass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.ClassInterfacePopupMenu">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.ConnectionsCombo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.Diagram">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.Hide1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.Hide2">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.HideDiagramElementAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.Label1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.Label2">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.LayoutButton">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.Model">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.OpenButton">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.OpenSelectedPackageAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.Openselectedpackageindiagram1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.PackagePopupMenu">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.Panel1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.ScrollBox">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.VisibilityCombo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.ConnectionsComboChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.HideDiagramElementActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.IAfterObjectModelListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.IBeforeObjectModelListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.ModelAfterChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.ModelBeforeChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.OnUpdateToolbar">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.VisibilityComboChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

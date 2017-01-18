@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uMainModule">
+      <descr/>
+      <element name="TMainModule">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.AboutAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.ActionList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.CopyDiagramClipboardAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.Diagram">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.DocGenAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.DocGenPreviewAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.ExportEmxAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.ExportXmiAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.FDiagram">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.Feedback">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.FileOpenAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.FModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.FTreeEditView">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.FTreeView">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.LayoutDiagramAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.Model">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.OpenFolderAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.PrintDiagramAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.RecentFiles">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.RecentOpenFolderPath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.SaveDiagramAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.SettingsAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.TreeEditShow">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.UnhideElementsAction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.AboutActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.CopyDiagramClipboardActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.DataModuleCreate">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.DataModuleDestroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.DocGenActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.DocGenPreviewActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.DoDocGen">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.DoEmxFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.DoXmiFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.DropFileTargetDrop">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.ExportEmxActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.ExportXmiActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.FileOpenActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.LayoutDiagramActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.OnRecentFilesClicked">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.OpenFolderActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.ProcessCommandLine">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.RefreshRecentFiles">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.SaveDiagramActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.SettingsActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.TreeEditShowExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.UnhideElementsActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainModule.UnhideElementsActionUpdate">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

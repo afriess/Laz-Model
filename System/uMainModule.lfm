@@ -5,78 +5,80 @@ object MainModule: TMainModule
   left = 219
   top = 203
   Height = 540
-  HorizontalOffset = 225
-  VerticalOffset = 306
+  HorizontalOffset = 525
+  VerticalOffset = 112
   Width = 783
   object ActionList: TActionList
     left = 81
     top = 128
     object CopyDiagramClipboardAction: TAction
-      Caption = 'Copy diagram to clipboard'
+      Caption = '&Copy Diagram to Clipboard'
       Enabled = False
       OnExecute = CopyDiagramClipboardActionExecute
       ShortCut = 16451
     end
     object PrintDiagramAction: TAction
-      Caption = 'Print diagram'
+      Caption = '&Print diagram'
       Visible = False
     end
     object DocGenAction: TAction
-      Caption = 'Generate documentation'
+      Caption = '&Generate Documentation'
       Enabled = False
       OnExecute = DocGenActionExecute
     end
     object AboutAction: TAction
-      Caption = 'About...'
+      Caption = '&About ...'
       OnExecute = AboutActionExecute
     end
     object ExportXmiAction: TAction
-      Caption = 'Export model to XMI-file'
+      Caption = 'Export Model to &XMI-file'
       Enabled = False
       OnExecute = ExportXmiActionExecute
     end
     object LayoutDiagramAction: TAction
-      Caption = 'Layout diagram'
+      Caption = '&Layout Diagram'
       Enabled = False
       Hint = 'Layout'
       OnExecute = LayoutDiagramActionExecute
     end
     object FileOpenAction: TAction
-      Caption = 'Open...'
+      Caption = '&Open ...'
       Hint = 'Open...'
       OnExecute = FileOpenActionExecute
     end
-    object ExitAction: TAction
-      Caption = 'Exit'
-      OnExecute = ExitActionExecute
-    end
     object SettingsAction: TAction
-      Caption = 'Change settings...'
+      Caption = '&Settings ...'
       OnExecute = SettingsActionExecute
     end
     object UnhideElementsAction: TAction
-      Caption = 'Show hidden diagram elements'
+      Caption = 'Show &Hidden Diagram Elements'
       OnExecute = UnhideElementsActionExecute
       OnUpdate = UnhideElementsActionUpdate
     end
     object SaveDiagramAction: TAction
-      Caption = 'Save as picture...'
+      Caption = '&Save as Picture ...'
       Enabled = False
       OnExecute = SaveDiagramActionExecute
     end
     object DocGenPreviewAction: TAction
-      Caption = 'Preview documentation'
+      Caption = 'Preview Documentation'
       Enabled = False
       OnExecute = DocGenPreviewActionExecute
     end
     object OpenFolderAction: TAction
-      Caption = 'Open folder...'
+      Caption = 'Open &Folder ...'
       OnExecute = OpenFolderActionExecute
     end
     object ExportEmxAction: TAction
-      Caption = 'Export model to EMX-file'
+      Caption = 'Export Model to EMX-file'
       Enabled = False
       OnExecute = ExportEmxActionExecute
+    end
+    object TreeEditShow: TAction
+      Caption = 'TreeEditShow'
+      DisableIfNoHandler = False
+      Enabled = False
+      OnExecute = TreeEditShowExecute
     end
   end
 end

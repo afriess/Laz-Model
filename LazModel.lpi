@@ -11,12 +11,14 @@
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="EssModel"/>
+      <Title Value="LazModel"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
+    <LazDoc Paths=".\FPDoc\en" PackageName="Laz-Model"/>
     <i18n>
-      <EnableI18N LFM="False"/>
+      <EnableI18N Value="True"/>
+      <OutDir Value="locale"/>
     </i18n>
     <VersionInfo>
       <StringTable ProductVersion=""/>
@@ -60,16 +62,20 @@
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
+        <CommandLineParams Value="--lang fi"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="1">
+    <RequiredPackages Count="2">
       <Item1>
-        <PackageName Value="LCL"/>
+        <PackageName Value="RunTimeTypeInfoControls"/>
       </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
     </RequiredPackages>
-    <Units Count="44">
+    <Units Count="49">
       <Unit0>
-        <Filename Value="EssModel.lpr"/>
+        <Filename Value="LazModel.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
@@ -156,7 +162,9 @@
       <Unit19>
         <Filename Value="Integrator\View\RtfdDiagram\uRtfdDiagramFrame.pas"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="RtfdDiagramFrame"/>
         <HasResources Value="True"/>
+        <ResourceBaseClass Value="Frame"/>
       </Unit19>
       <Unit20>
         <Filename Value="Model\uIterators.pas"/>
@@ -266,6 +274,29 @@
         <Filename Value="Integrator\View\RtfdDiagram\uRtfdLabel.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit43>
+      <Unit44>
+        <Filename Value="Integrator\View\LzmTreeEdit\uClassTreeEditIntegrator.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="Integrator\View\LzmTreeEdit\uClassTreeEditForm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ClassTreeEditForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="Integrator\Doc\uFPDocGen.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="locale\Laz-Model.fi.po"/>
+        <IsPartOfProject Value="True"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="locale\Laz-Model.po"/>
+        <IsPartOfProject Value="True"/>
+      </Unit48>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -274,7 +305,7 @@
     <SearchPaths>
       <IncludeFiles Value="Components;System;Model;Integrator\Code\Delphi;Integrator;CodeProvider;Integrator\CodeIO;Integrator\Code;Integrator\View;Integrator\View\RtfdDiagram;Integrator\Doc;Integrator\CodeIO\JavaClass;Integrator\Export;$(ProjOutDir)"/>
       <Libraries Value="Components"/>
-      <OtherUnitFiles Value="Components;System;Model;Integrator\Code\Delphi;Integrator;CodeProvider;Integrator\CodeIO;Integrator\Code;Integrator\View;Integrator\View\RtfdDiagram;Integrator\Doc;Integrator\CodeIO\JavaClass;Integrator\Export"/>
+      <OtherUnitFiles Value="Components;System;Model;Integrator\Code\Delphi;Integrator;CodeProvider;Integrator\CodeIO;Integrator\Code;Integrator\View;Integrator\View\RtfdDiagram;Integrator\Doc;Integrator\CodeIO\JavaClass;Integrator\Export;Integrator\View\LzmTreeEdit;C:\lazarus32\fpc\3.0.0\source\packages\fcl-passrc\src\"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\Debug"/>
       <ObjectPath Value="Components"/>
     </SearchPaths>
@@ -296,6 +327,7 @@
     </CodeGeneration>
     <Linking>
       <Debugging>
+        <UseHeaptrc Value="True"/>
         <UseExternalDbgSyms Value="True"/>
       </Debugging>
       <Options>
@@ -304,9 +336,12 @@
         </Win32>
       </Options>
     </Linking>
+    <Other>
+      <CustomOptions Value="-dDEBUG"/>
+    </Other>
   </CompilerOptions>
   <Debugging>
-    <Exceptions Count="3">
+    <Exceptions Count="7">
       <Item1>
         <Name Value="EAbort"/>
       </Item1>
@@ -316,6 +351,18 @@
       <Item3>
         <Name Value="EFOpenError"/>
       </Item3>
+      <Item4>
+        <Name Value="Exception"/>
+      </Item4>
+      <Item5>
+        <Name Value="EScannerError"/>
+      </Item5>
+      <Item6>
+        <Name Value="EParserError"/>
+      </Item6>
+      <Item7>
+        <Name Value="EInvalidPointer"/>
+      </Item7>
     </Exceptions>
   </Debugging>
 </CONFIG>

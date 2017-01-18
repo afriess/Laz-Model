@@ -24,17 +24,15 @@ unit uCodeProvider;
 
 interface
 
-uses Classes, uFeedback;
+uses
+  Classes, SysUtils, uFeedback, uConst;
 
 type
-  { Enum specifying the reason OnCodeChange was called.}
+
   TCodeChangeType = (cctAdd, cctRemove, cctChange);
 
   TCodeChangeEvent = procedure(ChangeType: TCodeChangeType; Namn: string) of object;
 
-  {
-    Abstract baseclass for sourcecode providers
-  }
   TCodeProvider = class
   private
     FOnCodeChange: TCodeChangeEvent;
@@ -52,33 +50,18 @@ type
     constructor Create(AFeedback : IEldeanFeedback = nil);
     destructor Destroy; override;
 
+    function LocateFile(const AName: string): string; virtual; abstract;
     function LoadStream(const AName: string): TStream; virtual; abstract;
     procedure SaveStream(const AName: string; AStream: TStream); virtual; abstract;
 
-    { Add a path to the search path list.}
     procedure AddSearchPath(APath: string);
 
-    { Locate a unit and return the full path to it. }
-    function LocateFile(const AName: string): string; virtual; abstract;
-
     property Active: Boolean read FActive write SetActive;
-
-    {
-      Stringlist specifying the searchpath to be used when searching for included
-      units.
-    }
     property SearchPath: TStringList read FSearchPath;
-
-    { Event to be called when there are external changes to the source detected }
     property OnCodeChange: TCodeChangeEvent read FOnCodeChange write FOnCodeChange;
   end;
 
-
 implementation
-
-uses SysUtils, uConst;
-
-{ TCodeProvider }
 
 procedure TCodeProvider.AddChangeWatch(AName: string);
 begin
@@ -120,7 +103,7 @@ procedure TCodeProvider.SetActive(const Value: Boolean);
 begin
   if (not Active) and Value then
   begin
-      // Activate soruce change hook
+      // Activate source change hook
     HookChanges;
     FActive := Value;
   end

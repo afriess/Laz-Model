@@ -24,14 +24,23 @@ unit uMainModule;
 
 interface
 
-
 uses
-  LCLIntf, LCLType,  SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  uModel, uIntegrator, ufpcIntegrator, ActnList, uViewIntegrator,
-  {$IFDEF DRAG_SUPPORT}DropSource, DropTarget, {$ENDIF}Menus, uFeedback, uTreeViewIntegrator,ExtCtrls;
+  SysUtils, Classes, Contnrs,
+  LCLIntf, LCLType, Graphics, Controls, ExtCtrls, Forms, Dialogs, Menus, Clipbrd,
+  Printers, ActnList, DefaultTranslator,
+  {$IFDEF DRAG_SUPPORT}DropSource, DropTarget,{$ENDIF}
+  uModel, uIntegrator, ufpcIntegrator, uViewIntegrator,
+  uFeedback, uClassTreeEditIntegrator, uClassTreeEditForm, uTreeViewIntegrator,
+  uFileProvider, uDocGen, uConfig, uJavaClassImport, uJavaParser,
+  {$IFDEF ARGO_XMI}uXmiExportArgoUML, {$ELSE}uXmiExport, {$ENDIF}
+  uConst, uError, uAboutForm, uSettingsForm, uZoomFrame, uEmxExport;
 
 type
+
+  { TMainModule }
+
   TMainModule = class(TDataModule)
+    TreeEditShow: TAction;
     ActionList: TActionList;
     CopyDiagramClipboardAction: TAction;
     PrintDiagramAction: TAction;
@@ -40,12 +49,10 @@ type
     ExportXmiAction: TAction;
     LayoutDiagramAction: TAction;
     FileOpenAction: TAction;
-    ExitAction: TAction;
     SettingsAction: TAction;
     UnhideElementsAction: TAction;
     SaveDiagramAction: TAction;
     DocGenPreviewAction: TAction;
-    CloseTimer: TTimer;
     OpenFolderAction: TAction;
     ExportEmxAction: TAction;
     procedure DataModuleCreate(Sender: TObject);
@@ -57,23 +64,22 @@ type
     procedure ExportXmiActionExecute(Sender: TObject);
     procedure LayoutDiagramActionExecute(Sender: TObject);
     procedure FileOpenActionExecute(Sender: TObject);
-    procedure ExitActionExecute(Sender: TObject);
     procedure SettingsActionExecute(Sender: TObject);
+    procedure TreeEditShowExecute(Sender: TObject);
     procedure UnhideElementsActionUpdate(Sender: TObject);
     procedure UnhideElementsActionExecute(Sender: TObject);
     procedure SaveDiagramActionExecute(Sender: TObject);
     procedure DocGenPreviewActionExecute(Sender: TObject);
-    procedure CloseTimerTimer(Sender: TObject);
     procedure OpenFolderActionExecute(Sender: TObject);
     procedure ExportEmxActionExecute(Sender: TObject);
   private
-    { Private declarations }
     FModel: TObjectModel;
     FDiagram: TDiagramIntegrator;
     //FBackEnd: TCodeIntegrator;
     RecentFiles : TStringList;
     RecentOpenFolderPath : string;
     FTreeView : TTreeViewIntegrator;
+    FTreeEditView : TClassTreeEditIntegrator;
     {$if Defined(WIN32) and Defined(DRAG_SUPPORT)}
     Drop : TDropFileTarget;
     {$ifend}
@@ -88,7 +94,6 @@ type
     //property BackEnd: TCodeIntegrator read FBackEnd;
     property Diagram: TDiagramIntegrator read FDiagram;
   public
-    { Public declarations }
     procedure LoadProject(FileNames : TStrings); overload;
     procedure LoadProject(FileName : string); overload;
 
@@ -100,22 +105,8 @@ var
 
 implementation
 
-uses uMainForm,
-  Clipbrd,
-  Printers,
-  uFileProvider,
-  uDocGen,
-  uConfig,
-  uJavaClassImport,
-  uJavaParser,
-  {$IFDEF ARGO_XMI}uXmiExportArgoUML, {$ELSE}uXmiExport, {$ENDIF}
-  uConst,
-  uError,
-  Contnrs,
-  uAboutForm,
-  uSettingsForm,
-  uZoomFrame,
-  uEmxExport;
+uses
+  uMainForm;
 
 {$R *.lfm}
 
@@ -138,6 +129,13 @@ begin
   FTreeView := TTreeViewIntegrator.Create(FModel,MainForm.TreePanel,Feedback);
 
   TZoomFrame.Create(MainForm.ZoomPanel,Diagram);
+  {$IFDEF DEBUG}
+  FTreeEditView := TClassTreeEditIntegrator.Create(FModel,ClassTreeEditForm, Feedback);
+ // ErrorHandler.SetTraceMode(trShowWindow);   // This leaks memory
+                                               // comment out before doing
+                                               // heaptrc runs until fixed.
+  {$ENDIF DEBUG}
+
 
   {$if Defined(WIN32) and Defined(DRAG_SUPPORT)}
   Drop := TDropFileTarget.Create(Self);
@@ -160,12 +158,14 @@ begin
   if Assigned(Drop) then
     Drop.Unregister;
   {$ifend}
+  {$IFDEF DEBUG}
+  FreeAndNil(FTreeEditView);
+  {$ENDIF DEBUG}
 
   FreeAndNil(FDiagram);
 //  FreeAndNil(FBackEnd);
   FreeAndNil(FTreeView);
   FreeAndNil(FModel);
-
   FreeAndNil(RecentFiles);
 end;
 
@@ -237,6 +237,9 @@ begin
   SaveDiagramAction.Enabled := True;
   CopyDiagramClipboardAction.Enabled := True;
   ExportEmxAction.Enabled := True;
+  {$IFDEF DEBUG}
+  TreeEditShow.Enabled := True;
+  {$ENDIF DEBUG}
 end;
 
 procedure TMainModule.LoadProject(FileName : string);
@@ -288,8 +291,6 @@ var
 begin
   F := TAboutForm.Create(nil);
   try
-    F.IconImage.Picture.Icon.Handle := LoadIcon(HInstance,'MAINICON');
-    F.NameLabel.Caption := uConst.ProgName + ' ' + uConst.ProgVersion;
     F.ShowModal;
   finally
     F.Free;
@@ -396,8 +397,8 @@ begin
         InShowHelp
       else if (S='-traceon') then
         //ignore
-      else if (S<>'') and (S[1]='-') then
-        ShowMessage('Ignoring unknown switch: ' + S)
+ //     else if (S<>'') and (S[1]='-') then
+      //  ShowMessage('Ignoring unknown switch: ' + S)
       else if (S<>'') and (S[1]<>'-') then
         InOne( ParamStr(I) );
     end;
@@ -411,11 +412,11 @@ begin
       DoDocGen(False,DocGenDir);
     if IsXmi then
       DoXmiFile(XmiFile);
-    if IsDocGen or IsXmi then
+    //if IsDocGen or IsXmi then
       //Delayed exit by using a timer, this is so that all global objects have
       //time to initialize (MainForm, MainModule). Otherwise this would be a
       //special case exit.
-      CloseTimer.Enabled := True;
+      //CloseTimer.Enabled := True; <- Did not work, removed
 
   finally
     Files.Free;
@@ -463,7 +464,7 @@ begin
 
   if not Assigned(D) then
   begin
-    D := TOpenDialog.Create(MainForm);
+    D := TOpenDialog.Create(Self);
     D.Filter := Filter;
   end;
   if D.Execute then
@@ -479,11 +480,6 @@ begin
   end;
 end;
 
-
-procedure TMainModule.ExitActionExecute(Sender: TObject);
-begin
-  Application.MainForm.Close;
-end;
 
 procedure TMainModule.DoDocGen(IsPreview : boolean; const DestPath: string = '');
 var
@@ -511,6 +507,11 @@ begin
   finally
     F.Free;
   end;
+end;
+
+procedure TMainModule.TreeEditShowExecute(Sender: TObject);
+begin
+   ClassTreeEditForm.Show;
 end;
 
 procedure TMainModule.UnhideElementsActionUpdate(Sender: TObject);
@@ -557,7 +558,7 @@ begin
   SetLength(Items,RecentFiles.Count);
   for I := 0 to RecentFiles.Count-1 do
   begin
-    M := TMenuItem.Create(MainForm);
+    M := TMenuItem.Create(MainForm.ReopenMenuItem);
     M.Caption := '&' + IntToStr(I) + ' ' + RecentFiles[I];
     M.OnClick := @OnRecentFilesClicked;
     M.Tag := I;
@@ -577,7 +578,7 @@ const
 begin
   if not Assigned(D) then
   begin
-    D := TSaveDialog.Create(MainForm);
+    D := TSaveDialog.Create(Self);
     D.InitialDir := ExtractFilePath( Model.ModelRoot.GetConfigFile );
     D.Filter := 'PNG files (*.png)|All files (*.*)|*.*';
   end;
@@ -594,11 +595,6 @@ end;
 procedure TMainModule.DocGenPreviewActionExecute(Sender: TObject);
 begin
   DoDocGen(True);
-end;
-
-procedure TMainModule.CloseTimerTimer(Sender: TObject);
-begin
-  ExitAction.Execute;
 end;
 
 procedure TMainModule.OpenFolderActionExecute(Sender: TObject);

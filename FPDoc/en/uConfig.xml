@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uConfig">
+      <descr/>
+      <element name="TDiSaveSetting">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiSaveSetting.dsAlways">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiSaveSetting.dsAsk">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiSaveSetting.dsNever">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.DiSave">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.DiShowAssoc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.DiVisibilityFilter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.DocGenImages">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.DocsDir">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.EditorCommandLine">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.FDiSave">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.FDiShowAssoc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.FDiVisibilityFilter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.FDocGenImages">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.FDocsDir">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.FEditorCommandLine">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.FIni">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.FProjectName">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.IsLimitedColors">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.IsTerminating">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.ProjectName">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.GetResource">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.ReadBool">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.ReadInt">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.ReadStr">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.StoreSettings">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.WriteBool">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.WriteInt">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConfig.WriteStr">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    <element name="TConfig.DocsFromFPDoc"><short>If set will get documentation from the configured DocDir.</short>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

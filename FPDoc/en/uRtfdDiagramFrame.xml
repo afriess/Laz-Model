@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uRtfdDiagramFrame">
+      <descr/>
+      <element name="TRtfdDiagramFrame">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uDiagramFrame.TDiagramFrame">TDiagramFrame {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdDiagramFrame.DiaBackImage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagramFrame.VisPrivateImage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagramFrame.VisProtectedImage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagramFrame.VisPublicImage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagramFrame.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagramFrame.OpenSelectedPackageActionExecute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

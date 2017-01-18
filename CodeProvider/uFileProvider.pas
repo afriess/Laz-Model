@@ -23,13 +23,14 @@ unit uFileProvider;
 {$mode objfpc}{$H+}
 
 interface
-uses Classes, uCodeProvider;
+
+uses
+  Classes, SysUtils,
+  uCodeProvider, uConfig;
+
 
 type
 
-  {
-    Implementation of a TCodeProvider using the physical filesystem.
-  }
   TFileProvider = class(TCodeProvider)
   protected
     procedure HookChanges; override;
@@ -41,10 +42,6 @@ type
   end;
 
 implementation
-
-uses SysUtils, uConfig;
-
-{ TFileProvider }
 
 function TFileProvider.LoadStream(const AName: string): TStream;
 begin

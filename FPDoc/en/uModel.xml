@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uModel">
+      <descr/>
+      <element name="TAggregationKind">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAggregationKind.akNone">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAggregationKind.akShared">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAggregationKind.akComposite">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCallModifier">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCallModifier.cmDefault">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCallModifier.cmRegister">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCallModifier.cmCdecl">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCallModifier.cmPascal">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCallModifier.cmStdCall">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCallModifier.cmSafeCall">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCallModifier.cmInline">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TCallModifiers">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassOperationType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassOperationType.cotNone">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassOperationType.cotClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassOperationType.cotStaticClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodDirective">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodDirective.mdDefault">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodDirective.mdVirtual">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodDirective.mdDynamic">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodDirective.mdAbstract">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodDirective.mdOverride">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodDirective.mdReintroduce">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMethodDirective.mdMessage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperationType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperationType.otConstructor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperationType.otDestructor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperationType.otProcedure">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperationType.otFunction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameterDirectionKind">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameterDirectionKind.dkIn">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameterDirectionKind.dkInOut">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameterDirectionKind.dkOut">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameterDirectionKind.dkReturn">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAbstractPackage">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TAbstractPackage.ConfigFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAbstractPackage.FSourceFilename">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAbstractPackage.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAbstractPackage.GetConfigFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAbstractPackage.GetSourcefilename">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAbstractPackage.SetConfigFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAbstractPackage.SetSourcefilename">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttribute">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModel.TFeature">TFeature {Parent of}</link>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TAttribute.FIsStatic">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttribute.FTypeClassifier">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttribute.IsStatic">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttribute.TypeClassifier">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttribute.GetAfterListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttribute.GetBeforeListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAttribute.SetTypeClassifier">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModel.TClassifier">TClassifier {Parent of}</link>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TClass.Ancestor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.FAncestor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.FImplements">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.AddAttribute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.AddImplements">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.AddOperation">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.AddProperty">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.AncestorAddChild">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.AncestorChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.AncestorEntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.AncestorRemove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.FindOperation">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.GetAfterListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.GetAttributes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.GetBeforeListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.GetDescendants">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.GetImplements">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.GetOperations">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClass.SetAncestor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassifier">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TClassifier.Features">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassifier.FFeatures">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassifier.FIsPlaceholder">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassifier.FSourceFilename">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassifier.IsPlaceholder">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassifier.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassifier.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassifier.GetFeatures">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassifier.GetSourcefilename">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TClassifier.SetSourcefilename">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDataType">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModel.TClassifier">TClassifier {Parent of}</link>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TDataType.GetAfterListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDataType.GetBeforeListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEnumeration">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModel.TDataType">TDataType {Parent of}</link>
+          <link id="uModel.TClassifier">TClassifier {Parent of}</link>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TEnumeration.AddLiteral">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEnumeration.GetAfterListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEnumeration.GetBeforeListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEnumLiteral">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModel.TFeature">TFeature {Parent of}</link>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TEnumLiteral.FOrdVal">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEnumLiteral.OrdVal">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEnumLiteral.GetAfterListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEnumLiteral.GetBeforeListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TFeature">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TInterface">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModel.TClassifier">TClassifier {Parent of}</link>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TInterface.Ancestor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TInterface.FAncestor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TInterface.AddAttribute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TInterface.AddOperation">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TInterface.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TInterface.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TInterface.GetAfterListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TInterface.GetAttributes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TInterface.GetBeforeListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TInterface.GetImplementingClasses">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TInterface.GetOperations">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TInterface.SetAncestor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLogicPackage">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModel.TAbstractPackage">TAbstractPackage {Parent of}</link>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TLogicPackage.FPackages">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLogicPackage.AddUnit">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLogicPackage.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLogicPackage.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLogicPackage.FindUnitPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLogicPackage.GetAfterListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLogicPackage.GetAllClassifiers">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLogicPackage.GetAllUnitPackages">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLogicPackage.GetBeforeListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLogicPackage.GetPackages">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.FLocked">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.FModelRoot">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.FUnknownPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.Listeners">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.Locked">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.ModelRoot">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.UnknownPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.AddListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.Clear">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.CreatePackages">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.Fire">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.Lock">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.RemoveListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TObjectModel.Unlock">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModel.TFeature">TFeature {Parent of}</link>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TOperation.CallModifier">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.FIsAbstract">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.FIsStatic">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.FMethodDirective">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.FModifier">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.FOperationType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.FParameters">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.FReturnValue">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.IsAbstract">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.IsStatic">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.MethodDirective">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.OperationType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.ReturnValue">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.AddCallModifier">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.AddParameter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.GetAfterListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.GetBeforeListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.GetParameters">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.SetIsAbstract">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.SetOperationType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOperation.SetReturnValue">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameter">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TParameter.DefaultValue">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameter.Direction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameter.FDefaultValue">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameter.FDirection">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameter.FIsConst">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameter.FTypeClassifier">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameter.IsConst">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameter.TypeClassifier">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameter.GetAfterListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TParameter.GetBeforeListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TProperty">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModel.TAttribute">TAttribute {Parent of}</link>
+          <link id="uModel.TFeature">TFeature {Parent of}</link>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TProperty.AggregationKind">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TProperty.FAggregationKind">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TProperty.GetAfterListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TProperty.GetBeforeListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStructuredDataType">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModel.TDataType">TDataType {Parent of}</link>
+          <link id="uModel.TClassifier">TClassifier {Parent of}</link>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TStructuredDataType.AddAttribute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStructuredDataType.GetAttributes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitDependency">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TUnitDependency.Package">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uModel.TAbstractPackage">TAbstractPackage {Parent of}</link>
+          <link id="uModelEntity.TModelEntity">TModelEntity {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TUnitPackage.FClassifiers">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage.FUnitDependencies">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage.AddClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage.AddDatatype">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage.AddEnumeration">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage.AddInterface">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage.AddUnitDependency">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage.FindClassifier">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage.GetAfterListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage.GetBeforeListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage.GetClassifiers">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TUnitPackage.GetUnitDependencies">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    <element name="TClass.ForwardSourceY"><short>The line number in the source code this class was declared as forward.</short>
+      </element><element name="TClass.FForwardSourceY" link="#Laz-Model.uModel.TClass.ForwardSourceY"/><element name="TClass.HasForward"><short>Does this class have a forward declaration in the source.</short><descr>This is only intended for use when reading existing source. Generation from a new model will have to work out if and where a forward is needed.</descr>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

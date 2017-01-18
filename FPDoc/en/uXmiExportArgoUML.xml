@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uXmiExportArgoUML">
+      <descr/>
+      <element name="TTypeClassifier">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTypeClassifier.tcAll">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTypeClassifier.tcDataType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTypeClassifier.tcNotDataType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIntegrator.TExportIntegrator">TExportIntegrator {Parent of}</link>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TXMIExporterArgoUML.bolWritePackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.dataTypeVoid">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.Feedback">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.IdModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.Ids">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.LaterList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.NextId">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.Output">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.complementoHeader">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.FlushLaterList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.getNamespace">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.GetXmi">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.GetXMIId">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.InitFromModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.MakeAbstract">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.MakeGeneral">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.MakeId">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.MakeTypeRef">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.SaveTo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.SetbolWritePackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.ShowSaveDialog">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.Write">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.WriteClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.WriteDataType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.WriteEntityHeader">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.WriteFeatures">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.WriteInterface">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.WriteLogicPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.WritePackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.WriteUnitPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.xmiUUID">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.Xml">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.XmlClose">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TXMIExporterArgoUML.XmlOpen">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

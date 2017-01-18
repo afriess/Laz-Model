@@ -26,9 +26,9 @@ interface
 
 
 uses
-  LCLIntf, LCLType, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ActnList, Menus, uViewIntegrator, StdCtrls, ExtCtrls, uListeners, uModelEntity,
-  uModel, Buttons;
+  Classes,
+  Controls, Messages, Forms, ActnList, Menus, StdCtrls, ExtCtrls, Buttons, DefaultTranslator,
+  uViewIntegrator, uListeners, uModelEntity, uModel;
 
 
 //const
@@ -42,8 +42,8 @@ type
     Openselectedpackageindiagram1: TMenuItem;
     Panel1: TPanel;
     VisibilityCombo: TComboBox;
-    Label1: TLabel;
-    Label2: TLabel;
+    ConnectionsLabel: TLabel;
+    FilterLabel: TLabel;
     OpenButton: TSpeedButton;
     LayoutButton: TSpeedButton;
     HideDiagramElementAction: TAction;
@@ -55,7 +55,6 @@ type
     procedure HideDiagramElementActionExecute(Sender: TObject);
     procedure ConnectionsComboChange(Sender: TObject);
   private
-    { Private declarations }
     Bypass : boolean;
     //Model listener
     procedure ModelBeforeChange(Sender: TModelEntity);
@@ -64,9 +63,7 @@ type
     procedure IAfterObjectModelListener.Change = ModelAfterChange;
   protected
   public
-    { Public declarations }
 //    procedure PackageChange(var M: TMessage); message WM_ChangePackage;
-
     constructor Create(AOwner: TComponent; Model : TObjectModel); reintroduce;
     destructor Destroy; override;
     procedure OnUpdateToolbar(Sender : TObject);
@@ -96,8 +93,6 @@ diagramframe
 
 
 implementation
-
-uses uError;
 
 {$R *.lfm}
 

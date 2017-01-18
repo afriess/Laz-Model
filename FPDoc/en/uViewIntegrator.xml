@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uViewIntegrator">
+      <descr/>
+      <element name="TDiagramIntegrator">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uViewIntegrator.TViewIntegrator">TViewIntegrator {Parent of}</link>
+          <link id="uIntegrator.TTwowayIntegrator">TTwowayIntegrator {Parent of}</link>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TDiagramIntegrator.FOnUpdateToolbar">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.FOnUpdateZoom">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.FPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.FShowAssoc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.FVisibilityFilter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.OnUpdateToolbar">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.OnUpdateZoom">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.Package">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.ShowAssoc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.VisibilityFilter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.CreateDiagram">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.DoLayout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.DoOnUpdateToolbar">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.DoOnUpdateZoom">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.DrawZoom">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.FetchDiagram">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.GetClickAreas">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.GetDiagramSize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.GetSelectedRect">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.GetStorage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.HasHiddenElements">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.HideSelectedDiagramElements">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.PaintTo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.SaveAsPicture">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.ScreenCenterEntity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.SetPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.SetShowAssoc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.SetVisibilityFilter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.SetZoomedScroll">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.StoreDiagram">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramIntegrator.UnHideAllElements">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewIntegrator">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIntegrator.TTwowayIntegrator">TTwowayIntegrator {Parent of}</link>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TViewIntegrator.CurrentEntity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewIntegrator.Feedback">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewIntegrator.Parent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewIntegrator.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewIntegrator.CurrentEntityChanged">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewIntegrator.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewIntegrator.GetCurrentEntity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TViewIntegrator.SetCurrentEntity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

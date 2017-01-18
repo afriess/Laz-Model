@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uRtfdDiagram">
+      <descr/>
+      <element name="TRtfdDiagram">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uViewIntegrator.TDiagramIntegrator">TDiagramIntegrator {Parent of}</link>
+          <link id="uViewIntegrator.TViewIntegrator">TViewIntegrator {Parent of}</link>
+          <link id="uIntegrator.TTwowayIntegrator">TTwowayIntegrator {Parent of}</link>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdDiagram.BoxNames">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.FHasChanged">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.FHasHidden">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.Frame">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.IsAllClasses">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.Panel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.ZoomFocusH">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.ZoomFocusW">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.AddBox">
+        <short>Add a 'Box' to the diagram (class/interface/package). </short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.ClearDiagram">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.CurrentEntityChanged">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.DoLayout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.DrawZoom">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.FetchDiagram">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.GetBox">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.GetClickAreas">
+        <short>Returns list with str = 'x1,y1,x2,y2', obj = modelentity  </short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.GetDiagramSize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.GetSelectedRect">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.HasChanged">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.HasHiddenElements">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.HideSelectedDiagramElements">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.IAfterObjectModelListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.IBeforeObjectModelListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.InitFromModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.ModelAfterChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.ModelBeforeChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.OnNeedZoomUpdate">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.OpenSelectedPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.PaintTo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.ResolveAssociations">
+        <short>Make arrows between boxes  </short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.ScreenCenterEntity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.SetPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.SetShowAssoc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.SetVisibilityFilter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.SetZoomedScroll">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.StoreDiagram">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.UnHideAllElements">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.UnitPackageAfterAddChild">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.UnitPackageAfterChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.UnitPackageAfterEntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdDiagram.UnitPackageAfterRemove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

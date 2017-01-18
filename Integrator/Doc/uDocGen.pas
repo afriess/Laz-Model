@@ -24,7 +24,10 @@ unit uDocGen;
 
 interface
 
-uses uIntegrator, uModel, uModelEntity;
+uses
+  SysUtils,
+  uIntegrator, uModel, uModelEntity, uIterators, uUseful, uConst, uConfig;
+
 
 type
   //Baseclass for documenation generators.
@@ -51,15 +54,8 @@ type
 
 implementation
 
-uses uIterators,
-  uHtmlDocGen,
-  uUseful,
-  SysUtils,
-  Forms,
-  uConst;
-
-
-{ TDocGen }
+uses
+  uFPDocGen;
 
 procedure TDocGen.InitFromModel;
 begin
@@ -85,9 +81,9 @@ var
 begin
   Di := TBrowseForFolderDialog.Create;
   try
-    Di.Path := ExtractFilePath( Model.ModelRoot.GetConfigFile );
-//    if not Di.Execute then
-//      Abort;
+    Di.Path := ExtractFilePath( Model.ModelRoot.GetConfigFile) + Config.DocsDir + PathDelim;
+    if not Di.Execute then
+      Abort;
     DestPath := Di.Path;
   finally
     Di.Free;
@@ -133,11 +129,12 @@ begin
 end;
 
 /////////////////////
-
+// TODO this should be changed so Doc can have multiple output types.
+// Probably based on [project &| program defaults]
 function CreateDocGen(Om : TObjectModel) : TDocGen;
 begin
-  //Use html
-  Result := THtmlDocGen.Create(Om);
+  //Use FPDoc
+  Result := TFPDocGen.Create(Om);
 end;
 
 procedure TDocGen.WriteClassDetail(C: TClass);

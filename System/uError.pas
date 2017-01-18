@@ -30,9 +30,8 @@ unit uError;
 interface
 
 {$IFNDEF Release}
-uses SysUtils, Forms, StdCtrls;
+uses SysUtils, Forms, Controls, StdCtrls;
 {$ENDIF}
-
 
 type
   TTraceMode = (trOff, trShowWindow);
@@ -40,6 +39,7 @@ type
   TErrorHandler = class
   public
     constructor Create;
+    destructor Destroy;
     procedure SetTraceMode(Mode: TTraceMode);
     procedure Trace(const Msg: string);
   private
@@ -57,11 +57,6 @@ var
 
 implementation
 
-{$IFNDEF Release}
-uses LCLIntf, LCLType, Controls;
-{$ENDIF}
-
-
 {-------------------}
 { ErrorHandler }
 
@@ -69,7 +64,14 @@ constructor TErrorHandler.Create;
 begin
   {$IFNDEF Release}
   SetTraceMode(trOff);
+//  SetTraceMode(trShowWindow);
   {$ENDIF}
+end;
+
+destructor TErrorHandler.Destroy;
+begin
+  if TraceWindow <> nil then
+    TraceWindow.Free;
 end;
 
 
@@ -89,14 +91,14 @@ begin
   TraceMode := Mode;
   if (TraceMode = trShowWindow) and (TraceWindow = nil) then
   begin
-    TraceWindow := TForm.Create(Application);
+    TraceWindow := TForm.Create(Application.MainForm);
     //Fönstret skapas nere i högra hörnet, med full bredd.
     with TraceWindow do
     begin
       FormStyle := fsStayOnTop;
-      Left := Screen.Width - 300;
-      Top := (Screen.Height div 3) * 2;
-      Width := Screen.Width - 100;
+      Left := Screen.Width div 2;
+      Top := (Screen.Height div 3) * 2 -100;
+      Width := Screen.Width div 2;
       Height := Screen.Height div 3;
     end;
     TraceMemo := TMemo.Create(TraceWindow);
@@ -129,12 +131,11 @@ initialization
 
   ErrorHandler := TErrorHandler.Create;
   {$IFNDEF Release}
-  if FindCmdLineSwitch('traceon', ['-', '/'], True) then
-    ErrorHandler.SetTraceMode(trShowWindow);
+//  if FindCmdLineSwitch('traceon', ['-', '/'], True) then
+//    ErrorHandler.SetTraceMode(trShowWindow);
   {$ENDIF}
 
 finalization
-
   ErrorHandler.Free;
 
 end.

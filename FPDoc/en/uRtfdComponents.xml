@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uRtfdComponents">
+      <descr/>
+      <element name="TRtfdAttribute">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TVisibilityLabel">TVisibilityLabel {Parent of}</link>
+          <link id="uRtfdComponents.TRtfdCustomLabel">TRtfdCustomLabel {Parent of}</link>
+          <link id="uRtfdLabel.TRtfdODLabel">TRtfdODLabel {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdAttribute.A">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdAttribute.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdAttribute.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdAttribute.EntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdAttribute.IAfterAttributeListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.Entity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.FMinVisibility">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.Frame">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.MinVisibility">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.AddChild">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.Change">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.EntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.Notification">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.OnChildMouseDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.Paint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.RefreshEntities">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.Remove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdBox.SetMinVisibility">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdClass">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TRtfdBox">TRtfdBox {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdClass.AddChild">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdClass.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdClass.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdClass.RefreshEntities">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdClassName">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TRtfdCustomLabel">TRtfdCustomLabel {Parent of}</link>
+          <link id="uRtfdLabel.TRtfdODLabel">TRtfdODLabel {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdClassName.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdClassName.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdClassName.EntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdCustomLabel">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdLabel.TRtfdODLabel">TRtfdODLabel {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdCustomLabel.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdEnumeration">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TRtfdBox">TRtfdBox {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdEnumeration.AddChild">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdEnumeration.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdEnumeration.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdEnumeration.RefreshEntities">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdEnumLiteral">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TRtfdCustomLabel">TRtfdCustomLabel {Parent of}</link>
+          <link id="uRtfdLabel.TRtfdODLabel">TRtfdODLabel {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdEnumLiteral.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdEnumLiteral.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdEnumLiteral.EntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdEnumName">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TRtfdCustomLabel">TRtfdCustomLabel {Parent of}</link>
+          <link id="uRtfdLabel.TRtfdODLabel">TRtfdODLabel {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdEnumName.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdEnumName.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdEnumName.EntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdInterface">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TRtfdBox">TRtfdBox {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdInterface.AddChild">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdInterface.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdInterface.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdInterface.RefreshEntities">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdInterfaceName">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TRtfdCustomLabel">TRtfdCustomLabel {Parent of}</link>
+          <link id="uRtfdLabel.TRtfdODLabel">TRtfdODLabel {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdInterfaceName.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdInterfaceName.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdInterfaceName.EntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdOperation">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TVisibilityLabel">TVisibilityLabel {Parent of}</link>
+          <link id="uRtfdComponents.TRtfdCustomLabel">TRtfdCustomLabel {Parent of}</link>
+          <link id="uRtfdLabel.TRtfdODLabel">TRtfdODLabel {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdOperation.O">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdOperation.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdOperation.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdOperation.EntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdOperation.IAfterOperationListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdSeparator">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TRtfdCustomLabel">TRtfdCustomLabel {Parent of}</link>
+          <link id="uRtfdLabel.TRtfdODLabel">TRtfdODLabel {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdSeparator.Paint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdStereotype">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TRtfdCustomLabel">TRtfdCustomLabel {Parent of}</link>
+          <link id="uRtfdLabel.TRtfdODLabel">TRtfdODLabel {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdStereotype.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackage">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TRtfdBox">TRtfdBox {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdUnitPackage.P">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackage.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackage.DblClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackage.RefreshEntities">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackageDiagram">
+        <short>Class to display mame of package at upper-left corner in a unitpackage diagram </short>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TRtfdCustomLabel">TRtfdCustomLabel {Parent of}</link>
+          <link id="uRtfdLabel.TRtfdODLabel">TRtfdODLabel {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdUnitPackageDiagram.P">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackageDiagram.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackageDiagram.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackageDiagram.EntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackageDiagram.IAfterUnitPackageListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackageName">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TRtfdCustomLabel">TRtfdCustomLabel {Parent of}</link>
+          <link id="uRtfdLabel.TRtfdODLabel">TRtfdODLabel {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TRtfdUnitPackageName.P">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackageName.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackageName.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackageName.EntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdUnitPackageName.IAfterUnitPackageListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVisibilityLabel">
+        <short>Left-justified label with visibility-icon </short>
+        <descr/>
+        <seealso>
+          <link id="uRtfdComponents.TRtfdCustomLabel">TRtfdCustomLabel {Parent of}</link>
+          <link id="uRtfdLabel.TRtfdODLabel">TRtfdODLabel {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TVisibilityLabel.Paint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVisibilityLabel.WidthNeeded">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    <element name="TRtfdBoxClass"><short>Baseclass for a diagram-panel</short>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

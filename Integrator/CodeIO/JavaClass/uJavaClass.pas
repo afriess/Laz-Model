@@ -24,7 +24,9 @@ unit uJavaClass;
 
 interface
 
-uses Classes;
+uses
+  Classes, SysUtils,
+  uError;
 
 
 type
@@ -250,8 +252,6 @@ type
 
 
 implementation
-
-uses SysUtils, uError;
 
 const
   ACC_PUBLIC    : word = $0001;

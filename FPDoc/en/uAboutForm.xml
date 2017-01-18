@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uAboutForm">
+      <descr/>
+      <element name="TAboutForm">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAboutForm.Button1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAboutForm.IconImage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAboutForm.Image1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAboutForm.Label1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAboutForm.Label2">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAboutForm.MailLabel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAboutForm.NameLabel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAboutForm.RegLabel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAboutForm.UrlLabel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAboutForm.FormActivate">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

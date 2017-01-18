@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="ufpcParser">
+      <descr/>
+      <element name="TfpcParser">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uCodeParser.TCodeParser">TCodeParser {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TfpcParser.fFilename">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.FGlobalDefines">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.Filename">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.FOM">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.FUnit">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.AddConstructor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.AddDestructor">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.AddFunction">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.AddOpDirectives">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.AddProcedure">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.AddProperty">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.FillEnum">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.GetClasses">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.getClassifier">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.GetDefaultValue">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.getInterfaceRef">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.getProcType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.GetTypes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.GetUnits">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.getVisibility">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.ParseFileWithDefines">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.ParseProject">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.ParseUnit">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.PopulateClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.PopulateInterface">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSimpleEngine">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSimpleEngine.fIsProgram">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSimpleEngine.IsProgram">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSimpleEngine.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSimpleEngine.CreateElement">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSimpleEngine.FindElement">
+        <short>Allows resolution during query of items in passrc marked as unresolved during parse phase.</short>
+        <descr><p>'Borrowed' from FPDoc source</p>
+        </descr>
+        <seealso/>
+      </element>
+      <element name="TSimpleEngine.FindModule">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    <element name="DelQuot"><short>Removes some annoying quotes added by passrc.</short>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

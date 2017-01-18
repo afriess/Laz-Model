@@ -24,7 +24,9 @@ unit uIntegrator;
 
 interface
 
-uses uModel, Classes, Contnrs, uCodeProvider;
+uses
+  Classes, Contnrs, SysUtils, Dialogs,
+  uModel, uCodeProvider, uError, uUseful, uCodeParser;
 
 type
   {
@@ -106,8 +108,6 @@ type
 function Integrators : TIntegrators;
 
 implementation
-
-uses SysUtils, uError, uUseful, uCodeParser, Dialogs;
 
 var
   _Integrators : TIntegrators = nil;
@@ -250,9 +250,7 @@ end;
 initialization
 
 finalization
-
-  if Assigned(_Integrators) then
-    _Integrators.Free;
+  _Integrators.Free;
 
 end.
 

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uModelEntity">
+      <descr/>
+      <element name="TIteratorOrder">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIteratorOrder.ioNone">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIteratorOrder.ioVisibility">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIteratorOrder.ioAlpha">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TListenerMethodType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TListenerMethodType.mtBeforeChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TListenerMethodType.mtBeforeAddChild">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TListenerMethodType.mtBeforeRemove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TListenerMethodType.mtBeforeEntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TListenerMethodType.mtAfterChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TListenerMethodType.mtAfterAddChild">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TListenerMethodType.mtAfterRemove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TListenerMethodType.mtAfterEntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVisibility">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVisibility.viPrivate">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVisibility.viProtected">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVisibility.viPublic">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVisibility.viPublished">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IIteratorFilter">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IIteratorFilter.Accept">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IModelIterator">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IModelIterator.Count">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IModelIterator.HasNext">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IModelIterator.Next">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="IModelIterator.Reset">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.Description">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.Documentation">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.FDocumentation">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.FLocked">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.FName">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.FOwner">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.FSourceX">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.FSourceY">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.FullName">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.FVisibility">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.Listeners">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.Locked">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.Name">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.Owner">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.Root">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.Sourcefilename">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.SourceX">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.SourceY">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.Visibility">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.AddListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.Fire">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.GetAfterListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.GetBeforeListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.GetDescription">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.GetFullName">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.GetLocked">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.GetRoot">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.GetSourcefilename">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.QueryInterface">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.RemoveListener">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.SetName">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.SetSourcefilename">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity.SetVisibility">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity._AddRef">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TModelEntity._Release">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

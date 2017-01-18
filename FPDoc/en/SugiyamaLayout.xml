@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="SugiyamaLayout">
+      <descr>
+        <img file="images\pSugiyamaLayout.png"/>
+      </descr>
+      <element name="TEdge">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEdge.FromNode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEdge.ToNode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEdge.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEdgeList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEdgeList.Edges">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEdgeList.GetEdge">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLayerList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLayerList.Layers">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLayerList.GetLayer">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.Control">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.COrder">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.H">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.Id">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.InEdges">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.IsDummy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.Order">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.OutEdges">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.Rank">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.W">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.Weight">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.X">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.Y">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNode.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNodeList">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNodeList.Nodes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNodeList.GetNode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TNodeList.LastIndexOf">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="essLayout.TEssLayout">TEssLayout {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TSugiyamaLayout.Layers">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.Nodes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.AddEdge">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.ApplyNodes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.CalcCrossings">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.CalcCrossingsTwoLayers">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.DoPhases">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.Execute">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.ExtractNodes">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.InitialRanking">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.LayeringPhase">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.MakeAcyclic">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.MakeProper">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.OrderingPhase">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.PositioningPhase">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.SetXPositions">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.SetYPositions">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSugiyamaLayout.TopoSort">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

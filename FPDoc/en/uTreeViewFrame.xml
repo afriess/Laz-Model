@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uTreeViewFrame">
+      <descr/>
+      <element name="TTreeViewFrame">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewFrame.ilTreeImages">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewFrame.tvModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTreeViewFrame.tvModelDblClick">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

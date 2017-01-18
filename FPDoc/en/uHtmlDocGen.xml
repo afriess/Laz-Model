@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uHtmlDocGen">
+      <descr/>
+      <element name="THtmlDocGen">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uDocGen.TDocGen">TDocGen {Parent of}</link>
+          <link id="uIntegrator.TExportIntegrator">TExportIntegrator {Parent of}</link>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="THtmlDocGen.Detail">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THtmlDocGen.Source">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THtmlDocGen.Xmi">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THtmlDocGen.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THtmlDocGen.DocFinished">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THtmlDocGen.DocStart">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THtmlDocGen.MakeDiagram">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THtmlDocGen.WriteOverview">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THtmlDocGen.WritePackageDetail">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

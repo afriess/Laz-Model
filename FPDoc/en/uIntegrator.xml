@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uIntegrator">
+      <descr/>
+      <element name="TExportIntegrator">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TExportIntegrator.InitFromModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TImportIntegrator">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TImportIntegrator.CodeProvider">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TImportIntegrator.FilesRead">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TImportIntegrator.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TImportIntegrator.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TImportIntegrator.GetFileExtensions">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TImportIntegrator.ImportOneFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIntegrator">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIntegrator.FModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIntegrator.Model">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIntegrator.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIntegrator.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIntegrators">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIntegrators.List">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIntegrators.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIntegrators.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIntegrators.Get">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TIntegrators.Register">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTwowayIntegrator">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TTwowayIntegrator.BuildModelFrom">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTwowayIntegrator.InitFromModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

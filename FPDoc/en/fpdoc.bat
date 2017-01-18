@@ -1,0 +1,2 @@
+C:\lazarus32\fpc\3.0.0\bin\i386-win32\fpdoc.exe --project=FPDoc.xml --format=chm  --auto-index --auto-toc --content --show-private
+C:\lazarus32\fpc\3.0.0\bin\i386-win32\fpdoc.exe --project=FPDoc.xml --format=html --output=web-en  --content  

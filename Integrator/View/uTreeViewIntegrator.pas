@@ -24,9 +24,10 @@ unit uTreeViewIntegrator;
 
 interface
 
-uses SysUtils, uViewIntegrator, uTreeViewFrame, uModel, Controls, uFeedback,
-  ComCtrls, uModelEntity, uListeners;
-
+uses
+  SysUtils, Contnrs, Controls, ComCtrls,
+  uViewIntegrator, uTreeViewFrame, uModel, uFeedback, uModelEntity, uListeners,
+  uIterators;
 
 type
   TTreeViewIntegrator = class(TViewIntegrator, IAfterObjectModelListener)
@@ -66,7 +67,6 @@ type
   end;
 
 implementation
-uses uIntegrator, uIterators, Classes, Contnrs;
 
 const
   ALL_CLASSES_TEXT: string = 'All classes';
@@ -138,7 +138,9 @@ begin
     else if ent is uModel.TClass then
       imIndex := 2
     else if ent is uModel.TInterface then
-      imIndex := 3;
+      imIndex := 3
+    else if ent is uModel.TDataType then
+      imIndex := 4;
 
     Node.ImageIndex := imIndex;
     Node.SelectedIndex := Node.ImageIndex;
@@ -192,7 +194,7 @@ procedure TTreeViewIntegrator.BuildUnitPackageView(ATreeRoot: TTreeNode;
 var
   Mi: IModelIterator;
   ent: TModelEntity;
-  newRoot: TTreeNode;
+  newRoot, dataRoot: TTreeNode;
 begin
   Mi := TModelIterator.Create(AEntity.GetUnitDependencies, ioAlpha);
   if Mi.Count > 0 then
@@ -205,6 +207,21 @@ begin
     end;
   end;
 
+  Mi := TModelIterator.Create(AEntity.GetClassifiers,TDataTypeFilter.Create, ioAlpha);
+  if Mi.Count > 0 then
+  begin
+    newRoot := ATreeRoot.Owner.AddChildObject(ATreeRoot, 'datatypes', nil);
+    while Mi.HasNext do
+    begin
+      ent := Mi.Next as TClassifier;
+      if (ent is uModel.TDataType) then
+      begin
+        dataRoot := ATreeRoot.Owner.AddChildObject(newRoot, (ent as TDataType).Name, ent );
+        (dataRoot as TViewNode).FIsImplementation := True;
+      end;
+    end;
+  end;
+
   Mi := TModelIterator.Create(AEntity.GetClassifiers, ioAlpha);
   while Mi.HasNext do
   begin
@@ -214,9 +231,9 @@ begin
       newRoot := ATreeRoot.Owner.AddChildObject(ATreeRoot, ent.Name, ent);
       (newRoot as TViewNode).FIsImplementation := True;
       if ent is uModel.TClass then
-        BuildClassView(newRoot, ent as uModel.TClass)
+        BuildClassView(newRoot, ent as TClass)
       else
-        BuildInterfaceView(newRoot, ent as uModel.TInterface)
+        BuildInterfaceView(newRoot, ent as TInterface)
     end;
   end;
 end;

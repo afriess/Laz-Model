@@ -1,6 +1,6 @@
 {
   ESS-Model
-  Copyright (C) 2002  Eldean AB, Peter Söderman, Ville Krumlinde
+  Copyright (C) 2002  Eldean AB, Peter SÃ¶derman, Ville Krumlinde
   Portions (C) 2016 Peter Dyson. Initial Lazarus port
 
   This program is free software; you can redistribute it and/or
@@ -28,21 +28,51 @@ unit uModel;
 
 interface
 
-uses Contnrs, Classes, uListeners, uModelEntity, uIterators;
+uses
+  Classes, SysUtils, Contnrs,
+  uListeners, uModelEntity, uIterators, uError;
 
 const
-{$IFDEF LINUX}
-  UNKNOWNPACKAGE_NAME = '<<Unknown>>';
-{$ELSE}
-  UNKNOWNPACKAGE_NAME = '«Unknown»';
-{$ENDIF LINUX}
+
+  UNKNOWNPACKAGE_NAME = 'Â«UnknownÂ»';
   ConfigFileExt = '.essModel';
 
 type
   TLogicPackage = class;
   TUnitPackage = class;
 
+  { Non UML construct, needed for class operations}
+  TClassOperationType = (cotNone, cotClass, cotStaticClass);
+
+  { Non UML construct, need to transform for xmi}
   TOperationType = (otConstructor, otDestructor, otProcedure, otFunction);
+
+  { UML Modeling Language 2.5 9.5.3 }
+  TAggregationKind = (akNone, akShared, akComposite);
+
+  { UML Modeling Language 2.5 9.4.2
+    Translates to a feature on a parameter in xmi}
+  TParameterDirectionKind = (dkIn, dkInOut, dkOut, dkReturn);
+  //  TArgumentAccess = (argDefault, argConst, argVar, argOut, argConstRef);
+
+  { Pascal call modifiers
+    translates to Features on an Operation in xmi}
+  TCallModifier = (cmDefault, cmRegister, cmCdecl, cmPascal, cmStdCall, cmSafeCall, cmInline);
+  //  TCallingConvention = (ccDefault,ccRegister,ccPascal,ccCDecl,ccStdCall,ccOldFPCCall,ccSafeCall,ccSysCall);
+
+
+  {using this we can keep full pascal declaration and use UML abstract concept
+   to flag a method as abstract along with virtual or dysnamic}
+  TMethodDirective = (mdDefault, mdVirtual, mdDynamic, mdAbstract, mdOverride, mdReintroduce, mdMessage);
+
+
+  // these are more oriented to procedural pascal programming.
+  //TProcedureModifier = (pmVirtual, pmDynamic, pmAbstract, pmOverride,
+  //                        pmExport, pmOverload, pmMessage, pmReintroduce,
+  //                        pmStatic,pmInline,pmAssembler,pmVarargs, pmPublic,
+  //                        pmCompilerProc,pmExternal,pmForward);
+
+  TCallModifiers = set of TCallModifier;
 
   TObjectModel = class
   private
@@ -79,19 +109,31 @@ type
   public
     constructor Create(AOwner: TModelEntity); override;
     destructor Destroy; override;
-    property IsPlaceholder: boolean read FIsPlaceHolder write FIsPlaceholder;
     function GetFeatures : IModelIterator;
+  published
+    property Features: IModelIterator read GetFeatures;
+    property IsPlaceholder: boolean read FIsPlaceHolder write FIsPlaceholder;
   end;
 
   TParameter = class(TModelEntity)
   private
     FTypeClassifier : TClassifier;
+    FDirection: TParameterDirectionKind;
+    FIsConst: boolean;
+    FDefaultValue: string;
   protected
     class function GetBeforeListener: TGUID; override;
     class function GetAfterListener: TGUID; override;
-  public
+  published
     property TypeClassifier : TClassifier read FTypeClassifier write FTypeClassifier;
+    property Direction: TParameterDirectionKind read FDirection write Fdirection default dkIn;
+    { Pascal specific addition to TParameterDirectionKind.dkIn could be set as true for
+     any dkIn and not change the program functionality.}
+    property IsConst: boolean read FIsConst write FIsConst default false;
+    property DefaultValue: string read FDefaultValue write FDefaultValue;
   end;
+
+  { TOperation }
 
   TOperation = class(TFeature)
   protected
@@ -102,6 +144,9 @@ type
     FParameters: TObjectList;
     FIsAbstract: boolean;
     FReturnValue: TClassifier;
+    FModifier: TCallModifier;
+    FIsStatic: TClassOperationType;
+    FMethodDirective: TMethodDirective;
     procedure SetOperationType(const Value: TOperationType);
     procedure SetIsAbstract(const Value: boolean);
     procedure SetReturnValue(const Value: TClassifier);
@@ -109,28 +154,59 @@ type
     constructor Create(AOwner: TModelEntity); override;
     destructor Destroy; override;
     function AddParameter(const NewName: string): TParameter;
+    function GetParameters : IModelIterator;
+    procedure AddCallModifier(AValue: TCallModifier);
+  published
     property OperationType: TOperationType read FOperationType write SetOperationType;
+    property IsStatic: TClassOperationType read FIsStatic write FIsStatic default cotNone;
     property IsAbstract: boolean read FIsAbstract write SetIsAbstract;
     property ReturnValue: TClassifier read FReturnValue write SetReturnValue;
-    function GetParameters : IModelIterator;
+    property MethodDirective: TMethodDirective read FMethodDirective write FMethodDirective default mdDefault;
+    property CallModifier: TCallModifier read FModifier write FModifier;
+  end;
+
+  { TEnumLiteral }
+
+  TEnumLiteral = class(TFeature)
+  private
+    FOrdVal: integer;
+  protected
+    class function GetBeforeListener: TGUID; override;
+    class function GetAfterListener: TGUID; override;
+  published
+    property OrdVal:integer read FOrdVal write FOrdVal;
   end;
 
   TAttribute = class(TFeature)
   private
     FTypeClassifier: TClassifier;
+    FIsStatic: boolean;
     procedure SetTypeClassifier(const Value: TClassifier);
   protected
     class function GetBeforeListener: TGUID; override;
     class function GetAfterListener: TGUID; override;
-  public
+  published
     property TypeClassifier : TClassifier read FTypeClassifier write SetTypeClassifier;
+    { UML 2.5 9.5.3
+     < When a Property is a static attribute of a Classifier, the value or values
+      are related to the Classifier itself within some execution scope >
+      We need this on Attribute rather than property as Pascal can have Class
+      Variables which are not Properties but are needed by Class Operations.
+      Properties will inherit this.
+      Used in Model to flag Class variables.
+    }
+    property IsStatic: boolean read FIsStatic write FIsStatic default False;
   end;
 
   TProperty = class(TAttribute)
   { TODO : to be specified later }
+  private
+    FAggregationKind: TAggregationKind;
   protected
     class function GetBeforeListener: TGUID; override;
     class function GetAfterListener: TGUID; override;
+  published
+    property AggregationKind: TAggregationKind read FAggregationKind write FAggregationKind default akNone;
   end;
 
   TDataType = class(TClassifier)
@@ -142,6 +218,28 @@ type
   protected
     class function GetBeforeListener: TGUID; override;
     class function GetAfterListener: TGUID; override;
+  end;
+
+
+  { TStructuredDataType }
+
+  TStructuredDataType = class(TDataType)
+  public
+    function AddAttribute(const NewName: string): TAttribute;
+    function GetAttributes: IModelIterator;
+  end;
+
+  { UML Modeling Language 2.5 10.2.2 }
+
+  { TEnumeration }
+
+  TEnumeration = class(TDataType)
+  protected
+    class function GetBeforeListener: TGUID; override;
+    class function GetAfterListener: TGUID; override;
+  public
+    function AddLiteral(const s: string): TEnumLiteral;
+  published
   end;
 
   TInterface = class(TClassifier)
@@ -171,6 +269,7 @@ type
   private
     FAncestor: TClass;
     FImplements: TObjectList;
+    FForwardSourceY: integer;
     procedure SetAncestor(const Value: TClass);
     //Ancestorlisteners
     procedure AncestorChange(Sender: TModelEntity);
@@ -194,6 +293,9 @@ type
     function GetImplements : IModelIterator;
     function GetDescendants : IModelIterator;
     function FindOperation(O : TOperation) : TOperation;
+    function HasForward: boolean;
+  published
+    property ForwardSourceY: Integer read FForwardSourceY write FForwardSourceY;
   end;
 
 
@@ -218,6 +320,8 @@ type
     Package : TUnitPackage;
   end;
 
+  { TUnitPackage }
+
   TUnitPackage = class(TAbstractPackage)
   protected
     class function GetBeforeListener: TGUID; override;
@@ -231,6 +335,7 @@ type
     function AddClass(const NewName: string): TClass;
     function AddInterface(const NewName: string): TInterface;
     function AddDatatype(const NewName: string): TDataType;
+    function AddEnumeration(const NewName: string): TEnumeration;
     function AddUnitDependency(U : TUnitPackage; AVisibility : TVisibility): TUnitDependency;
     function FindClassifier(const CName: string; RaiseException: boolean = False; TheClass : TModelEntityClass = nil; CaseSense : boolean = False): TClassifier;
     function GetClassifiers : IModelIterator;
@@ -259,11 +364,7 @@ type
 
 implementation
 
-uses SysUtils, uError;
-
-
 Var
-
 _AllClassesPackage : TAbstractPackage = nil;
 
 
@@ -290,6 +391,49 @@ type
 
 const
   CompareFunc : array[boolean] of TStrCompare = (@CompareText, @CompareStr);
+
+{ TStructuredDataType }
+
+function TStructuredDataType.AddAttribute(const NewName: string): TAttribute;
+begin
+
+end;
+
+function TStructuredDataType.GetAttributes: IModelIterator;
+begin
+
+end;
+
+{ TEnumLiteral }
+
+class function TEnumLiteral.GetBeforeListener: TGUID;
+begin
+  Result:=inherited GetBeforeListener;
+end;
+
+class function TEnumLiteral.GetAfterListener: TGUID;
+begin
+  Result:=inherited GetAfterListener;
+end;
+
+{ TEnumeration }
+
+class function TEnumeration.GetBeforeListener: TGUID;
+begin
+  Result:=inherited GetBeforeListener;
+end;
+
+class function TEnumeration.GetAfterListener: TGUID;
+begin
+  Result:=inherited GetAfterListener;
+end;
+
+function TEnumeration.AddLiteral(const s: string): TEnumLiteral;
+begin
+  Result := TEnumLiteral.Create(self);
+  Result.Name:= s;
+  FFeatures.Add(Result);
+end;
 
 { TObjectModel }
 
@@ -568,6 +712,20 @@ begin
   Fire(mtAfterAddChild, Result);
 end;
 
+function TUnitPackage.AddEnumeration(const NewName: string): TEnumeration;
+begin
+  Result := TEnumeration.Create(Self);
+  Result.FName := NewName;
+  FClassifiers.Add(Result);
+  try
+    Fire(mtBeforeAddChild, Result);
+  except
+    FClassifiers.Remove(Result);
+    raise;
+  end;
+  Fire(mtAfterAddChild, Result);
+end;
+
 class function TUnitPackage.GetAfterListener: TGUID;
 begin
   Result := IAfterUnitPackageListener;
@@ -588,7 +746,7 @@ function TUnitPackage.FindClassifier(const CName: string;
   TheClass : TModelEntityClass = nil;
   CaseSense : boolean = False): TClassifier;
 var
-  C : TClassifier;
+  Clsf : TClassifier;
   Mi : IModelIterator;
   P : TUnitPackage;
   F : TStrCompare;
@@ -602,13 +760,13 @@ var
     if Assigned(TheClass) then
       Mi := TModelIterator.Create( P.GetClassifiers , TheClass )
     else
-      Mi := P.GetClassifiers;
+      Mi := TModelIterator.Create(P.GetClassifiers);
     while Mi.HasNext do
     begin
-      C := Mi.Next as TClassifier;
-      if F(C.Name,CName)=0 then
+      Clsf := TClassifier(Mi.Next) ;
+      if F(Clsf.Name,CName)=0 then
       begin
-        Result := C;
+        Result := Clsf;
         Break;
       end;
     end;
@@ -638,6 +796,7 @@ function TUnitPackage.GetClassifiers: IModelIterator;
 begin
   Result := TModelIterator.Create( FClassifiers );
 end;
+
 
 function TUnitPackage.AddUnitDependency(U: TUnitPackage; AVisibility: TVisibility): TUnitDependency;
 begin
@@ -835,6 +994,11 @@ begin
   end;
 end;
 
+function TClass.HasForward: boolean;
+begin
+  Result := (FForwardSourceY > 0);
+end;
+
 
 { TParameter }
 
@@ -944,6 +1108,11 @@ end;
 function TOperation.GetParameters: IModelIterator;
 begin
   Result := TModelIterator.Create( FParameters );
+end;
+
+procedure TOperation.AddCallModifier(AValue: TCallModifier);
+begin
+  FModifier := AValue;
 end;
 
 { TAttribute }

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uMainForm">
+      <descr/>
+      <element name="TMainForm">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.About1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Changesettings1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Copydiagramtoclipboard1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Diagram1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.DiagramPanel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Exit1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.ExportmodeltoEMXfile1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.ExportXmiAction1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.File1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Generatedocumentation1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Help">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Layoutdiagram1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.LeftPanel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.MainMenu1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.N1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.N2">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.N3">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Open1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.OpenButton">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.OpenFolderAction1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Panel1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Panel2">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Previewdocumentation1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Printdiagram1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.ReopenMenuItem">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Saveaspicture1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Splitter1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Splitter2">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.StatusPanel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.TreeEdit">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.TreePanel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Unhidediagramelements1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.ZoomPanel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.Exit1Click">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.FormActivate">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.FormClose">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TMainForm.FormCreate">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

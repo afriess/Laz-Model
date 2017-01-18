@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uDocumentation">
+      <descr/>
+      <element name="TDocumentation">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocumentation.Description">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocumentation.FDescription">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocumentation.SetDescription">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDocumentation.ShortDescription">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

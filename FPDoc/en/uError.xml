@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uError">
+      <descr/>
+      <element name="TTraceMode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTraceMode.trOff">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TTraceMode.trShowWindow">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TErrorHandler">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TErrorHandler.TraceMemo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TErrorHandler.TraceMode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TErrorHandler.TraceWindow">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TErrorHandler.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TErrorHandler.SetTraceMode">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TErrorHandler.Trace">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

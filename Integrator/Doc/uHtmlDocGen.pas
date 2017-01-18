@@ -24,7 +24,9 @@ unit uHtmlDocGen;
 
 interface
 
-uses uDocGen, uModel, uModelEntity, uXmiExport;
+uses
+  Classes, SysUtils, Forms, {ComObj,}
+  uDocGen, uModel, uModelEntity, uXmiExport, uViewIntegrator;
 
 type
   //Html documentation generator
@@ -43,12 +45,6 @@ type
   end;
 
 implementation
-
-uses Forms, SysUtils, Graphics,
-  LCLIntf, LCLType, {ComObj,}
-  uConfig, Classes, Dialogs, uViewIntegrator;
-
-
 
 {$IFDEF false}
 function MakeDOM : variant;

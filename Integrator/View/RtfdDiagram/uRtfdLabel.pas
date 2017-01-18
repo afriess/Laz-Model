@@ -1,13 +1,30 @@
+{
+  Laz-Model
+  Copyright (C) 2017 Peter Dyson. Initial Lazarus port
+  Portions (C) 2002  Eldean AB, Peter Söderman, Ville Krumlinde
+
+  This program is free software; you can redistribute it and/or
+  modify it under the terms of the GNU General Public License
+  as published by the Free Software Foundation; either version 2
+  of the License, or (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+}
 unit uRtfdLabel;
 
 {$mode objfpc}{$H+}
 
-
 interface
-uses LCLIntf, LCLType,
-  ExtCtrls, Classes, Graphics, uModel, uModelEntity, Controls, uListeners,
-  uConfig;
-
+uses
+  Classes, LCLIntf, LCLType, Controls, ExtCtrls, Graphics,
+  uModel, uModelEntity, uListeners, uConfig;
 
 const
   ClassShadowWidth = 3;
@@ -20,68 +37,49 @@ const
   cMargin = 4;
 
 var
-  TopColor : array[boolean] of TColor = ($EAF4F8, clWhite);
 
+  TopColor : array[boolean] of TColor = ($EAF4F8, clWhite);
 
 type
 
-{
-  This label will be given it's Top at create
-  Left will be global EnitiyLeftMargin
-  It will calculate it's Height which will be available to the parent
-  after the parents calls its WidthNeeded method which the parent
-  can ignore as
-  it will be told it's Width at draw time.
-}
-
-{ TRtfdODLabel }
-
-TRtfdODLabel = class(TComponent, IModelEntityListener)
-private
-  FOwner: TCustomControl;
-  FCaption: TCaption;
-  FCanvas: TCanvas;
-  FAlignment: TAlignment;
-  FTransparent: Boolean;
-  fFont: TFont;
-  function GetAlignment: TAlignment;
-  procedure SetAlignment(const Value: TAlignment);
-  procedure SetTransparent(const Value: Boolean);
-  procedure SetWantedBounds;
-
-protected
-
-  FBox: TRect;
-  Entity: TModelEntity;
-
-  procedure Paint; virtual;
-  procedure SetText(const Value: TCaption);
-  function GetText: TCaption;
-public
-  constructor Create(AOwner: TComponent; AEntity: TModelEntity; Tp: integer); reintroduce; virtual;
-  destructor Destroy; override;
-  procedure Change(Sender: TModelEntity); virtual;
-  procedure Paint(width: integer); virtual;{override;}
-  procedure AddChild(Sender: TModelEntity; NewChild: TModelEntity); virtual;
-  procedure Remove(Sender: TModelEntity); virtual;
-  procedure EntityChange(Sender: TModelEntity); virtual;
-  function WidthNeeded : integer; virtual;
-  function Height:  integer;
-  property ModelEntity: TModelEntity read Entity;
-  property Alignment: TAlignment read GetAlignment write SetAlignment default taLeftJustify;
-  property Transparent: Boolean read FTransparent write SetTransparent;
-  property Canvas: TCanvas read FCanvas write FCanvas;
-  property Parent: TCustomControl read FOwner;
-  property Font: TFont read fFont write fFont;
-  property Caption: TCaption read FCaption write FCaption;
-end;
-
+  TRtfdODLabel = class(TComponent, IModelEntityListener)
+  private
+    FOwner: TCustomControl;
+    FCaption: TCaption;
+    FCanvas: TCanvas;
+    FAlignment: TAlignment;
+    FTransparent: Boolean;
+    fFont: TFont;
+    function GetAlignment: TAlignment;
+    procedure SetAlignment(const Value: TAlignment);
+    procedure SetTransparent(const Value: Boolean);
+    procedure SetWantedBounds;
+  protected
+    FBox: TRect;
+    Entity: TModelEntity;
+    procedure Paint; virtual;
+    procedure SetText(const Value: TCaption);
+    function GetText: TCaption;
+  public
+    constructor Create(AOwner: TComponent; AEntity: TModelEntity; Tp: integer); reintroduce; virtual;
+    destructor Destroy; override;
+    procedure Change(Sender: TModelEntity); virtual;
+    procedure Paint(width: integer); virtual;
+    procedure AddChild(Sender: TModelEntity; NewChild: TModelEntity); virtual;
+    procedure Remove(Sender: TModelEntity); virtual;
+    procedure EntityChange(Sender: TModelEntity); virtual;
+    function WidthNeeded : integer; virtual;
+    function Height:  integer;
+    property ModelEntity: TModelEntity read Entity;
+    property Alignment: TAlignment read GetAlignment write SetAlignment default taLeftJustify;
+    property Transparent: Boolean read FTransparent write SetTransparent;
+    property Canvas: TCanvas read FCanvas write FCanvas;
+    property Parent: TCustomControl read FOwner;
+    property Font: TFont read fFont write fFont;
+    property Caption: TCaption read FCaption write FCaption;
+  end;
 
 implementation
-
-
-
-{ TRtfdODLabel }
 
 function TRtfdODLabel.GetAlignment: TAlignment;
 begin
@@ -105,7 +103,6 @@ begin
     FOwner.Invalidate;
   end;
 end;
-
 
 procedure TRtfdODLabel.SetWantedBounds;
 var
@@ -133,7 +130,6 @@ begin
   FBox.Right := Rect.Right;
 
 end;
-
 
 procedure TRtfdODLabel.Paint(width: integer);
 begin
@@ -226,12 +222,10 @@ begin
    // stub
 end;
 
-
 procedure TRtfdODLabel.EntityChange(Sender: TModelEntity);
 begin
   // fOwner.Invalidate;
 end;
-
 
 function TRtfdODLabel.WidthNeeded: integer;
 begin

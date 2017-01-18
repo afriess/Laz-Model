@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uRtfdLabel">
+      <descr/>
+      <element name="TRtfdODLabel">
+        <short>A lightwieght owner drawn label which inherits from TComponent instead of TControl.</short>
+        <descr>
+          <p>Created because there are no controls in Lazarus which have no mouse eventing.</p>
+          <p>This label will be given it's Top at create</p>
+          <p>Left will be global EnitiyLeftMargin</p>
+          <p>It will calculate it's Height which will be available to the parent
+  after the parents calls its WidthNeeded method which the parent
+  can ignore as it will be told it's Width at draw time.</p>
+        </descr>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.Alignment">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.Canvas">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.Caption">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.Entity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.FAlignment">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.FBox">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.FCanvas">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.FCaption">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.fFont">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.Font">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.FOwner">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.FTransparent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.ModelEntity">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.Parent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.Transparent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.AddChild">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.Change">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.EntityChange">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.GetAlignment">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.GetText">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.Height">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.Remove">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.SetAlignment">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.SetText">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.SetTransparent">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.SetWantedBounds">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRtfdODLabel.WidthNeeded">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uJavaClassImport">
+      <descr/>
+      <element name="TJavaClassImporter">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIntegrator.TImportIntegrator">TImportIntegrator {Parent of}</link>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TJavaClassImporter.GetFileExtensions">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaClassImporter.ImportOneFile">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TJavaClassImporter.NeedPackageHandler">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

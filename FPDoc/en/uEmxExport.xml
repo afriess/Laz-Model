@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uEmxExport">
+      <descr/>
+      <element name="TEmxExporter">
+        <short/>
+        <descr/>
+        <seealso>
+          <link id="uIntegrator.TExportIntegrator">TExportIntegrator {Parent of}</link>
+          <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
+        </seealso>
+      </element>
+      <element name="TEmxExporter.Feedback">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.Ids">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.NextId">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.Output">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.GetText">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.InitFromModel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.MakeId">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.MakeTypeRef">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.SaveTo">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.ShowSaveDialog">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.Write">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.WriteClass">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.WriteDataType">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.WriteEntityHeader">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.WriteFeatures">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.WriteInterface">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.WriteLogicPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.WritePackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.WriteUnitPackage">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.Xml">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.XmlClose">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TEmxExporter.XmlOpen">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

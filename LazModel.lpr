@@ -1,5 +1,5 @@
 {
-  ESS-Model
+  Laz-Model
   Copyright (C) 2002  Eldean AB, Peter Söderman, Ville Krumlinde
   Portions (C) 2016 Peter Dyson. Initial Lazarus port
 
@@ -22,10 +22,10 @@
     www.sourceforge.net/projects/essmodel
 }
 
-program EssModel;
+program LazModel;
 
 uses
-  Forms, Interfaces,
+  Forms, Interfaces, sysutils,
   uMainForm in 'System\uMainForm.pas' {MainForm},
   uMainModule in 'System\uMainModule.pas' {MainModule: TDataModule},
   uListeners in 'Model\uListeners.pas',
@@ -48,6 +48,7 @@ uses
   uRtfdLabel in 'Integrator\View\RtfdDiagram\uRtfdLabel.pas',
   uIterators in 'Model\uIterators.pas',
   uDocGen in 'Integrator\Doc\uDocGen.pas',
+  uFPDocGen in 'Integrator\Doc\uFPDocGen.pas',
   uDocumentation in 'Model\uDocumentation.pas',
   uJavaClassImport in 'Integrator\CodeIO\JavaClass\uJavaClassImport.pas',
   uJavaClass in 'Integrator\CodeIO\JavaClass\uJavaClass.pas',
@@ -56,6 +57,7 @@ uses
   essLayout in 'Components\essLayout.pas',
   uHtmlDocGen in 'Integrator\Doc\uHtmlDocGen.pas',
   uJavaParser in 'Integrator\CodeIO\uJavaParser.pas',
+  ufpcParser in 'Integrator\CodeIO\ufpcParser.pas',
   SugiyamaLayout in 'Components\SugiyamaLayout.pas',
   uConst in 'System\uConst.pas',
   uAboutForm in 'System\uAboutForm.pas' {AboutForm},
@@ -63,6 +65,8 @@ uses
   uFeedback in 'System\uFeedback.pas',
   uTreeViewFrame in 'Integrator\View\uTreeViewFrame.pas' {TreeViewFrame: TFrame},
   uTreeViewIntegrator in 'Integrator\View\uTreeViewIntegrator.pas',
+  uClassTreeEditIntegrator in 'Integrator\View\LzmTreeEdit\uClassTreeEditIntegrator.pas',
+  uClassTreeEditForm in 'Integrator\View\LzmTreeEdit\uClassTreeEditForm.pas',
   uXmiExportArgoUML in 'Integrator\Export\uXmiExportArgoUML.pas',
   uZoomFrame in 'System\uZoomFrame.pas' {ZoomFrame: TFrame},
   uEmxExport in 'Integrator\Export\uEmxExport.pas';
@@ -70,6 +74,16 @@ uses
 {$R *.res}
 
 begin
+   {$IFDEF DEBUG}
+  // Assuming your build mode sets -dDEBUG in Project Options/Other when defining -gh
+  // This avoids interference when running a production/default build without -gh
+
+  // Set up -gh output for the Leakview package:
+  if FileExists('heap.trc') then
+    DeleteFile('heap.trc');
+  SetHeapTraceOutput('heap.trc');
+  {$ENDIF DEBUG}
+
   Application.Initialize;
   Application.Title := 'essModel';
   Application.CreateForm(TMainForm, MainForm);

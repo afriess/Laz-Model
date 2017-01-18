@@ -1,35 +1,29 @@
 object MainForm: TMainForm
-  Left = 84
+  Left = 33
   Height = 526
-  Top = 339
+  Top = 564
   Width = 648
-  Caption = 'x'
-  ClientHeight = 507
+  ClientHeight = 496
   ClientWidth = 648
-  Color = clBtnFace
-  Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'MS Sans Serif'
   Menu = MainMenu1
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poScreenCenter
   ShowHint = True
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.7'
   object Panel1: TPanel
     Left = 0
-    Height = 479
-    Top = 28
+    Height = 496
+    Top = 0
     Width = 648
     Align = alClient
-    Caption = 'Panel1'
-    ClientHeight = 479
+    ClientHeight = 496
     ClientWidth = 648
     TabOrder = 0
     object Splitter1: TSplitter
       Left = 201
-      Height = 457
+      Height = 474
       Top = 1
       Width = 8
       Beveled = True
@@ -37,7 +31,7 @@ object MainForm: TMainForm
     object StatusPanel: TPanel
       Left = 1
       Height = 20
-      Top = 458
+      Top = 475
       Width = 646
       Align = alBottom
       Alignment = taLeftJustify
@@ -50,7 +44,7 @@ object MainForm: TMainForm
     end
     object DiagramPanel: TPanel
       Left = 209
-      Height = 457
+      Height = 474
       Top = 1
       Width = 438
       Align = alClient
@@ -59,12 +53,12 @@ object MainForm: TMainForm
     end
     object LeftPanel: TPanel
       Left = 1
-      Height = 457
+      Height = 474
       Top = 1
       Width = 200
       Align = alLeft
       BevelOuter = bvNone
-      ClientHeight = 457
+      ClientHeight = 474
       ClientWidth = 200
       TabOrder = 2
       object Splitter2: TSplitter
@@ -88,7 +82,7 @@ object MainForm: TMainForm
       end
       object TreePanel: TPanel
         Left = 0
-        Height = 328
+        Height = 345
         Top = 129
         Width = 200
         Align = alClient
@@ -97,60 +91,11 @@ object MainForm: TMainForm
       end
     end
   end
-  object Panel2: TPanel
-    Left = 0
-    Height = 28
-    Top = 0
-    Width = 648
-    Align = alTop
-    BevelOuter = bvNone
-    ClientHeight = 28
-    ClientWidth = 648
-    TabOrder = 1
-    Visible = False
-    object OpenButton: TSpeedButton
-      Left = 0
-      Height = 22
-      Top = 1
-      Width = 23
-      Action = MainModule.FileOpenAction
-      Flat = True
-      Glyph.Data = {
-        42030000424D42030000000000003600000028000000110000000F0000000100
-        1800000000000C03000000000000000000000000000000000000CED3D6CED3D6
-        CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3
-        D6CED3D6CED3D6CED3D6CED3D600CED3D6000000000000000000000000000000
-        000000000000000000000000000000000000CED3D6CED3D6CED3D6CED3D6CED3
-        D600CED3D6000000000000008684008684008684008684008684008684008684
-        008684008684000000CED3D6CED3D6CED3D6CED3D600CED3D600000000FFFF00
-        0000008684008684008684008684008684008684008684008684008684000000
-        CED3D6CED3D6CED3D600CED3D6000000FFFFFF00FFFF00000000868400868400
-        8684008684008684008684008684008684008684000000CED3D6CED3D600CED3
-        D600000000FFFFFFFFFF00FFFF00000000868400868400868400868400868400
-        8684008684008684008684000000CED3D600CED3D6000000FFFFFF00FFFFFFFF
-        FF00FFFF00000000000000000000000000000000000000000000000000000000
-        0000CED3D600CED3D600000000FFFFFFFFFF00FFFFFFFFFF00FFFFFFFFFF00FF
-        FFFFFFFF00FFFF000000CED3D6CED3D6CED3D6CED3D6CED3D600CED3D6000000
-        FFFFFF00FFFFFFFFFF00FFFFFFFFFF00FFFFFFFFFF00FFFFFFFFFF000000CED3
-        D6CED3D6CED3D6CED3D6CED3D600CED3D600000000FFFFFFFFFF00FFFF000000
-        000000000000000000000000000000000000CED3D6CED3D6CED3D6CED3D6CED3
-        D600CED3D6CED3D6000000000000000000CED3D6CED3D6CED3D6CED3D6CED3D6
-        CED3D6CED3D6CED3D6000000000000000000CED3D600CED3D6CED3D6CED3D6CE
-        D3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6
-        000000000000CED3D600CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CE
-        D3D6CED3D6000000CED3D6CED3D6CED3D6000000CED3D6000000CED3D600CED3
-        D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D600000000
-        0000000000CED3D6CED3D6CED3D6CED3D600CED3D6CED3D6CED3D6CED3D6CED3
-        D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CED3D6CE
-        D3D6CED3D600
-      }
-    end
-  end
   object MainMenu1: TMainMenu
-    left = 46
-    top = 55
+    left = 48
+    top = 56
     object File1: TMenuItem
-      Caption = 'File'
+      Caption = '&File'
       object Open1: TMenuItem
         Action = MainModule.FileOpenAction
       end
@@ -167,11 +112,10 @@ object MainForm: TMainForm
         Action = MainModule.PrintDiagramAction
       end
       object Generatedocumentation1: TMenuItem
-        Caption = 'Generate documentation'
-        Enabled = False
+        Action = MainModule.DocGenAction
       end
       object Previewdocumentation1: TMenuItem
-        Caption = 'Preview documentation'
+        Caption = 'Preview Documentation'
         Enabled = False
       end
       object ExportXmiAction1: TMenuItem
@@ -190,7 +134,8 @@ object MainForm: TMainForm
         Caption = '-'
       end
       object Exit1: TMenuItem
-        Action = MainModule.ExitAction
+        Caption = '&Exit'
+        OnClick = Exit1Click
       end
     end
     object Diagram1: TMenuItem
@@ -212,6 +157,9 @@ object MainForm: TMainForm
       Caption = 'Help'
       object About1: TMenuItem
         Action = MainModule.AboutAction
+      end
+      object TreeEdit: TMenuItem
+        Action = MainModule.TreeEditShow
       end
     end
   end
