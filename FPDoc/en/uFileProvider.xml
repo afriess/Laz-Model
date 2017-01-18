@@ -4,7 +4,7 @@
     <module name="uFileProvider">
       <descr/>
       <element name="TFileProvider">
-        <short/>
+        <short>Implementation of a TCodeProvider using the physical filesystem.  </short>
         <descr/>
         <seealso>
           <link id="uCodeProvider.TCodeProvider">TCodeProvider {Parent of}</link>
