@@ -29,7 +29,7 @@
         <seealso/>
       </element>
       <element name="TCodeProvider">
-        <short/>
+        <short>Abstract baseclass for sourcecode providers</short>
         <descr/>
         <seealso/>
       </element>
@@ -69,12 +69,12 @@
         <seealso/>
       </element>
       <element name="TCodeProvider.OnCodeChange">
-        <short/>
+        <short>Event to be called when there are external changes to the source detected</short>
         <descr/>
         <seealso/>
       </element>
       <element name="TCodeProvider.SearchPath">
-        <short/>
+        <short>Stringlist specifying the searchpath to be used when searching for included units</short>
         <descr/>
         <seealso/>
       </element>
@@ -84,7 +84,7 @@
         <seealso/>
       </element>
       <element name="TCodeProvider.AddSearchPath">
-        <short/>
+        <short>Add a path to the search path list</short>
         <descr/>
         <seealso/>
       </element>
@@ -109,7 +109,7 @@
         <seealso/>
       </element>
       <element name="TCodeProvider.LocateFile">
-        <short/>
+        <short>Locate a unit and return the full path to it.</short>
         <descr/>
         <seealso/>
       </element>

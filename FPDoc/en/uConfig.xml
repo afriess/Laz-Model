@@ -163,6 +163,8 @@
         <descr/>
         <seealso/>
       </element>
+    <element name="TConfig.DocsFromFPDoc"><short>If set will get documentation from the configured DocDir.</short>
+      </element>
     </module>
   </package>
 </fpdoc-descriptions>
