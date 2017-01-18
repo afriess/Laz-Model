@@ -289,12 +289,11 @@ begin
       ref := TPasElement(u.Items[i]);
 
       if (ref is TPasModule) and (TPasModule(ref).Filename <> '') then
-        uname := DelQuot(TPasModule(ref).FileName);
-
-      if (ref is TPasUnresolvedUnitRef) and (TPasUnresolvedUnitRef(ref).Filename <> '') then
+        uname := DelQuot(TPasModule(ref).FileName)
+      else if (ref is TPasUnresolvedUnitRef) and (TPasUnresolvedUnitRef(ref).Filename <> '') then
         uname := DelQuot(TPasUnresolvedUnitRef(ref).FileName)
       else
-          uName := ref.Name;
+        uName := ref.Name;
 
       if (FOM.ModelRoot.FindUnitPackage(ref.Name) = nil) then
       begin
@@ -918,16 +917,13 @@ var
   uname: string;
   P: TUnitPackage;
 begin
+
    if (tmod is TPasModule) and (TPasModule(tmod).Filename <> '') then
       uname := DelQuot(TPasModule(tmod).FileName)
-    else
-      uName := tmod.Name;
-
-   if (tmod is TPasUnresolvedUnitRef) and (TPasUnresolvedUnitRef(tmod).Filename <> '') then
+    else if (tmod is TPasUnresolvedUnitRef) and (TPasUnresolvedUnitRef(tmod).Filename <> '') then
       uname := DelQuot(TPasUnresolvedUnitRef(tmod).FileName)
     else
       uName := tmod.Name;
-
 
    if Assigned(Self.NeedPackage) then
       if (FOM.ModelRoot.FindUnitPackage(uName) = nil) then
@@ -994,8 +990,8 @@ begin
 
      {$IFDEF TRACE_PARSE_TREE}ErrorHandler.Trace ('Start Parsing 0 : ' + fFilename);{$ENDIF}
      pp:= ParseSource(E, self.Filename + ' -Sd' ,'WINDOWS' ,'i386', True) as TPasProgram;
-     CurProgram := pp;
      {$IFDEF TRACE_PARSE_TREE}ErrorHandler.Trace ('Stop Parsing 0: ' + fFilename);{$ENDIF}
+     CurProgram := pp;
      ParseProject (pp);
      CurProgram := nil;
      pp.free;

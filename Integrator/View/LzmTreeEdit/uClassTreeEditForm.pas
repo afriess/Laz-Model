@@ -201,8 +201,6 @@ begin
 
 end;
 
-
-
 procedure TClassTreeEditForm.InitTreeFromDataType;
 var
   root: TTreeNode;
@@ -233,6 +231,7 @@ begin
      tel := TEnumLiteral(Pi.Next);
      TreeView1.Items.AddChildObject(ParentNode, tel.Name + ' : ' + tel.ClassName,tel);
    end;
+   Pi.Free;
 end;
 
 

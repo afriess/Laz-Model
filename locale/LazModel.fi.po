@@ -1,6 +1,10 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8"
 
+#: tclasstreeeditform.caption
+msgid "ClassTreeEditForm"
+msgstr ""
+
 #: tdiagramframe.connectionslabel.caption
 msgid "Connections"
 msgstr "Kytkennät"
