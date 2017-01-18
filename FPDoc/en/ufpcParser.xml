@@ -161,14 +161,17 @@
         <seealso/>
       </element>
       <element name="TSimpleEngine.FindElement">
-        <short/>
-        <descr/>
+        <short>Allows resolution during query of items in passrc marked as unresolved during parse phase.</short>
+        <descr><p>'Borrowed' from FPDoc source</p>
+        </descr>
         <seealso/>
       </element>
       <element name="TSimpleEngine.FindModule">
         <short/>
         <descr/>
         <seealso/>
+      </element>
+    <element name="DelQuot"><short>Removes some annoying quotes added by passrc.</short>
       </element>
     </module>
   </package>

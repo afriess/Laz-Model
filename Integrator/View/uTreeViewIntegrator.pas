@@ -231,9 +231,9 @@ begin
       newRoot := ATreeRoot.Owner.AddChildObject(ATreeRoot, ent.Name, ent);
       (newRoot as TViewNode).FIsImplementation := True;
       if ent is uModel.TClass then
-        BuildClassView(newRoot, ent as uModel.TClass)
+        BuildClassView(newRoot, ent as TClass)
       else
-        BuildInterfaceView(newRoot, ent as uModel.TInterface)
+        BuildInterfaceView(newRoot, ent as TInterface)
     end;
   end;
 end;

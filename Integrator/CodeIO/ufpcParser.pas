@@ -21,20 +21,29 @@ unit ufpcParser;
 
 {$mode objfpc}{$H+}
 
+// Debuging defs
+//{$DEFINE TRACE_PARSE_TREE}
+
 interface
 
 uses
   Classes, SysUtils,
   Dialogs,
-  uCodeParser, uModel, uModelEntity, PParser, PasTree;
+  uCodeParser, uModel, uModelEntity, uConfig, uError, uIterators,
+  PParser, PasTree;
 
+
+var
+   CurProgram: TPasProgram;
 
 type
+  TfpcParser = class;
 
   { TSimpleEngine }
 
   TSimpleEngine = class(TPasTreeContainer)
   private
+    FCallingParser: TfpcParser;
     fIsProgram: boolean;
     CurModule: TPasModule;
   public
@@ -46,6 +55,7 @@ type
     function FindElement(const AName: String): TPasElement; override;
     function FindModule(const AName: String): TPasModule; override;
     property IsProgram: boolean read fIsProgram write fIsProgram;
+    property CallingParser: TfpcParser read FCallingParser write FCallingParser;
   end;
 
 
@@ -53,8 +63,6 @@ type
 
   TfpcParser = class(TCodeParser)
     private
-      FOM: TObjectModel;
-      FUnit: TUnitPackage;
       fFilename: string;
       FGlobalDefines: TStringList;
       FForwards: TStringList;
@@ -65,7 +73,6 @@ type
       function GetDefaultValue(exp: TPasExpr):string;
       function FindInForwards(clsName: string): TClass;
       procedure FillEnum(tp: TPasEnumType; te: TEnumeration);
-
       procedure AddOpDirectives(op: TOperation; Mods:TProcedureModifiers);
       procedure ParseProject(M: TPasProgram);
       procedure ParseUnit(M: TPasModule);
@@ -82,8 +89,12 @@ type
       procedure AddFunction(op: TOperation; proc: TPasFunction);
       procedure AddProperty(prop: TProperty; pproc: TPasProperty);
     public
+      FUnit: TUnitPackage;
+      FOM: TObjectModel;
+      Name: string;
       constructor Create;
       destructor Destroy; override;
+      procedure CheckThis(tmod : TPasElement);
       procedure ParseFileWithDefines( AModel: TAbstractPackage; AOM: TObjectModel; const GlobalDefines: TStringList );
     published
       property Filename: string read fFilename write fFilename;
@@ -172,25 +183,50 @@ begin
 end;
 
 function TSimpleEngine.FindModule(const AName: String): TPasModule;
+var
+  i: integer;
+  ulist: TFPList;
+  s: string;
 begin
   if fIsProgram then
-     Result := TPasModule.Create(AName, nil)
-  else
+    begin
+    // If parsing a program file let the engine create unresolved unit refs
+    // if you let the passrc engine create TPasUnits here it leaks memory!!
      Result := nil;
+    end
+  else
+    begin
+      Result := nil;
+      // if unit parsing in a program then fully resolve the partial filename
+      // and check to see if this unit has been parsed already, and do so if not
+      // This section is called while the parser is actually parsing the unit
+      // section before it parses the rest of the file.
+      if Assigned(CurProgram) then
+      begin
+        ulist := CurProgram.ProgramSection.UsesList;
+        for i := 0 to ulist.Count-1 do
+        begin
+          s :=  TPasModule(ulist[i]).Name;
+          if (s = AName) then
+            begin
+              Result := TPasModule(ulist[i]);
+              self.CallingParser.CheckThis(Result);
+             break;
+            end;
+        end;
+      end;
+    end;
 end;
 
-
-{ TfpcParser }
-
-// TODO EXTEND The model
 function TfpcParser.getVisibility(vis: TPasMemberVisibility): TVisibility;
 begin
+
   case vis of
     visPublic, visDefault: Result := viPublic;
     visStrictPrivate, visPrivate: Result := viPrivate;
     visStrictProtected, visProtected: Result := viProtected;
     visPublished: Result := viPublished;
-    visAutomated:
+    visAutomated: Result := viPublic;  // ?? passrc / delphi specific ??
   end;
 end;
 
@@ -206,12 +242,10 @@ begin
   end;
 end;
 
-
-
 procedure TfpcParser.ParseProject(M: TPasProgram);
 begin
-  FUnit := (FModel as TLogicPackage).AddUnit(M.Name);
-  FUnit.Sourcefilename := Filename;
+//  FUnit := (FModel as TLogicPackage).AddUnit(M.Name);
+//  FUnit.Sourcefilename := Filename;
   GetUnits(M.ProgramSection.UsesList);
 
 end;
@@ -220,10 +254,15 @@ procedure TfpcParser.ParseUnit(M: TPasModule);
 var
   intf: TInterfaceSection;
 begin
-   FUnit := (FModel as TLogicPackage).AddUnit(M.Name);
-   FUnit.Sourcefilename := Self.Filename;
-   FUnit.Documentation.Description := M.DocComment;
-   FUnit.Visibility := viPublic;
+   if not Assigned(FUnit) then
+     FUnit := FOM.ModelRoot.FindUnitPackage(M.Name);
+   if not Assigned(FUnit) then
+     begin
+      FUnit := (FModel as TLogicPackage).AddUnit(M.Name);
+      FUnit.Sourcefilename := Self.Filename;
+      FUnit.Documentation.Description := M.DocComment;
+      FUnit.Visibility := viPublic;
+     end;
    intf := M.InterfaceSection;
    if Assigned(intf) then
       begin
@@ -242,39 +281,61 @@ var
   str: TStream;
   fullName, uName: string;
   ref: TPasElement;
+  P: TUnitPackage;
 begin
   If Assigned(u) and (u.Count > 0) then
-     for i := 0 to u.Count- 1 do
-     begin
-       ref := TPasElement(u.Items[i]);
-       if (ref is TPasModule) and (TPasModule(ref).Filename <> '') then
-          uname := DelQuot(TPasModule(ref).FileName)
-        else
-          uName := ref.Name;
-       if Assigned(NeedPackage) and (FOM.ModelRoot.FindUnitPackage(uName) = nil) then
-       begin
-         fullName := NeedPackage(uName, str{%H-}, Recurse);
-         if Fullname <> '' then
-         begin
-           try
-             prs := TfpcParser.Create;
-             prs.FileName := fullName;
-             prs.NeedPackage := NeedPackage;
-             try
-               prs.ParseFileWithDefines(FModel, FOM, FGlobalDefines);
-             except
-               on E : EParseError do
-                 ShowMessage(E.Message);
-             end;
-           finally
-             FreeAndNil(prs);
-           end;
-         end;
-       end;
-       if (FOM.ModelRoot.FindUnitPackage(uName) <> nil) and Recurse then
-         FUnit.AddUnitDependency(FOM.ModelRoot.FindUnitPackage(uName),AVisibility);
+    for i := 0 to u.Count- 1 do
+    begin
+      ref := TPasElement(u.Items[i]);
 
-     end;
+      if (ref is TPasModule) and (TPasModule(ref).Filename <> '') then
+        uname := DelQuot(TPasModule(ref).FileName);
+
+      if (ref is TPasUnresolvedUnitRef) and (TPasUnresolvedUnitRef(ref).Filename <> '') then
+        uname := DelQuot(TPasUnresolvedUnitRef(ref).FileName)
+      else
+          uName := ref.Name;
+
+      if (FOM.ModelRoot.FindUnitPackage(ref.Name) = nil) then
+      begin
+        if Assigned(NeedPackage) then
+        begin
+          fullName := NeedPackage(uName, str{%H-}, Recurse);
+          if Fullname <> '' then
+          begin
+            try
+              P := (FModel as TLogicPackage).AddUnit(ref.Name);
+              P.Sourcefilename := Fullname;
+              P.SourceY := ref.SourceLinenumber;
+              P.Documentation.Description := ref.DocComment;
+              if Assigned(self.FUnit) then
+                FUnit.AddUnitDependency(P,viPublic);
+              prs := TfpcParser.Create;
+              prs.FileName := fullName;
+              prs.NeedPackage := NeedPackage;
+              prs.Name := ref.Name;
+              prs.FUnit := P;
+              try
+                {$IFDEF TRACE_PARSE_TREE}ErrorHandler.Trace ('Start Parsing 2: ' + uname);{$ENDIF}
+                prs.ParseFileWithDefines(FModel, FOM, FGlobalDefines);
+                {$IFDEF TRACE_PARSE_TREE}ErrorHandler.Trace ('Stop Parsing 2: ' + uname);{$ENDIF}
+              except
+                on E : EParseError do
+                  ShowMessage(E.Message);
+              end;
+            finally
+              FreeAndNil(prs);
+            end;
+          end;
+        end;
+      end
+      else
+        begin
+          if Assigned(FUnit) and Recurse then
+            FUnit.AddUnitDependency(FOM.ModelRoot.FindUnitPackage(ref.Name),AVisibility);
+        end;
+    end;
+
 end;
 
 procedure TfpcParser.GetClasses(c: TFPList; AVisibility: TVisibility;
@@ -400,7 +461,6 @@ begin
       end;
     end;
 end;
-
 
 procedure TfpcParser.PopulateMembers(ths: TClass; mems: TFPList);
 var
@@ -530,7 +590,6 @@ begin
   end;
 end;
 
-
 // this has a nasty hack due to the parser parsing file by file
 // even though it does things recursivly, unfortunately there are a lot
 // of TStringLists, TObject references which come as parameters to
@@ -544,13 +603,31 @@ end;
 function TfpcParser.getClassifier(s: String; pType: TPasType): TClassifier;
 var
   createForward: boolean;
+  Mi: TModelIterator;
+  pack: TUnitPackage;
 begin
   createForward := False;
 
+
   if s = '' then s := 'Unidentified datatype';
+
   Result := FUnit.FindClassifier(s);
   if not Assigned(Result) then
      Result := FUnit.FindClassifier(s, False, TClass);
+
+  Mi := TModelIterator.Create(FOM.ModelRoot.GetPackages);
+  if (Mi.Count > 0) then
+  while Mi.HasNext do
+  begin
+    pack :=  TUnitPackage(Mi.Next);
+    Result := pack.FindClassifier(s);
+    if not Assigned(Result) then
+      Result := pack.FindClassifier(s, False, TClass);
+    If Assigned( Result) then
+      break;
+  end;
+  Mi.Free;
+
   if not Assigned(Result) then
        Result := FOM.UnknownPackage.FindClassifier(s, False, TClass);
   if not Assigned(Result) then
@@ -660,7 +737,6 @@ begin
 
 end;
 
-
 procedure TfpcParser.PopulateClass(ths: TClass; cls: TPasClassType);
 var
   ans: TPasType;
@@ -670,6 +746,8 @@ var
   intfs: TFPList;
   i: integer;
 begin
+
+
   if Assigned(cls.AncestorType) then
   begin
     ans := TPasType(cls.AncestorType);
@@ -760,8 +838,6 @@ begin
 
 end;
 
-
-
 procedure TfpcParser.AddConstructor(op: TOperation; proc: TPasConstructor);
 var
   i: integer;
@@ -834,7 +910,67 @@ begin
   inherited Destroy;
 end;
 
+procedure TfpcParser.CheckThis(tmod: TPasElement);
+var
+  fullname: string;
+  str: TStream;
+  prs: TfpcParser;
+  uname: string;
+  P: TUnitPackage;
+begin
+   if (tmod is TPasModule) and (TPasModule(tmod).Filename <> '') then
+      uname := DelQuot(TPasModule(tmod).FileName)
+    else
+      uName := tmod.Name;
 
+   if (tmod is TPasUnresolvedUnitRef) and (TPasUnresolvedUnitRef(tmod).Filename <> '') then
+      uname := DelQuot(TPasUnresolvedUnitRef(tmod).FileName)
+    else
+      uName := tmod.Name;
+
+
+   if Assigned(Self.NeedPackage) then
+      if (FOM.ModelRoot.FindUnitPackage(uName) = nil) then
+   begin
+     fullName := NeedPackage(uName, str{%H-}, true);
+     if Fullname <> '' then
+     begin
+       try
+         P := (FModel as TLogicPackage).AddUnit(tmod.Name);
+         P.Sourcefilename := fullname;
+         P.SourceY := tmod.SourceLinenumber;
+         P.Documentation.Description := tmod.DocComment;
+         if Assigned(self.FUnit) then
+           FUnit.AddUnitDependency(P,viPublic);
+         prs := TfpcParser.Create;
+         prs.FileName := fullName;
+         prs.Name := uname;
+         prs.NeedPackage := NeedPackage;
+         prs.FUnit := P;
+         try
+           {$IFDEF TRACE_PARSE_TREE}ErrorHandler.Trace ('Start Parsing 3: ' + uName); {$ENDIF}
+           prs.ParseFileWithDefines(FModel, FOM, FGlobalDefines);
+           {$IFDEF TRACE_PARSE_TREE}ErrorHandler.Trace ('Stop Parsing 3: ' + uName);{$ENDIF}
+         except
+           on E : EParseError do
+             ShowMessage(E.Message);
+         end;
+       finally
+         FreeAndNil(prs);
+       end;
+     end
+    else
+     begin
+        if not Assigned(FUnit) then
+          Funit := FOM.ModelRoot.FindUnitPackage(self.Name);
+
+        if Assigned(FUnit) and (FOM.ModelRoot.FindUnitPackage(uName) <> nil)  then
+            FUnit.AddUnitDependency(FOM.ModelRoot.FindUnitPackage(uName),viPublic);
+
+     end;
+   end;
+
+end;
 
 procedure TfpcParser.ParseFileWithDefines(AModel: TAbstractPackage;
   AOM: TObjectModel; const GlobalDefines: TStringList);
@@ -849,21 +985,31 @@ begin
   FOM := AOM;
 
   E := TSimpleEngine.Create;
+  TSimpleEngine(E).CallingParser := self;
   s:=  ExtractFileExt(fFilename);
   if ( s = '.lpr') then
   begin
      E.InterfaceOnly := false;
      TSImpleEngine(E).IsProgram := True;
+
+     {$IFDEF TRACE_PARSE_TREE}ErrorHandler.Trace ('Start Parsing 0 : ' + fFilename);{$ENDIF}
      pp:= ParseSource(E, self.Filename + ' -Sd' ,'WINDOWS' ,'i386', True) as TPasProgram;
+     CurProgram := pp;
+     {$IFDEF TRACE_PARSE_TREE}ErrorHandler.Trace ('Stop Parsing 0: ' + fFilename);{$ENDIF}
      ParseProject (pp);
+     CurProgram := nil;
+     pp.free;
      FreeAndNil(E);
   end
   else
   begin
+     {$IFDEF TRACE_PARSE_TREE}ErrorHandler.Trace ('Start Parsing 1: ' + fFilename);{$ENDIF}
      M := ParseSource(E, self.Filename  + ' -Sd' ,'WINDOWS' ,'i386', True);
+     {$IFDEF TRACE_PARSE_TREE}ErrorHandler.Trace ('Stop Parsing 1: ' + fFilename);{$ENDIF}
      ParseUnit(M);
      FreeAndNil(M);
   end;
+
   E.Free;
 end;
 

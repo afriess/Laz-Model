@@ -131,6 +131,9 @@ begin
   TZoomFrame.Create(MainForm.ZoomPanel,Diagram);
   {$IFDEF DEBUG}
   FTreeEditView := TClassTreeEditIntegrator.Create(FModel,ClassTreeEditForm, Feedback);
+ // ErrorHandler.SetTraceMode(trShowWindow);   // This leaks memory
+                                               // comment out before doing
+                                               // heaptrc runs until fixed.
   {$ENDIF DEBUG}
 
 
@@ -155,12 +158,14 @@ begin
   if Assigned(Drop) then
     Drop.Unregister;
   {$ifend}
+  {$IFDEF DEBUG}
+  FreeAndNil(FTreeEditView);
+  {$ENDIF DEBUG}
 
   FreeAndNil(FDiagram);
 //  FreeAndNil(FBackEnd);
   FreeAndNil(FTreeView);
   FreeAndNil(FModel);
-
   FreeAndNil(RecentFiles);
 end;
 

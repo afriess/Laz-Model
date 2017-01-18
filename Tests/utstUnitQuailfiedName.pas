@@ -23,9 +23,9 @@ unit utstUnitQuailfiedName;
   for proper compilation.
 
   However there is also the usage in uTreeViewIntegrator where TClass is
-  fully qualified throughout the unit, without any ryhme or reason ( although
+  fully qualified throughout the unit, without any ryhme or reason. ( although
   it is probably just a case of having had to qualify in much earlier versions
-  of the codebase.
+  of the codebase.)
 
   Probably the best idea is to add IsQualified to TClassifiers in the model,
   but keep as simple full name if thrown in the unknown bucket without the

@@ -43,6 +43,7 @@ type
     FDiVisibilityFilter: integer;
     FEditorCommandLine: String;
     FDocGenImages: boolean;
+    FDocsFromFPDoc: boolean;
     FProjectName: string;
     FDocsDir: string;
   public
@@ -70,6 +71,7 @@ type
     property ProjectName: string read FProjectName write FProjectName;
     property DocGenImages: boolean read FDocGenImages write FDocGenImages default True;
     property DocsDir: string read FDocsDir write FDocsDir;
+    property DocsFromFPDoc: boolean read FDocsFromFPDoc write FDocsFromFPDoc default True;
   end;
 
 var

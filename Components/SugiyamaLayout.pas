@@ -70,12 +70,14 @@ type
     function GetEdge(Index: Integer): TEdge;
     property Edges[Index: Integer]: TEdge read GetEdge; default;
   end;
+
   TNodeList = class(TObjectList)
   private
     function GetNode(Index: Integer): TNode;
     function LastIndexOf(const P : pointer) : integer;
     property Nodes[Index: Integer]: TNode read GetNode; default;
   end;
+
   TLayerList = class(TObjectList)
   private
     function GetLayer(Index: Integer): TNodeList;
