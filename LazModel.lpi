@@ -11,13 +11,14 @@
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="EssModel"/>
+      <Title Value="LazModel"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
     <LazDoc Paths=".\FPDoc\en" PackageName="Laz-Model"/>
     <i18n>
-      <EnableI18N LFM="False"/>
+      <EnableI18N Value="True"/>
+      <OutDir Value="locale"/>
     </i18n>
     <VersionInfo>
       <StringTable ProductVersion=""/>
@@ -61,6 +62,7 @@
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
+        <CommandLineParams Value="--lang fi"/>
       </local>
     </RunParams>
     <RequiredPackages Count="2">
@@ -71,9 +73,9 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="47">
+    <Units Count="49">
       <Unit0>
-        <Filename Value="EssModel.lpr"/>
+        <Filename Value="LazModel.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
@@ -287,6 +289,14 @@
         <Filename Value="Integrator\Doc\uFPDocGen.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit46>
+      <Unit47>
+        <Filename Value="locale\Laz-Model.fi.po"/>
+        <IsPartOfProject Value="True"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="locale\Laz-Model.po"/>
+        <IsPartOfProject Value="True"/>
+      </Unit48>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -328,9 +338,6 @@
     </Linking>
     <Other>
       <CustomOptions Value="-dDEBUG"/>
-      <OtherDefines Count="1">
-        <Define0 Value="DEBUG"/>
-      </OtherDefines>
     </Other>
   </CompilerOptions>
   <Debugging>

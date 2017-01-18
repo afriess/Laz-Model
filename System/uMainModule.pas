@@ -397,8 +397,8 @@ begin
         InShowHelp
       else if (S='-traceon') then
         //ignore
-      else if (S<>'') and (S[1]='-') then
-        ShowMessage('Ignoring unknown switch: ' + S)
+ //     else if (S<>'') and (S[1]='-') then
+      //  ShowMessage('Ignoring unknown switch: ' + S)
       else if (S<>'') and (S[1]<>'-') then
         InOne( ParamStr(I) );
     end;

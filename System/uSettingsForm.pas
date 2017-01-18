@@ -29,9 +29,6 @@ uses
   uConfig;
 
 type
-
-  { TSettingsForm }
-
   TSettingsForm = class(TForm)
     ButtonPanel1: TButtonPanel;
     DiSaveCombo: TComboBox;

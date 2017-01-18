@@ -1,5 +1,5 @@
 {
-  ESS-Model
+  Laz-Model
   Copyright (C) 2002  Eldean AB, Peter Söderman, Ville Krumlinde
   Portions (C) 2016 Peter Dyson. Initial Lazarus port
 
@@ -22,7 +22,7 @@
     www.sourceforge.net/projects/essmodel
 }
 
-program EssModel;
+program LazModel;
 
 uses
   Forms, Interfaces, sysutils,

@@ -3,114 +3,129 @@ msgstr "Content-Type: text/plain; charset=UTF-8"
 
 #: tdiagramframe.connectionslabel.caption
 msgid "Connections"
-msgstr "Kytkennät"
+msgstr ""
 
 #: tdiagramframe.filterlabel.caption
 msgid "Filter"
-msgstr "Suodatin"
+msgstr ""
 
 #: tdiagramframe.hidediagramelementaction.caption
 msgid "Hide"
-msgstr "Piilota"
+msgstr ""
 
 #: tdiagramframe.openselectedpackageaction.caption
 msgid "Open selected package in diagram"
-msgstr "Avaa valittu paketti kaaviossa"
+msgstr ""
 
 #: tmainform.diagram1.caption
 msgid "Diagram"
-msgstr "Kaavio"
+msgstr ""
 
 #: tmainform.exit1.caption
 msgctxt "tmainform.exit1.caption"
 msgid "&Exit"
-msgstr "&Poistu"
+msgstr ""
 
 #: tmainform.file1.caption
 msgctxt "tmainform.file1.caption"
 msgid "&File"
-msgstr "&Tiedosto"
+msgstr ""
 
 #: tmainform.help.caption
 msgid "Help"
-msgstr "Ohje"
+msgstr ""
+
+#: tmainform.n1.caption
+msgctxt "tmainform.n1.caption"
+msgid "-"
+msgstr ""
+
+#: tmainform.n2.caption
+msgctxt "TMAINFORM.N2.CAPTION"
+msgid "-"
+msgstr ""
+
+#: tmainform.n3.caption
+msgctxt "TMAINFORM.N3.CAPTION"
+msgid "-"
+msgstr ""
 
 #: tmainform.previewdocumentation1.caption
 msgctxt "tmainform.previewdocumentation1.caption"
 msgid "Preview Documentation"
-msgstr "Esikatsele dokumenttia"
+msgstr ""
 
 #: tmainform.reopenmenuitem.caption
 msgctxt "tmainform.reopenmenuitem.caption"
 msgid "&Reopen"
-msgstr "Avaa &uudelleen"
+msgstr ""
 
 #: tmainmodule.aboutaction.caption
 msgid "&About ..."
-msgstr "&Tietoja ..."
+msgstr ""
 
 #: tmainmodule.copydiagramclipboardaction.caption
 msgctxt "tmainmodule.copydiagramclipboardaction.caption"
 msgid "&Copy Diagram to Clipboard"
-msgstr "&Kopioi kaavio leikepäydälle"
+msgstr ""
 
 #: tmainmodule.docgenaction.caption
 msgctxt "tmainmodule.docgenaction.caption"
 msgid "&Generate Documentation"
-msgstr "Luo dokumentti"
+msgstr ""
 
 #: tmainmodule.docgenpreviewaction.caption
 msgctxt "tmainmodule.docgenpreviewaction.caption"
 msgid "Preview Documentation"
-msgstr "Esikatsele dokumenttia"
+msgstr ""
 
 #: tmainmodule.exportemxaction.caption
 msgctxt "tmainmodule.exportemxaction.caption"
 msgid "Export Model to EMX-file"
-msgstr "Vie malli &EMX-tiedostoon"
+msgstr ""
 
 #: tmainmodule.exportxmiaction.caption
 msgctxt "tmainmodule.exportxmiaction.caption"
 msgid "Export Model to &XMI-file"
-msgstr "Vie malli &XMI-tiedostoon"
+msgstr ""
 
 #: tmainmodule.fileopenaction.caption
 msgctxt "tmainmodule.fileopenaction.caption"
 msgid "&Open ..."
-msgstr "&Avaa ..."
+msgstr ""
 
 #: tmainmodule.fileopenaction.hint
 msgctxt "tmainmodule.fileopenaction.hint"
 msgid "Open..."
-msgstr "&Avaa ..."
+msgstr ""
 
 #: tmainmodule.layoutdiagramaction.caption
 msgctxt "tmainmodule.layoutdiagramaction.caption"
 msgid "&Layout Diagram"
-msgstr "Asettele kaavio"
+msgstr ""
 
 #: tmainmodule.layoutdiagramaction.hint
 msgid "Layout"
-msgstr "Asettelu"
+msgstr ""
 
 #: tmainmodule.openfolderaction.caption
 msgctxt "tmainmodule.openfolderaction.caption"
 msgid "Open &Folder ..."
-msgstr "Avaa &kansio ..."
+msgstr ""
 
 #: tmainmodule.printdiagramaction.caption
 msgid "&Print diagram"
-msgstr "&Tulosta kaavio"
+msgstr ""
 
 #: tmainmodule.savediagramaction.caption
 msgctxt "tmainmodule.savediagramaction.caption"
 msgid "&Save as Picture ..."
-msgstr "Tallenna kuvana ..."
+msgstr ""
 
 #: tmainmodule.settingsaction.caption
 msgctxt "tmainmodule.settingsaction.caption"
 msgid "&Settings ..."
-msgstr "Asetukset ..."
+msgstr ""
 
 #: tmainmodule.treeeditshow.caption
 msgid "TreeEditShow"
@@ -118,5 +133,29 @@ msgstr ""
 
 #: tmainmodule.unhideelementsaction.caption
 msgid "Show &Hidden Diagram Elements"
-msgstr "Näytä piilotetut kaavion osat"
+msgstr ""
+
+#: uconst.progcopyright
+msgid "Copyright (C) Eldean AB Sweden"
+msgstr ""
+
+#: uconst.progmail
+msgid "mail address?"
+msgstr ""
+
+#: uconst.progname
+msgid "Laz-Model"
+msgstr ""
+
+#: uconst.progported
+msgid "Ported for Lazarus by Peter Dyson"
+msgstr ""
+
+#: uconst.progurl
+msgid "https://github.com/dicepd/Laz-Model"
+msgstr ""
+
+#: uconst.progversion
+msgid "2.2"
+msgstr ""
 
