@@ -25,7 +25,7 @@ unit uSettingsForm;
 interface
 
 uses
-  Forms, StdCtrls, ButtonPanel,
+  Forms, StdCtrls, ButtonPanel, DefaultTranslator,
   uConfig;
 
 type

@@ -34,13 +34,8 @@ const
   ProgUrl  = 'https://github.com/dicepd/Laz-Model'; // 'http://www.essmodel.com';
   ProgMail = 'mail address?'; // 'essmodel@eldean.se';
 
-  {$IFDEF TIMELIMIT}
-  TimeLimitY = 2001;
-  TimeLimitM = 5;
-  TimeLimitD = 26;
-  {$ENDIF}
-
 
 implementation
 
 end.
+

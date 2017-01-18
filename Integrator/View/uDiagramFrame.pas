@@ -27,7 +27,7 @@ interface
 
 uses
   Classes,
-  Controls, Messages, Forms, ActnList, Menus, StdCtrls, ExtCtrls, Buttons,
+  Controls, Messages, Forms, ActnList, Menus, StdCtrls, ExtCtrls, Buttons, DefaultTranslator,
   uViewIntegrator, uListeners, uModelEntity, uModel;
 
 
