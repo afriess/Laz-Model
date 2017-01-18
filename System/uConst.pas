@@ -28,17 +28,14 @@ const
   ProgName = 'Laz-Model';
   ProgVersion = '2.2';
 
-  ProgMail = 'essmodel@eldean.se';
-  ProgUrl  = 'http://www.essmodel.com';
+  ProgCopyright = 'Copyright (C) Eldean AB Sweden';
+  ProgPorted = 'Ported for Lazarus by Peter Dyson';
 
-  {$IFDEF TIMELIMIT}
-  TimeLimitY = 2001;
-  TimeLimitM = 5;
-  TimeLimitD = 26;
-  {$ENDIF}
+  ProgUrl  = 'https://github.com/dicepd/Laz-Model'; // 'http://www.essmodel.com';
+  ProgMail = 'mail address?'; // 'essmodel@eldean.se';
 
-  RegKey = 'Software\Eldean\EssModel';
 
 implementation
 
 end.
+

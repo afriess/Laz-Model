@@ -27,7 +27,7 @@ interface
 uses
   SysUtils, Classes, Contnrs,
   LCLIntf, LCLType, Graphics, Controls, ExtCtrls, Forms, Dialogs, Menus, Clipbrd,
-  Printers, ActnList,
+  Printers, ActnList, DefaultTranslator,
   {$IFDEF DRAG_SUPPORT}DropSource, DropTarget,{$ENDIF}
   uModel, uIntegrator, ufpcIntegrator, uViewIntegrator,
   uFeedback, uClassTreeEditIntegrator, uClassTreeEditForm, uTreeViewIntegrator,
@@ -291,8 +291,6 @@ var
 begin
   F := TAboutForm.Create(nil);
   try
-    F.IconImage.Picture.Icon.Handle := LoadIcon(HInstance,'MAINICON');
-    F.NameLabel.Caption := uConst.ProgName + ' ' + uConst.ProgVersion;
     F.ShowModal;
   finally
     F.Free;

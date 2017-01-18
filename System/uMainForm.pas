@@ -26,7 +26,7 @@ interface
 
 
 uses
-  Classes, Math, Forms, ExtCtrls, Menus, Buttons,
+  Classes, Math, Forms, ExtCtrls, Menus, Buttons, DefaultTranslator,
   uMainModule, uClassTreeEditForm, uConst;
 
 type

@@ -25,19 +25,21 @@ unit uSettingsForm;
 interface
 
 uses
-  Forms, StdCtrls,
+  Forms, StdCtrls, ButtonPanel, DefaultTranslator,
   uConfig;
 
 type
+
+  { TSettingsForm }
+
   TSettingsForm = class(TForm)
-    OkButton: TButton;
+    ButtonPanel1: TButtonPanel;
     DiSaveCombo: TComboBox;
-    Label1: TLabel;
-    Button2: TButton;
+    DiSaveLabel: TLabel;
     ShowAssocCheck: TCheckBox;
     VisibilityCombo: TComboBox;
-    Label2: TLabel;
-    Label3: TLabel;
+    VisibilityLabel: TLabel;
+    CommandLineLabel: TLabel;
     eEditorCommandLine: TEdit;
     procedure FormCreate(Sender: TObject);
     procedure DelphiIDECheckClick(Sender: TObject);
@@ -55,19 +57,18 @@ implementation
 
 {$R *.lfm}
 
-
 procedure TSettingsForm.FormCreate(Sender: TObject);
 begin
   ReadSettings;
   IDEChanged := False;
   ShellChanged := False;
+  ButtonPanel1.OKButton.OnClick := @OkButtonClick;
 end;
 
 procedure TSettingsForm.DelphiIDECheckClick(Sender: TObject);
 begin
   IDEChanged := True;
 end;
-
 
 procedure TSettingsForm.ShellCheckClick(Sender: TObject);
 begin
@@ -77,7 +78,6 @@ end;
 procedure TSettingsForm.OkButtonClick(Sender: TObject);
 begin
   SaveSettings;
-  Close;
 end;
 
 procedure TSettingsForm.ReadSettings;
@@ -93,7 +93,7 @@ begin
   Config.DiSave := TDiSaveSetting(DiSaveCombo.ItemIndex);
   Config.DiShowAssoc := ShowAssocCheck.Checked;
   Config.DiVisibilityFilter := VisibilityCombo.ItemIndex;
-  Config.EditorCommandLine :=  eEditorCommandLine.Text;
+  Config.EditorCommandLine := eEditorCommandLine.Text;
   Config.StoreSettings;
 end;
 

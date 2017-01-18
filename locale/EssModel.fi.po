@@ -1,0 +1,122 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: tdiagramframe.connectionslabel.caption
+msgid "Connections"
+msgstr "Kytkennät"
+
+#: tdiagramframe.filterlabel.caption
+msgid "Filter"
+msgstr "Suodatin"
+
+#: tdiagramframe.hidediagramelementaction.caption
+msgid "Hide"
+msgstr "Piilota"
+
+#: tdiagramframe.openselectedpackageaction.caption
+msgid "Open selected package in diagram"
+msgstr "Avaa valittu paketti kaaviossa"
+
+#: tmainform.diagram1.caption
+msgid "Diagram"
+msgstr "Kaavio"
+
+#: tmainform.exit1.caption
+msgctxt "tmainform.exit1.caption"
+msgid "&Exit"
+msgstr "&Poistu"
+
+#: tmainform.file1.caption
+msgctxt "tmainform.file1.caption"
+msgid "&File"
+msgstr "&Tiedosto"
+
+#: tmainform.help.caption
+msgid "Help"
+msgstr "Ohje"
+
+#: tmainform.previewdocumentation1.caption
+msgctxt "tmainform.previewdocumentation1.caption"
+msgid "Preview Documentation"
+msgstr "Esikatsele dokumenttia"
+
+#: tmainform.reopenmenuitem.caption
+msgctxt "tmainform.reopenmenuitem.caption"
+msgid "&Reopen"
+msgstr "Avaa &uudelleen"
+
+#: tmainmodule.aboutaction.caption
+msgid "&About ..."
+msgstr "&Tietoja ..."
+
+#: tmainmodule.copydiagramclipboardaction.caption
+msgctxt "tmainmodule.copydiagramclipboardaction.caption"
+msgid "&Copy Diagram to Clipboard"
+msgstr "&Kopioi kaavio leikepäydälle"
+
+#: tmainmodule.docgenaction.caption
+msgctxt "tmainmodule.docgenaction.caption"
+msgid "&Generate Documentation"
+msgstr "Luo dokumentti"
+
+#: tmainmodule.docgenpreviewaction.caption
+msgctxt "tmainmodule.docgenpreviewaction.caption"
+msgid "Preview Documentation"
+msgstr "Esikatsele dokumenttia"
+
+#: tmainmodule.exportemxaction.caption
+msgctxt "tmainmodule.exportemxaction.caption"
+msgid "Export Model to EMX-file"
+msgstr "Vie malli &EMX-tiedostoon"
+
+#: tmainmodule.exportxmiaction.caption
+msgctxt "tmainmodule.exportxmiaction.caption"
+msgid "Export Model to &XMI-file"
+msgstr "Vie malli &XMI-tiedostoon"
+
+#: tmainmodule.fileopenaction.caption
+msgctxt "tmainmodule.fileopenaction.caption"
+msgid "&Open ..."
+msgstr "&Avaa ..."
+
+#: tmainmodule.fileopenaction.hint
+msgctxt "tmainmodule.fileopenaction.hint"
+msgid "Open..."
+msgstr "&Avaa ..."
+
+#: tmainmodule.layoutdiagramaction.caption
+msgctxt "tmainmodule.layoutdiagramaction.caption"
+msgid "&Layout Diagram"
+msgstr "Asettele kaavio"
+
+#: tmainmodule.layoutdiagramaction.hint
+msgid "Layout"
+msgstr "Asettelu"
+
+#: tmainmodule.openfolderaction.caption
+msgctxt "tmainmodule.openfolderaction.caption"
+msgid "Open &Folder ..."
+msgstr "Avaa &kansio ..."
+
+#: tmainmodule.printdiagramaction.caption
+msgid "&Print diagram"
+msgstr "&Tulosta kaavio"
+
+#: tmainmodule.savediagramaction.caption
+msgctxt "tmainmodule.savediagramaction.caption"
+msgid "&Save as Picture ..."
+msgstr "Tallenna kuvana ..."
+
+#: tmainmodule.settingsaction.caption
+msgctxt "tmainmodule.settingsaction.caption"
+msgid "&Settings ..."
+msgstr "Asetukset ..."
+
+#: tmainmodule.treeeditshow.caption
+msgid "TreeEditShow"
+msgstr ""
+
+#: tmainmodule.unhideelementsaction.caption
+msgid "Show &Hidden Diagram Elements"
+msgstr "Näytä piilotetut kaavion osat"
+

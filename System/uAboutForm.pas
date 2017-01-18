@@ -28,17 +28,19 @@ uses
   Forms, ExtCtrls, StdCtrls,
   uConst;
 
-
 type
+
   TAboutForm = class(TForm)
     Button1: TButton;
     Image1: TImage;
+    Image2: TImage;
+    PortedLabel: TLabel;
     NameLabel: TLabel;
+    RegLabel: TMemo;
     UrlLabel: TLabel;
     IconImage: TImage;
-    Label2: TLabel;
+    CopyrightLabel: TLabel;
     MailLabel: TLabel;
-    RegLabel: TLabel;
     Label1: TLabel;
     procedure FormActivate(Sender: TObject);
   private
@@ -53,6 +55,10 @@ implementation
 
 procedure TAboutForm.FormActivate(Sender: TObject);
 begin
+  IconImage.Picture.Icon.LoadFromResourceName(HInstance,'MAINICON');
+  NameLabel.Caption := uConst.ProgName + ' ' + uConst.ProgVersion;
+  CopyrightLabel.Caption := uConst.ProgCopyright;
+  PortedLabel.Caption := uConst.ProgPorted;
   UrlLabel.Caption := uConst.ProgUrl;
   MailLabel.Caption := 'Contact: ' + uConst.ProgMail;
 end;
