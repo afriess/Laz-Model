@@ -286,8 +286,6 @@ var
 begin
   F := TAboutForm.Create(nil);
   try
-    F.IconImage.Picture.Icon.Handle := LoadIcon(HInstance,'MAINICON');
-    F.NameLabel.Caption := uConst.ProgName + ' ' + uConst.ProgVersion;
     F.ShowModal;
   finally
     F.Free;
