@@ -42,8 +42,8 @@ type
     Openselectedpackageindiagram1: TMenuItem;
     Panel1: TPanel;
     VisibilityCombo: TComboBox;
-    Label1: TLabel;
-    Label2: TLabel;
+    ConnectionsLabel: TLabel;
+    FilterLabel: TLabel;
     OpenButton: TSpeedButton;
     LayoutButton: TSpeedButton;
     HideDiagramElementAction: TAction;

@@ -2,44 +2,55 @@ object DiagramFrame: TDiagramFrame
   Left = 0
   Height = 459
   Top = 0
-  Width = 633
+  Width = 635
   Align = alClient
   ClientHeight = 459
-  ClientWidth = 633
+  ClientWidth = 635
   TabOrder = 0
-  DesignLeft = 122
-  DesignTop = 244
+  DesignLeft = 329
+  DesignTop = 266
   object Panel1: TPanel
     Left = 0
-    Height = 28
+    Height = 34
     Top = 0
-    Width = 633
+    Width = 635
     Align = alTop
+    AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 28
-    ClientWidth = 633
+    ClientHeight = 34
+    ClientWidth = 635
     TabOrder = 0
-    object Label1: TLabel
-      Left = 70
-      Height = 13
-      Top = 5
-      Width = 59
+    object ConnectionsLabel: TLabel
+      AnchorSideTop.Control = ConnectionsCombo
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = ConnectionsCombo
+      Left = 94
+      Height = 18
+      Top = 9
+      Width = 76
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 6
       Caption = 'Connections'
       ParentColor = False
     end
-    object Label2: TLabel
-      Left = 315
-      Height = 13
-      Top = 5
-      Width = 24
+    object FilterLabel: TLabel
+      AnchorSideTop.Control = VisibilityCombo
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = VisibilityCombo
+      Left = 442
+      Height = 18
+      Top = 9
+      Width = 32
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 6
       Caption = 'Filter'
       ParentColor = False
     end
     object OpenButton: TSpeedButton
       Left = 0
-      Height = 22
-      Top = 1
-      Width = 23
+      Height = 27
+      Top = 0
+      Width = 24
       Action = MainModule.FileOpenAction
       Flat = True
       Glyph.Data = {
@@ -73,9 +84,9 @@ object DiagramFrame: TDiagramFrame
       }
     end
     object LayoutButton: TSpeedButton
-      Left = 30
-      Height = 22
-      Top = 1
+      Left = 32
+      Height = 27
+      Top = 0
       Width = 23
       Action = MainModule.LayoutDiagramAction
       Flat = True
@@ -108,12 +119,12 @@ object DiagramFrame: TDiagramFrame
       }
     end
     object VisibilityCombo: TComboBox
-      Left = 342
-      Height = 21
+      Left = 480
+      Height = 32
       Top = 2
       Width = 145
       Enabled = False
-      ItemHeight = 13
+      ItemHeight = 24
       Items.Strings = (
         'Show all members'
         'Hide private'
@@ -126,12 +137,12 @@ object DiagramFrame: TDiagramFrame
       TabStop = False
     end
     object ConnectionsCombo: TComboBox
-      Left = 135
-      Height = 21
+      Left = 176
+      Height = 32
       Top = 2
       Width = 165
       Enabled = False
-      ItemHeight = 13
+      ItemHeight = 24
       Items.Strings = (
         'Inheritance and associations'
         'Inheritance only'
@@ -144,7 +155,7 @@ object DiagramFrame: TDiagramFrame
   end
   object ActionList: TActionList
     left = 71
-    top = 37
+    top = 56
     object OpenSelectedPackageAction: TAction
       Caption = 'Open selected package in diagram'
     end
