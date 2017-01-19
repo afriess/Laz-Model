@@ -59,6 +59,7 @@ type
       procedure DocStart; override;
       procedure TraverseModel; override;
       procedure WriteClassDetail(C : TClass); override;
+      procedure DocFinished; override;
       procedure WriteInterfaceDetail(I: TInterface); override;
     public
       destructor Destroy; override;
@@ -491,6 +492,11 @@ begin
            AddEntity(C.Name + '.' + ent.Name);
     end;
 
+end;
+
+procedure TFPDocGen.DocFinished;
+begin
+   // stub
 end;
 
 procedure TFPDocGen.WriteInterfaceDetail(I: TInterface);
