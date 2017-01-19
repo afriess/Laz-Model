@@ -139,26 +139,35 @@ msgstr ""
 msgid "Show &Hidden Diagram Elements"
 msgstr "Näytä piilotetut kaavion osat"
 
-#: uconst.progcopyright
-msgid "Copyright (C) Eldean AB Sweden"
+#: uconst.rsallclasses_ic
+msgid "All Classes"
 msgstr ""
 
-#: uconst.progmail
-msgid "mail address?"
+#: uconst.rsancestor_ic
+msgid "Ancestor"
 msgstr ""
 
-#: uconst.progname
-msgid "Laz-Model"
-msgstr "Laz-Model"
-
-#: uconst.progported
-msgid "Ported for Lazarus by Peter Dyson"
+#: uconst.rsdatatypes_lc
+msgid "datatypes"
 msgstr ""
 
-#: uconst.progurl
-msgid "https://github.com/dicepd/Laz-Model"
-msgstr "https://github.com/dicepd/Laz-Model"
+#: uconst.rsdependencies_lc
+msgid "dependencies"
+msgstr ""
 
-#: uconst.progversion
-msgid "2.2"
-msgstr "2.2"
+#: uconst.rsimplementors_lc
+msgid "implementors"
+msgstr ""
+
+#: uconst.rsinterfaces_lc
+msgid "interfaces"
+msgstr ""
+
+#: uconst.rspackages_ic
+msgid "Packages"
+msgstr ""
+
+#: uconst.rssubclasses_lc
+msgid "subclasses"
+msgstr ""
+

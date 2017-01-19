@@ -27,7 +27,7 @@ interface
 uses
   SysUtils, Contnrs, Controls, ComCtrls,
   uViewIntegrator, uTreeViewFrame, uModel, uFeedback, uModelEntity, uListeners,
-  uIterators;
+  uIterators, uConst;
 
 type
   TTreeViewIntegrator = class(TViewIntegrator, IAfterObjectModelListener)
@@ -68,9 +68,7 @@ type
 
 implementation
 
-const
-  ALL_CLASSES_TEXT: string = 'All classes';
-  PACKAGES_TEXT: string = 'Packages';
+
 var
   NodesList: TObjectList;
 
@@ -199,7 +197,7 @@ begin
   Mi := TModelIterator.Create(AEntity.GetUnitDependencies, ioAlpha);
   if Mi.Count > 0 then
   begin
-    newRoot := ATreeRoot.Owner.AddChildObject(ATreeRoot, 'dependencies', nil);
+    newRoot := ATreeRoot.Owner.AddChildObject(ATreeRoot, rsDependencies_lc, nil);
     while Mi.HasNext do
     begin
       ent := Mi.Next;
@@ -210,7 +208,7 @@ begin
   Mi := TModelIterator.Create(AEntity.GetClassifiers,TDataTypeFilter.Create, ioAlpha);
   if Mi.Count > 0 then
   begin
-    newRoot := ATreeRoot.Owner.AddChildObject(ATreeRoot, 'datatypes', nil);
+    newRoot := ATreeRoot.Owner.AddChildObject(ATreeRoot, rsDatatypes_lc, nil);
     while Mi.HasNext do
     begin
       ent := Mi.Next as TClassifier;
@@ -246,11 +244,11 @@ var
   ent: TModelEntity;
 begin
   if Assigned(AEntity.Ancestor) then
-    ATreeRoot.Owner.AddChildObject(ATreeRoot, 'Ancestor: ' + AEntity.Ancestor.Name, AEntity.Ancestor);
+    ATreeRoot.Owner.AddChildObject(ATreeRoot, rsAncestor_ic + ': ' + AEntity.Ancestor.Name, AEntity.Ancestor);
   Mi := TModelIterator.Create(AEntity.GetImplements, ioAlpha);
   if Mi.Count > 0 then
   begin
-    newRoot := ATreeRoot.Owner.AddChildObject(ATreeRoot, 'interfaces', nil);
+    newRoot := ATreeRoot.Owner.AddChildObject(ATreeRoot, rsInterfaces_lc, nil);
     while Mi.HasNext do
     begin
       ent := Mi.Next;
@@ -261,7 +259,7 @@ begin
   Mi := TModelIterator.Create(AEntity.GetDescendants, ioAlpha);
   if Mi.Count > 0 then
   begin
-    newRoot := ATreeRoot.Owner.AddChildObject(ATreeRoot, 'subclasses', nil);
+    newRoot := ATreeRoot.Owner.AddChildObject(ATreeRoot, rsSubclasses_lc, nil);
     while Mi.HasNext do
     begin
       ent := Mi.Next;
@@ -278,11 +276,11 @@ var
   ent: TModelEntity;
 begin
   if Assigned(AEntity.Ancestor) then
-    ATreeRoot.Owner.AddChildObject(ATreeRoot, 'Ancestor: ' + AEntity.Ancestor.Name, AEntity.Ancestor);
+    ATreeRoot.Owner.AddChildObject(ATreeRoot, rsAncestor_ic + ': ' + AEntity.Ancestor.Name, AEntity.Ancestor);
   Mi := TModelIterator.Create(AEntity.GetImplementingClasses, ioAlpha);
   if Mi.Count > 0 then
   begin
-    newRoot := ATreeRoot.Owner.AddChildObject(ATreeRoot, 'implementors', nil);
+    newRoot := ATreeRoot.Owner.AddChildObject(ATreeRoot, rsImplementors_lc, nil);
     while Mi.HasNext do
     begin
       ent := Mi.Next;
@@ -321,11 +319,11 @@ var
 begin
   Frame.tvModel.Items.Clear;
 //  BuildUnitPackageView(Frame.tvModel.Items.Add(nil,'Unknown'),Model.UnknownPackage);
-  node := Frame.tvModel.Items.AddObject(nil, PACKAGES_TEXT, Model.ModelRoot) as TViewNode;
+  node := Frame.tvModel.Items.AddObject(nil, rsPackages_ic, Model.ModelRoot) as TViewNode;
   node.FIsImplementation := True;
   BuildLogicPackageView(node, Model.ModelRoot);
 
-  node := Frame.tvModel.Items.AddObject(nil, ALL_CLASSES_TEXT, AllClassesPackage) as TViewNode;
+  node := Frame.tvModel.Items.AddObject(nil, rsAllClasses_ic, AllClassesPackage) as TViewNode;
   node.FIsImplementation := True;
   BuildAllClassesView(node, nil);
 end;

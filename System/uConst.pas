@@ -24,6 +24,26 @@ unit uConst;
 
 interface
 
+resourcestring
+  // try this naming convention for starters
+  // rs[a-z*]_ic  Initial Caps       = rsInitialCaps_ic
+  // rs[a-z"]_ac  ALL CAPS           = rsAllCaps_ac
+  // rs[a-z*]_lc  all lower case     = rsAllLowerCase_lc
+  // this is mainly for developers to understand what type of string is being used.
+  // this may not make sense in non european languages but should convey the
+  // basic intent of the displayed string.
+  // Placing all resource string here may help reuse and non duplication.
+
+  {Tree View Integrator}
+  rsPackages_ic = 'Packages';
+  rsAllClasses_ic = 'All Classes';
+  rsDependencies_lc = 'dependencies';
+  rsDatatypes_lc = 'datatypes';
+  rsInterfaces_lc = 'interfaces';
+  rsSubclasses_lc = 'subclasses';
+  rsImplementors_lc = 'implementors';
+  rsAncestor_ic = 'Ancestor';
+
 const
   ProgName = 'Laz-Model';
   ProgVersion = '2.2';
