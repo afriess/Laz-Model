@@ -58,6 +58,9 @@ resourcestring
   {uCodeProvider}
   rsFilesRead_ending_lc = ' files read.';
 
+  {uFile Provider}
+  rsReading_ic = 'Reading';
+
 
 const
   ProgName = 'Laz-Model';

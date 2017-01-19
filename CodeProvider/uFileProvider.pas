@@ -26,7 +26,7 @@ interface
 
 uses
   Classes, SysUtils,
-  uCodeProvider, uConfig;
+  uCodeProvider, uConfig, uConst;
 
 
 type
@@ -47,7 +47,7 @@ function TFileProvider.LoadStream(const AName: string): TStream;
 begin
   if AName <> '' then
   begin
-    Feedback.Message('Reading ' + AName);
+    Feedback.Message(rsReading_ic + ' ' + AName);
     Inc(LoadedCount);
     Result := TFileStream.Create(AName, fmOpenRead);
     AddChangeWatch(AName);

@@ -191,6 +191,10 @@ msgstr ""
 msgid "Parent"
 msgstr ""
 
+#: uconst.rsreading_ic
+msgid "Reading"
+msgstr ""
+
 #: uconst.rsreturn_ic
 msgid "Return"
 msgstr ""
