@@ -1,0 +1,214 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: minesadorada <minesadorada@charcodelvalle.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"X-Generator: Poedit 1.8.11\n"
+
+#: tclasstreeeditform.caption
+msgid "ClassTreeEditForm"
+msgstr "ClassTreeEditForm"
+
+#: tdiagramframe.connectionslabel.caption
+msgid "Connections"
+msgstr "Conexiones"
+
+#: tdiagramframe.filterlabel.caption
+msgid "Filter"
+msgstr "Filtro"
+
+#: tdiagramframe.hidediagramelementaction.caption
+msgid "Hide"
+msgstr "Ocultar"
+
+#: tdiagramframe.openselectedpackageaction.caption
+msgid "Open selected package in diagram"
+msgstr "Abrir paquete seleccionado en el diagrama"
+
+#: tmainform.diagram1.caption
+msgid "Diagram"
+msgstr "Diagrama"
+
+#: tmainform.exit1.caption
+msgctxt "tmainform.exit1.caption"
+msgid "&Exit"
+msgstr "Saída:"
+
+#: tmainform.file1.caption
+msgctxt "tmainform.file1.caption"
+msgid "&File"
+msgstr "&Archivo"
+
+#: tmainform.help.caption
+msgid "Help"
+msgstr "&Ayuda"
+
+#: tmainform.n1.caption
+msgctxt "tmainform.n1.caption"
+msgid "-"
+msgstr ""
+
+#: tmainform.n2.caption
+msgctxt "TMAINFORM.N2.CAPTION"
+msgid "-"
+msgstr ""
+
+#: tmainform.n3.caption
+msgctxt "TMAINFORM.N3.CAPTION"
+msgid "-"
+msgstr ""
+
+#: tmainform.previewdocumentation1.caption
+msgctxt "tmainform.previewdocumentation1.caption"
+msgid "Preview Documentation"
+msgstr "Documentación de previsualización"
+
+#: tmainform.reopenmenuitem.caption
+msgctxt "tmainform.reopenmenuitem.caption"
+msgid "&Reopen"
+msgstr "&Reabrir"
+
+#: tmainmodule.aboutaction.caption
+msgid "&About ..."
+msgstr "&Acerca de ..."
+
+#: tmainmodule.copydiagramclipboardaction.caption
+msgctxt "tmainmodule.copydiagramclipboardaction.caption"
+msgid "&Copy Diagram to Clipboard"
+msgstr "&Copiar archivo al portapapeles"
+
+#: tmainmodule.docgenaction.caption
+msgctxt "tmainmodule.docgenaction.caption"
+msgid "&Generate Documentation"
+msgstr "Generar Documentación:"
+
+#: tmainmodule.docgenpreviewaction.caption
+msgctxt "tmainmodule.docgenpreviewaction.caption"
+msgid "Preview Documentation"
+msgstr "Documentación de previsualización"
+
+#: tmainmodule.exportemxaction.caption
+msgctxt "tmainmodule.exportemxaction.caption"
+msgid "Export Model to EMX-file"
+msgstr "Exportación Modelo para EMX-archivo"
+
+#: tmainmodule.exportxmiaction.caption
+msgctxt "tmainmodule.exportxmiaction.caption"
+msgid "Export Model to &XMI-file"
+msgstr "Modelo de exportación a & XMI-archivo"
+
+#: tmainmodule.fileopenaction.caption
+msgctxt "tmainmodule.fileopenaction.caption"
+msgid "&Open ..."
+msgstr "&Abrir ..."
+
+#: tmainmodule.fileopenaction.hint
+msgctxt "tmainmodule.fileopenaction.hint"
+msgid "Open..."
+msgstr "&Abrir ..."
+
+#: tmainmodule.layoutdiagramaction.caption
+msgctxt "tmainmodule.layoutdiagramaction.caption"
+msgid "&Layout Diagram"
+msgstr "Diagrama del diseño de Profibus:"
+
+#: tmainmodule.layoutdiagramaction.hint
+msgid "Layout"
+msgstr "Layot"
+
+#: tmainmodule.openfolderaction.caption
+msgctxt "tmainmodule.openfolderaction.caption"
+msgid "Open &Folder ..."
+msgstr "Abrir &Carpeta"
+
+#: tmainmodule.printdiagramaction.caption
+msgid "&Print diagram"
+msgstr "Imprimir"
+
+#: tmainmodule.savediagramaction.caption
+msgctxt "tmainmodule.savediagramaction.caption"
+msgid "&Save as Picture ..."
+msgstr "Guardar como imagen..."
+
+#: tmainmodule.settingsaction.caption
+msgctxt "tmainmodule.settingsaction.caption"
+msgid "&Settings ..."
+msgstr "Configuraciones"
+
+#: tmainmodule.treeeditshow.caption
+msgid "TreeEditShow"
+msgstr "TreeEditShow"
+
+#: tmainmodule.unhideelementsaction.caption
+msgid "Show &Hidden Diagram Elements"
+msgstr "Mostrar Ocultos y Diagrama Elementos"
+
+#: uconst.rsallclasses_ic
+msgid "All Classes"
+msgstr "Todas las clases"
+
+#: uconst.rsancestor_ic
+msgid "Ancestor"
+msgstr "Antepasado"
+
+#: uconst.rsattributes_ic
+msgid "Attributes"
+msgstr "Atributos"
+
+#: uconst.rsdatatypes_lc
+msgid "datatypes"
+msgstr "Tipo de dato"
+
+#: uconst.rsdependencies_lc
+msgid "dependencies"
+msgstr "dependencias"
+
+#: uconst.rsfilesread_ending_lc
+msgid " files read."
+msgstr "archivos leen."
+
+#: uconst.rsgeneratingdocumentation_kc
+msgid "Generating documentation..."
+msgstr "Generación de documentación ..."
+
+#: uconst.rsimplementors_lc
+msgid "implementors"
+msgstr "implementadores"
+
+#: uconst.rsinterfaces_lc
+msgid "interfaces"
+msgstr "Interfaces"
+
+#: uconst.rsoperations_ic
+msgid "Operations"
+msgstr "Operaciones"
+
+#: uconst.rsoperationtype_ic
+msgid "Operation Type"
+msgstr "Tipo de operación"
+
+#: uconst.rspackages_ic
+msgid "Packages"
+msgstr "Paquetes"
+
+#: uconst.rsparent_ic
+msgid "Parent"
+msgstr "Padre"
+
+#: uconst.rsreading_ic
+msgid "Reading"
+msgstr "Lectura"
+
+#: uconst.rsreturn_ic
+msgid "Return"
+msgstr "Volver"
+
+#: uconst.rssubclasses_lc
+msgid "subclasses"
+msgstr "subclase"
