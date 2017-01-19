@@ -1,5 +1,5 @@
 {
-  ESS-Model
+  Laz-Model
   Copyright (C) 2002  Eldean AB, Peter Söderman, Ville Krumlinde
   Portions (C) 2016 Peter Dyson. Initial Lazarus port
 
@@ -19,7 +19,7 @@
 }
 
 
-// Exporter for the "ESS-Model XML" format
+// Exporter for the "Laz-Model XML" format
 unit uEmxExport;
 {$mode objfpc}{$H+}
 
@@ -90,7 +90,7 @@ begin
   WritePackage(Model.ModelRoot);
   //Write( XmlClose('Model_Management.Model') );
   //Write(XmiFooter);
-  Feedback.Message('ESS-Model xmi export finished.');
+  Feedback.Message('Laz-Model xmi export finished.');
 end;
 
 function TEmxExporter.MakeId(const S : string): string;
@@ -117,7 +117,7 @@ begin
     Dir := ExtractFilePath( Model.ModelRoot.GetConfigFile );
     D.DefaultExt := 'emx';
     D.InitialDir := Dir;
-    D.Filter := 'ESS-Model xml files (*.emx)|*.emx|All files (*.*)|*.*';
+    D.Filter := 'Laz-Model xml files (*.emx)|*.emx|All files (*.*)|*.*';
     D.Options := D.Options + [ofOverwritePrompt];
     if D.Execute then
       SaveTo( D.FileName );

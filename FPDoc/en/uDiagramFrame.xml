@@ -153,6 +153,16 @@
         <descr/>
         <seealso/>
       </element>
+      <element name="TDiagramFrame.ConnectionsLabel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDiagramFrame.FilterLabel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
     </module>
   </package>
 </fpdoc-descriptions>

@@ -54,6 +54,7 @@
         <unit file="..\..\Integrator\Export\uXmiExport.pas"/>
         <unit file="..\..\Integrator\Export\uXmiExportArgoUML.pas"/>
         <unit file="..\..\System\uZoomFrame.pas"/>
+        <unit file="..\..\Components\EssLayout.pas"/>
       </units>
       <descriptions>
         <description file="essConnectPanel.xml"/>
@@ -101,6 +102,7 @@
         <description file="uXmiExport.xml"/>
         <description file="uXmiExportArgoUML.xml"/>
         <description file="uZoomFrame.xml"/>
+        <description file="EssLayout.xml"/>
       </descriptions>
     </package>
   </packages>

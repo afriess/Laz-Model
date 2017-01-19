@@ -75,26 +75,57 @@ be documented as you go along. (Future feature some mechanism to remove entries 
       </element>
       <element name="TFPDocGen.AddSkeletonConfig">
         <short>Fleshes out a new instance of FConfigFile with basic defaults.</short>
-        <descr><p>Adds the following elements to the empty xml document</p><ul><li>docproject</li><li>options</li><li>option * 4</li><li>packages</li><li>package</li><li>units</li><li>descriptions</li>
-          </ul><p>Called By</p><p><link id="TFPDocGen.GetConfigFile">GetConfigFile</link>
+        <descr>
+          <p>Adds the following elements to the empty xml document</p>
+          <ul>
+            <li>docproject</li>
+            <li>options</li>
+            <li>option * 4</li>
+            <li>packages</li>
+            <li>package</li>
+            <li>units</li>
+            <li>descriptions</li>
+          </ul>
+          <p>Called By</p>
+          <p>
+            <link id="TFPDocGen.GetConfigFile">GetConfigFile</link>
           </p>
         </descr>
         <seealso/>
       </element>
       <element name="TFPDocGen.AddSkeletonPackage">
         <short>Fleshes out a new instance of FPackageFile with basic defaults.</short>
-        <descr><p>Adds the following elements to the empty xml document</p><ul><li>fpdoc-descriptions</li><li>package</li><li>module</li><li>descr</li>
-          </ul><p><b>Called By</b>
-          </p><p><link id="TFPDocGen.GetPackageFile">GetPackageFile</link>
-          </p><p/>
+        <descr>
+          <p>Adds the following elements to the empty xml document</p>
+          <ul>
+            <li>fpdoc-descriptions</li>
+            <li>package</li>
+            <li>module</li>
+            <li>descr</li>
+          </ul>
+          <p>
+            <b>Called By</b>
+          </p>
+          <p>
+            <link id="TFPDocGen.GetPackageFile">GetPackageFile</link>
+          </p>
+          <p/>
         </descr>
         <seealso/>
       </element>
       <element name="TFPDocGen.CheckConfigForUnit">
         <short>Checks the FPDoc.xml file for existance of unit file. </short>
-        <descr><p>If the unit does not exist in the FPDoc.xml file it creates the following elements</p><ul><li>description</li><li>unit</li>
-          </ul><p><b>Calls</b>
-          </p><p><link id="TFPDocGen.UnitInConfig">UnitInConfig</link>
+        <descr>
+          <p>If the unit does not exist in the FPDoc.xml file it creates the following elements</p>
+          <ul>
+            <li>description</li>
+            <li>unit</li>
+          </ul>
+          <p>
+            <b>Calls</b>
+          </p>
+          <p>
+            <link id="TFPDocGen.UnitInConfig">UnitInConfig</link>
           </p>
         </descr>
         <seealso/>
@@ -116,11 +147,16 @@ be documented as you go along. (Future feature some mechanism to remove entries 
       </element>
       <element name="TFPDocGen.GetConfigFile">
         <short>Gets the config file for the language being processed. Creates a skeleton file if it does not exist. Sets FConfigFile, FUnitsNode and FDescriptionsNode.</short>
-        <descr><p><b>Calls</b>
-          </p><p><link id="TFPDocGen.AddSkeletonConfig">AddSkeletonConfig</link>
+        <descr>
+          <p>
+            <b>Calls</b>
           </p>
-  
-            <p>Called By</p><p><link id="TFPDocGen.TraverseModel">TraverseModel</link>
+          <p>
+            <link id="TFPDocGen.AddSkeletonConfig">AddSkeletonConfig</link>
+          </p>
+          <p>Called By</p>
+          <p>
+            <link id="TFPDocGen.TraverseModel">TraverseModel</link>
           </p>
         </descr>
         <seealso/>
@@ -132,9 +168,16 @@ be documented as you go along. (Future feature some mechanism to remove entries 
       </element>
       <element name="TFPDocGen.GetPackageFile">
         <short>Retrieves or creates a package description file for the unit being processed.</short>
-        <descr><p><b>Calls</b>
-          </p><p><link id="TFPDocGen.AddSkeletonPackage">AddSkeletonPackage</link>
-          </p><p>Called By</p><p><link id="TFPDocGen.ProcessPackage">ProcessPackage</link>
+        <descr>
+          <p>
+            <b>Calls</b>
+          </p>
+          <p>
+            <link id="TFPDocGen.AddSkeletonPackage">AddSkeletonPackage</link>
+          </p>
+          <p>Called By</p>
+          <p>
+            <link id="TFPDocGen.ProcessPackage">ProcessPackage</link>
           </p>
         </descr>
         <seealso/>
@@ -166,7 +209,10 @@ be documented as you go along. (Future feature some mechanism to remove entries 
       </element>
       <element name="TFPDocGen.SaveConfigFile">
         <short>Saves the config file after all units are processed for current language.</short>
-        <descr><p>Called By</p><p><link id="TFPDocGen.TraverseModel">TraverseModel</link>
+        <descr>
+          <p>Called By</p>
+          <p>
+            <link id="TFPDocGen.TraverseModel">TraverseModel</link>
           </p>
         </descr>
         <seealso/>
@@ -183,9 +229,11 @@ be documented as you go along. (Future feature some mechanism to remove entries 
       </element>
       <element name="TFPDocGen.UnitInConfig">
         <short>Queries the FPDoc config file for the existance of a unit.</short>
-        
         <seealso/>
-        <descr><p>Called By</p><p><link id="TFPDocGen.CheckConfigForUnit">CheckConfigForUnit</link>
+        <descr>
+          <p>Called By</p>
+          <p>
+            <link id="TFPDocGen.CheckConfigForUnit">CheckConfigForUnit</link>
           </p>
         </descr>
       </element>
@@ -202,12 +250,20 @@ be documented as you go along. (Future feature some mechanism to remove entries 
       <element name="TFPDocGen.GetConfigFile.SubDir">
         <short>Subdirectories should be 2 letter ISO contry code.</short>
       </element>
-    <element name="TFPDocGen.SaveConfigFile.SubDir">
-      <short>subdirectories should be 2 letters ISO contry code.</short>
+      <element name="TFPDocGen.SaveConfigFile.SubDir">
+        <short>subdirectories should be 2 letters ISO contry code.</short>
       </element>
-    <element name="TFPDocGen.AddSkeletonPackage.pname"><short>Name of the unit which will documented by this file.</short>
-      </element><element name="TFPDocGen.SALinkExists"><short>Checks for the existence of a link in the given seealso section.</short><descr><p><b>Called By</b>
-          </p><p><link id="TFPDocGen.AddParentLinks">AddParentLinks</link>
+      <element name="TFPDocGen.AddSkeletonPackage.pname">
+        <short>Name of the unit which will documented by this file.</short>
+      </element>
+      <element name="TFPDocGen.SALinkExists">
+        <short>Checks for the existence of a link in the given seealso section.</short>
+        <descr>
+          <p>
+            <b>Called By</b>
+          </p>
+          <p>
+            <link id="TFPDocGen.AddParentLinks">AddParentLinks</link>
           </p>
         </descr>
       </element>

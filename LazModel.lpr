@@ -17,9 +17,9 @@
   along with this program; if not, write to the Free Software
   Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
-  For more info about ESS-Model please visit:
-    www.essmodel.com
-    www.sourceforge.net/projects/essmodel
+  For more info about Laz-Model please visit:
+    https://github.com/dicepd/Laz-Model
+
 }
 
 program LazModel;
@@ -85,7 +85,7 @@ begin
   {$ENDIF DEBUG}
 
   Application.Initialize;
-  Application.Title := 'essModel';
+  Application.Title := 'Laz-Model';
   Application.CreateForm(TMainForm, MainForm);
   Application.Run;
 end.

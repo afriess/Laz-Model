@@ -149,7 +149,7 @@ msgstr ""
 
 #: uconst.progname
 msgid "Laz-Model"
-msgstr ""
+msgstr "Laz-Model"
 
 #: uconst.progported
 msgid "Ported for Lazarus by Peter Dyson"
@@ -157,9 +157,8 @@ msgstr ""
 
 #: uconst.progurl
 msgid "https://github.com/dicepd/Laz-Model"
-msgstr ""
+msgstr "https://github.com/dicepd/Laz-Model"
 
 #: uconst.progversion
 msgid "2.2"
-msgstr ""
-
+msgstr "2.2"

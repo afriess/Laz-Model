@@ -21,7 +21,10 @@
       <OutDir Value="locale"/>
     </i18n>
     <VersionInfo>
-      <StringTable ProductVersion=""/>
+      <UseVersionInfo Value="True"/>
+      <MajorVersionNr Value="2"/>
+      <MinorVersionNr Value="2"/>
+      <StringTable ProductName="Laz-Model" ProductVersion=""/>
     </VersionInfo>
     <BuildModes Count="2">
       <Item1 Name="Debug" Default="True"/>
@@ -73,7 +76,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="49">
+    <Units Count="47">
       <Unit0>
         <Filename Value="LazModel.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -289,14 +292,6 @@
         <Filename Value="Integrator\Doc\uFPDocGen.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit46>
-      <Unit47>
-        <Filename Value="locale\Laz-Model.fi.po"/>
-        <IsPartOfProject Value="True"/>
-      </Unit47>
-      <Unit48>
-        <Filename Value="locale\Laz-Model.po"/>
-        <IsPartOfProject Value="True"/>
-      </Unit48>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

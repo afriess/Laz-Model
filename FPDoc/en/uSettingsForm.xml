@@ -93,6 +93,26 @@
         <descr/>
         <seealso/>
       </element>
+      <element name="TSettingsForm.ButtonPanel1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.CommandLineLabel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.DiSaveLabel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSettingsForm.VisibilityLabel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
     </module>
   </package>
 </fpdoc-descriptions>

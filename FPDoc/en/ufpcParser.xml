@@ -162,7 +162,8 @@
       </element>
       <element name="TSimpleEngine.FindElement">
         <short>Allows resolution during query of items in passrc marked as unresolved during parse phase.</short>
-        <descr><p>'Borrowed' from FPDoc source</p>
+        <descr>
+          <p>'Borrowed' from FPDoc source</p>
         </descr>
         <seealso/>
       </element>
@@ -171,7 +172,53 @@
         <descr/>
         <seealso/>
       </element>
-    <element name="DelQuot"><short>Removes some annoying quotes added by passrc.</short>
+      <element name="DelQuot">
+        <short>Removes some annoying quotes added by passrc.</short>
+      </element>
+      <element name="TfpcParser.FForwards">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.Name">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.CheckThis">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TfpcParser.FindInForwards">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSimpleEngine.CallingParser">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSimpleEngine.CurModule">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TSimpleEngine.FCallingParser">
+        <short/>
+        <descr/>
+        <seealso/>
       </element>
     </module>
   </package>

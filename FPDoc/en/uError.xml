@@ -53,6 +53,11 @@
         <descr/>
         <seealso/>
       </element>
+      <element name="TErrorHandler.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
     </module>
   </package>
 </fpdoc-descriptions>

@@ -163,7 +163,13 @@
         <descr/>
         <seealso/>
       </element>
-    <element name="TConfig.DocsFromFPDoc"><short>If set will get documentation from the configured DocDir.</short>
+      <element name="TConfig.DocsFromFPDoc">
+        <short>If set will get documentation from the configured DocDir.</short>
+      </element>
+      <element name="TConfig.FDocsFromFPDoc">
+        <short/>
+        <descr/>
+        <seealso/>
       </element>
     </module>
   </package>

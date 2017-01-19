@@ -58,6 +58,21 @@
         <descr/>
         <seealso/>
       </element>
+      <element name="TAboutForm.CopyrightLabel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAboutForm.Image2">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAboutForm.PortedLabel">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
     </module>
   </package>
 </fpdoc-descriptions>

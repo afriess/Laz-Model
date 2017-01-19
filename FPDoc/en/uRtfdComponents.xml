@@ -468,7 +468,8 @@
         <descr/>
         <seealso/>
       </element>
-    <element name="TRtfdBoxClass"><short>Baseclass for a diagram-panel</short>
+      <element name="TRtfdBoxClass">
+        <short>Baseclass for a diagram-panel</short>
       </element>
     </module>
   </package>
