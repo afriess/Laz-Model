@@ -257,6 +257,7 @@
         <descr/>
         <seealso/>
       </element>
+      <short>Layout according to the 'Sugiyama'-algoritm. </short>
     </module>
   </package>
 </fpdoc-descriptions>
