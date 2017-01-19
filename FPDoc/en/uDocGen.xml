@@ -4,7 +4,7 @@
     <module name="uDocGen">
       <descr/>
       <element name="TDocGen">
-        <short/>
+        <short>Baseclass for documenation generators.</short>
         <descr/>
         <seealso>
           <link id="uIntegrator.TExportIntegrator">TExportIntegrator {Parent of}</link>

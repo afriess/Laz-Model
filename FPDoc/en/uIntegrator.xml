@@ -4,7 +4,7 @@
     <module name="uIntegrator">
       <descr/>
       <element name="TExportIntegrator">
-        <short/>
+        <short>Baseclass for an integrator where the model is used to generate 'something'.</short>
         <descr/>
         <seealso>
           <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
@@ -16,7 +16,7 @@
         <seealso/>
       </element>
       <element name="TImportIntegrator">
-        <short/>
+        <short>Baseclass for an integrator where 'something' (probably some sourcecode) is used to generate a model.</short>
         <descr/>
         <seealso>
           <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
@@ -28,7 +28,7 @@
         <seealso/>
       </element>
       <element name="TImportIntegrator.FilesRead">
-        <short/>
+        <short>List of files that have been read in this import session</short>
         <descr/>
         <seealso/>
       </element>
@@ -53,7 +53,7 @@
         <seealso/>
       </element>
       <element name="TIntegrator">
-        <short/>
+        <short>Baseclass for integrators </short>
         <descr/>
         <seealso/>
       </element>
@@ -98,17 +98,21 @@
         <seealso/>
       </element>
       <element name="TIntegrators.Get">
-        <short/>
+        <short>Retrieves a list of available integrators of a given kind </short>
         <descr/>
         <seealso/>
       </element>
       <element name="TIntegrators.Register">
-        <short/>
-        <descr/>
+        <short>Register an Integrator implementing class with the global set of Integrators.</short>
+        <descr><p>Should be called by all integrator implementations to register it with
+     the masterlist of integrators.
+     eg. </p><p><code>Integrators.Register( TEiffelIntegrator ); </code>
+          </p>
+        </descr>
         <seealso/>
       </element>
       <element name="TTwowayIntegrator">
-        <short/>
+        <short>Baseclass for an integrator where the model can be changed from the source and changes in the model can change the source.</short>
         <descr/>
         <seealso>
           <link id="uIntegrator.TIntegrator">TIntegrator {Parent of}</link>
@@ -123,6 +127,8 @@
         <short/>
         <descr/>
         <seealso/>
+      </element>
+    <element name="Integrators"><short>Used to retrieve _the_ instance of TIntegrators.</short>
       </element>
     </module>
   </package>

@@ -29,6 +29,7 @@ resourcestring
   // rs[a-z*]_ic  Initial Caps       = rsInitialCaps_ic
   // rs[a-z"]_ac  ALL CAPS           = rsAllCaps_ac
   // rs[a-z*]_lc  all lower case     = rsAllLowerCase_lc
+  // rs[a-z*]_kc  For anything Else.     = rsAllLowerCase_kc
   // this is mainly for developers to understand what type of string is being used.
   // this may not make sense in non european languages but should convey the
   // basic intent of the displayed string.
@@ -50,6 +51,9 @@ resourcestring
   rsOperations_ic = 'Operations';
   rsOperationType_ic = 'Operation Type';
   rsReturn_ic = 'Return';
+
+  {uDocGen}
+  rsGeneratingDocumentation_kc = 'Generating documentation...';
 
 
 const

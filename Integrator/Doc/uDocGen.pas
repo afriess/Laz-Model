@@ -26,11 +26,12 @@ interface
 
 uses
   SysUtils,
-  uIntegrator, uModel, uModelEntity, uIterators, uUseful, uConst, uConfig;
+  uIntegrator, uModel, uModelEntity, uIterators,
+  uUseful, uConst, uConfig;
 
 
 type
-  //Baseclass for documenation generators.
+
   TDocGen = class(TExportIntegrator)
   protected
     Packages : IModelIterator;
@@ -109,7 +110,7 @@ begin
     Packages.Next;
   end;
   Packages.Reset;
-  Pro := TEldeanProgress.Create('Generating documentation...',PCount);
+  Pro := TEldeanProgress.Create(rsGeneratingDocumentation_kc,PCount);
 
   while Packages.HasNext do
   begin

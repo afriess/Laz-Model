@@ -159,6 +159,10 @@ msgstr ""
 msgid "dependencies"
 msgstr ""
 
+#: uconst.rsgeneratingdocumentation_kc
+msgid "Generating documentation..."
+msgstr ""
+
 #: uconst.rsimplementors_lc
 msgid "implementors"
 msgstr ""
