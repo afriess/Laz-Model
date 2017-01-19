@@ -159,6 +159,10 @@ msgstr ""
 msgid "dependencies"
 msgstr ""
 
+#: uconst.rsfilesread_ending_lc
+msgid " files read."
+msgstr ""
+
 #: uconst.rsgeneratingdocumentation_kc
 msgid "Generating documentation..."
 msgstr ""

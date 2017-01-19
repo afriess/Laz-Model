@@ -93,7 +93,7 @@ end;
 
 destructor TCodeProvider.Destroy;
 begin
-  Feedback.Message( IntToStr(LoadedCount) + ' files read.');
+  Feedback.Message( IntToStr(LoadedCount) + rsFilesRead_ending_lc);
   FreeAndNil(FSearchPath);
   FreeAndNil(FWatched);
   inherited;

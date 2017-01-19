@@ -28,9 +28,7 @@ uses
   uIntegrator, uCodeProvider;
 
 type
-  {
-    Baseclass for a twoway code integrator.
-  }
+
   TCodeIntegrator = class(TTwowayIntegrator)
   private
     FCodeProvider: TCodeProvider;
@@ -40,7 +38,6 @@ type
   end;
 
 implementation
-
 
 procedure TCodeIntegrator.SetCodeProvider(const Value: TCodeProvider);
 begin

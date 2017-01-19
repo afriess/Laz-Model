@@ -4,7 +4,7 @@
     <module name="uCodeIntegrator">
       <descr/>
       <element name="TCodeIntegrator">
-        <short/>
+        <short>Baseclass for a twoway code integrator.</short>
         <descr/>
         <seealso>
           <link id="uIntegrator.TTwowayIntegrator">TTwowayIntegrator {Parent of}</link>

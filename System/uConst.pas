@@ -55,6 +55,9 @@ resourcestring
   {uDocGen}
   rsGeneratingDocumentation_kc = 'Generating documentation...';
 
+  {uCodeProvider}
+  rsFilesRead_ending_lc = ' files read.';
+
 
 const
   ProgName = 'Laz-Model';

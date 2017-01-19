@@ -29,49 +29,31 @@ uses
   uModel, uCodeProvider, uError, uUseful, uCodeParser;
 
 type
-  {
-    Baseclass for integrators
-  }
+
   TIntegrator = class(TComponent)
   private
     FModel: TObjectModel;
   public
     constructor Create(om: TObjectModel); reintroduce;
     destructor Destroy; override;
-
-    // THE objectmodel
     property Model: TObjectModel read FModel;
   end;
 
-  {
-    Baseclass for an integrator where the model can be changed from the source and
-    changes in the model can change the source.
-  }
   TTwowayIntegrator = class(TIntegrator)
   public
     procedure InitFromModel; virtual;
     procedure BuildModelFrom(FileName : string); virtual;
   end;
 
-  {
-    Baseclass for an integrator where the model is used to generate 'something'.
-  }
   TExportIntegrator = class(TIntegrator)
   public
     procedure InitFromModel; virtual; abstract;
   end;
 
-  {
-    Baseclass for an integrator where 'something' (probably some sourcecode) is
-    used to generate a model.
-  }
   TImportIntegrator = class(TIntegrator)
   protected
     CodeProvider: TCodeProvider;
-
-    // List of files that have been read in this Lista importsession
     FilesRead : TStringList;
-
     procedure ImportOneFile(const FileName : string); virtual; abstract;
   public
     constructor Create(om: TObjectModel; ACodeProvider: TCodeProvider); reintroduce;
@@ -90,29 +72,16 @@ type
   public
     constructor Create;
     destructor Destroy; override;
-
-    {
-     Should be called by all integrator implementations to register it with
-     the masterlist of integrators.
-     eg. Integrators.Register( TEiffelIntegrator );
-    }
     procedure Register(T: TIntegratorClass);
-
-    // Retrieves a list of available integrators of a given kind
     function Get(Kind : TIntegratorClass) : TClassList;
   end;
 
-{
-  Used to retrieve _the_ instance of TIntegrators.
-}
 function Integrators : TIntegrators;
 
 implementation
 
 var
   _Integrators : TIntegrators = nil;
-
-{ TIntegrator }
 
 constructor TIntegrator.Create(om: TObjectModel);
 begin
@@ -126,8 +95,6 @@ begin
   FModel := nil;
 end;
 
-{ TTwowayIntegrator }
-
 procedure TTwowayIntegrator.BuildModelFrom(FileName : string);
 begin
 //Stub
@@ -137,8 +104,6 @@ procedure TTwowayIntegrator.InitFromModel;
 begin
 //Stub
 end;
-
-{ TImportIntegrator }
 
 procedure TImportIntegrator.BuildModelFrom(FileName: string; ResetModel: boolean; Lock : boolean);
 begin
@@ -166,7 +131,6 @@ begin
       Model.Unlock;
   end;
 end;
-
 
 procedure TImportIntegrator.BuildModelFrom(FileNames: TStrings);
 var
@@ -212,8 +176,6 @@ begin
   inherited;
 end;
 
-{ TIntegrators }
-
 constructor TIntegrators.Create;
 begin
   List := TClassList.Create;
@@ -238,7 +200,6 @@ procedure TIntegrators.Register(T: TIntegratorClass);
 begin
   List.Add(T);
 end;
-
 
 function Integrators : TIntegrators;
 begin

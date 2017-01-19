@@ -29,10 +29,6 @@ uses
 
 type
 
-  // Ordinary import of delphi code, until we have two-way integration.
-
-  { TfpciImporter }
-
   TfpciImporter = class(TImportIntegrator)
   private
     // Implementation of parser callback to retrieve a named package
@@ -44,8 +40,6 @@ type
 
 
 implementation
-
-{ TfpcImporter }
 
 procedure TfpciImporter.ImportOneFile(const FileName : string);
 var
