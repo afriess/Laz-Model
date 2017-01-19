@@ -147,6 +147,10 @@ msgstr ""
 msgid "Ancestor"
 msgstr ""
 
+#: uconst.rsattributes_ic
+msgid "Attributes"
+msgstr ""
+
 #: uconst.rsdatatypes_lc
 msgid "datatypes"
 msgstr ""
@@ -163,8 +167,24 @@ msgstr ""
 msgid "interfaces"
 msgstr ""
 
+#: uconst.rsoperations_ic
+msgid "Operations"
+msgstr ""
+
+#: uconst.rsoperationtype_ic
+msgid "Operation Type"
+msgstr ""
+
 #: uconst.rspackages_ic
 msgid "Packages"
+msgstr ""
+
+#: uconst.rsparent_ic
+msgid "Parent"
+msgstr ""
+
+#: uconst.rsreturn_ic
+msgid "Return"
 msgstr ""
 
 #: uconst.rssubclasses_lc

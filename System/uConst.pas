@@ -32,7 +32,7 @@ resourcestring
   // this is mainly for developers to understand what type of string is being used.
   // this may not make sense in non european languages but should convey the
   // basic intent of the displayed string.
-  // Placing all resource string here may help reuse and non duplication.
+  // Placing all resource strings here may help reuse and non duplication.
 
   {Tree View Integrator}
   rsPackages_ic = 'Packages';
@@ -43,6 +43,14 @@ resourcestring
   rsSubclasses_lc = 'subclasses';
   rsImplementors_lc = 'implementors';
   rsAncestor_ic = 'Ancestor';
+
+  {uClassTreeEditForm}
+  rsAttributes_ic = 'Attributes';
+  rsParent_ic = 'Parent';
+  rsOperations_ic = 'Operations';
+  rsOperationType_ic = 'Operation Type';
+  rsReturn_ic = 'Return';
+
 
 const
   ProgName = 'Laz-Model';

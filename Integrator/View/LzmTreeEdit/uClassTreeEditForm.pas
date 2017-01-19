@@ -26,7 +26,7 @@ interface
 uses
   Classes, Forms, typinfo,
   RTTIGrids, ComCtrls, ExtCtrls,
-  uModel, uModelEntity, uIterators;
+  uModel, uModelEntity, uIterators, uConst;
 
 type
 
@@ -111,14 +111,14 @@ var
 begin
     with FModelObject as TClass do
     begin
-      tp := TreeView1.Items.Add(nil, 'Parent: ' + Owner.Name);
+      tp := TreeView1.Items.Add(nil, rsParent_ic + ': ' + Owner.Name);
       If Assigned(Ancestor) then
       begin
         tc := TreeView1.Items.AddChildObject(tp, Name + ': ' + Ancestor.Name, Ancestor);
         Mi := TModelIterator.Create(GetImplements, ioAlpha);
         if Mi.Count > 0 then
         begin
-          nod := TreeView1.Items.AddChildObject(tc, 'implementors', nil);
+          nod := TreeView1.Items.AddChildObject(tc, rsImplementors_lc, nil);
           while Mi.HasNext do
           begin
             ent := Mi.Next;
@@ -132,7 +132,7 @@ begin
       Mi := TModelIterator.Create(GetAttributes);
       if Mi.Count > 0 then
       begin
-        nod := TreeView1.Items.AddChildObject(tc, 'Attributes', nil);
+        nod := TreeView1.Items.AddChildObject(tc, rsAttributes_ic, nil);
         while Mi.HasNext do
         begin
           ent := Mi.Next;
@@ -153,13 +153,13 @@ begin
       Mi := TModelIterator.Create(GetOperations);
       if Mi.Count > 0 then
       begin
-        nod := TreeView1.Items.AddChildObject(tc, 'Operations', nil);
+        nod := TreeView1.Items.AddChildObject(tc, rsOperations_ic, nil);
         while Mi.HasNext do
         begin
           ent := Mi.Next;
           nod1 := TreeView1.Items.AddChildObject(nod, ent.Name + ' : ' + ent.ClassName, ent);
           op := TOperation(ent);
-          TreeView1.Items.AddChild(nod1,' Operation Type: ' + GetEnumName(typeinfo(TOperationType), ord(op.OperationType)));
+          TreeView1.Items.AddChild(nod1,' ' + rsOperationType_ic + ': ' + GetEnumName(typeinfo(TOperationType), ord(op.OperationType)));
 
           Pi := TModelIterator.Create(op.GetParameters);
           if Pi.Count > 0  then
@@ -172,7 +172,7 @@ begin
             end;
           if (op.OperationType = otFunction) then
           begin
-            TreeView1.Items.AddChildObject(nod1,'Return: ' + op.ReturnValue.Name + ' : ' + op.ReturnValue.ClassName, op.ReturnValue);
+            TreeView1.Items.AddChildObject(nod1,rsReturn_ic + ': ' + op.ReturnValue.Name + ' : ' + op.ReturnValue.ClassName, op.ReturnValue);
           end;
         end;
       end;
