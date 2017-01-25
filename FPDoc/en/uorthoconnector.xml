@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uOrthoConnector">
+      <short>A dragable orthagonal connetor with decorations.</short>
+      <descr>
+        <p>This will be used to correctly model connections with more end types than existing.</p>
+        <p>It will support the following</p>
+        <ul>
+          <li>AutoRouting</li>
+          <li>Miss Boxes</li>
+          <li>Connect to Member points</li>
+          <li>Support all endpoint decorations</li>
+          <li>Support Cardinality decorations</li>
+          <li>Support Strereotypes</li>
+          <li>Be movable by user</li>
+        </ul>
+      </descr>
+      <element name="TAnchorPosition">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apLeftUpper">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apLeftMid">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apLeftLower">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apRightUpper">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apRightMid">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apRightLower">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apBottomLeft">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apBottomMid">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apBottomRight">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apTopLeft">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apTopMid">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apTopRight">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apMemberLeft">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apMemberRight">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoDir">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoDir.odLeft">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoDir.odRight">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoDir.odUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoDir.odDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPoint">
+        <short>Describes one of the 12 points on a box a connection can be made to.</short>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConnectionDir">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConnectionDir.cdIn">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TConnectionDir.cdOut">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THorizontalAlign">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THorizontalAlign.haSame">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THorizontalAlign.haLeft">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THorizontalAlign.haRight">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opNorth">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opNorthEast">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opEast">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opSouthEast">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opSouth">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opSouthWest">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opWest">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opNorthWest">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVerticalAlign">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVerticalAlign.vaSame">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVerticalAlign.vaLower">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVerticalAlign.vaHigher">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    <element name="TAnchorPoint.Pos"><short>Position of the AnchorPoint in box coordinates.</short>
+      </element><element name="TAnchorPoint.Used"><short>True if already has a connection.</short>
+      </element><element name="TAnchorPoint.Dir"><short>Connection direction is this the owner of a relationship or the related element.</short>
+      </element><element name="TAnchorPoint.OutPath"><short>The Ortho direction for a owned relationship.</short>
+      </element><element name="SetAnchorPoints"><short>Given a TRect at any position calculate the connection points in Rect coordinates</short>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

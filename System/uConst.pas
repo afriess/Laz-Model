@@ -61,6 +61,16 @@ resourcestring
   {uFile Provider}
   rsReading_ic = 'Reading';
 
+  {VisibiltyCombo}
+  rsShowAllMembers_kc = 'Show all members';
+  rsHidePrivate_kc = 'Hide private';
+  rsHidePrivateAndProtected = 'Hide private + protected';
+  rsHideAllMembers = 'Hide all members';
+
+  {Connections Combo}
+  rsInheritanceAndAssociations_kc = 'Inheritance and associations';
+  rsInheritanceOnly_kc = 'Inheritance only';
+
 
 const
   ProgName = 'Laz-Model';

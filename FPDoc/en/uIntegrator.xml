@@ -104,9 +104,12 @@
       </element>
       <element name="TIntegrators.Register">
         <short>Register an Integrator implementing class with the global set of Integrators.</short>
-        <descr><p>Should be called by all integrator implementations to register it with
+        <descr>
+          <p>Should be called by all integrator implementations to register it with
      the masterlist of integrators.
-     eg. </p><p><code>Integrators.Register( TEiffelIntegrator ); </code>
+     eg. </p>
+          <p>
+            <code>Integrators.Register( TEiffelIntegrator ); </code>
           </p>
         </descr>
         <seealso/>
@@ -128,7 +131,8 @@
         <descr/>
         <seealso/>
       </element>
-    <element name="Integrators"><short>Used to retrieve _the_ instance of TIntegrators.</short>
+      <element name="Integrators">
+        <short>Used to retrieve _the_ instance of TIntegrators.</short>
       </element>
     </module>
   </package>

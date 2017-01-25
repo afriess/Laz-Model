@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uPathLayout">
+      <descr/>
+      <element name="TOrthoPathLayout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoPathLayout.ArrangeAnchors">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoPathLayout.CalculatePath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoPathLayout.GetConnection">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoPathLayout.RefreshPath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoPathLayout.SetBaseAnchors">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRoundedPathLayout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRoundedPathLayout.ArrangeAnchors">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRoundedPathLayout.CalculatePath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRoundedPathLayout.GetConnection">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRoundedPathLayout.RefreshPath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRoundedPathLayout.SetBaseAnchors">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVectorPathLayout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVectorPathLayout.ArrangeAnchors">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVectorPathLayout.CalculatePath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVectorPathLayout.GetConnection">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVectorPathLayout.RefreshPath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVectorPathLayout.SetBaseAnchors">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    <element name="TNudgeParent"><short>Base procedure for adjusting an item in its parent context.</short>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>

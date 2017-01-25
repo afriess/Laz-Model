@@ -3,24 +3,33 @@
   <package name="Laz-Model">
     <module name="uFPDocGen">
       <short>Unit for maintaining FPDoc style documentation.</short>
-      <descr>/<p><b>How it works.</b>
-        </p><p>From the programmers point of view, Click the menu! Thats it!</p><p>What happens is that the program looks in the configured DocRoot directory (selectable via directory dialog, with a default in Config of ProjectRoot/FPDoc).
-It searches the directory for subdirs with 2 letters (ISO country codes, only by convention). These are the languages this run will generate for.</p><code>For each language
+      <descr>/<p>
+          <b>How it works.</b>
+        </p>
+        <p>From the programmers point of view, Click the menu! Thats it!</p>
+        <p>What happens is that the program looks in the configured DocRoot directory (selectable via directory dialog, with a default in Config of ProjectRoot/FPDoc).
+It searches the directory for subdirs with 2 letters (ISO country codes, only by convention). These are the languages this run will generate for.</p>
+        <code>For each language
   get or create a FPDoc project file (FPDoc.xml).
   For each Unit in Model
     check project for inclusion, add entries if not there.
     get or create a Unit descriptions file {unitname}.xml
         check for or create element entries for all classifiers in the unit.
-</code><p>As you can see you can safely run and rerun this adding new items to
-be documented as you go along. (Future feature some mechanism to remove entries which are no longer in the codebase, probably only needed to be used just before a release. Not a hard thing to do.)</p><p>Source control should store only the lang directories.
-(Future feature) Diagrams to be generated in DocRoot/images with links auto inserted into description files.</p><p>To generate docs for a language a symlink is made below the lang dir to the images dir. This is a workaround for FPDoc not generating all doc types properly unless images is a subdir of where the project/desc files are.</p><p>If you need to support another language just add an empty directory, generate and let your new collaborators at it.</p><img file="images/pFPDocGen.png" caption="FPDocGen Package Diagram"/>
+</code>
+        <p>As you can see you can safely run and rerun this adding new items to
+be documented as you go along. (Future feature some mechanism to remove entries which are no longer in the codebase, probably only needed to be used just before a release. Not a hard thing to do.)</p>
+        <p>Source control should store only the lang directories.
+(Future feature) Diagrams to be generated in DocRoot/images with links auto inserted into description files.</p>
+        <p>To generate docs for a language a symlink is made below the lang dir to the images dir. This is a workaround for FPDoc not generating all doc types properly unless images is a subdir of where the project/desc files are.</p>
+        <p>If you need to support another language just add an empty directory, generate and let your new collaborators at it.</p>
+        <img file="images/pFPDocGen.png" caption="FPDocGen Package Diagram"/>
       </descr>
       <element name="TFPDocGen">
         <short/>
-        <descr><img file="images/cFPDocGen.png" caption="TFPDocGen Class Diagram"/>
+        <descr>
+          <img file="images/cFPDocGen.png" caption="TFPDocGen Class Diagram"/>
         </descr>
-        <seealso>
-        </seealso>
+        <seealso/>
       </element>
       <element name="TFPDocGen.FConfigFile">
         <short>Holds the config file for the language being processed. Filename FPDoc.xml.</short>
@@ -49,7 +58,8 @@ be documented as you go along. (Future feature some mechanism to remove entries 
       </element>
       <element name="TFPDocGen.FPackageName">
         <short>The FPDoc package name being processed. </short>
-        <descr><p>All FPDoc items belong to a package. #LCL and #FCL are common packages used in Lazarus.</p>
+        <descr>
+          <p>All FPDoc items belong to a package. #LCL and #FCL are common packages used in Lazarus.</p>
         </descr>
         <seealso/>
       </element>
