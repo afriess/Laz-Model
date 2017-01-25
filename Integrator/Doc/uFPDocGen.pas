@@ -471,8 +471,8 @@ begin
   if not Assigned(clsNode) then
      clsNode := AddEntity(C.Name);
   seeNode := clsNode.FindNode('seealso');
-  if Assigned(seeNode) then
-    AddParentLinks(C as TModelEntity, seeNode);
+//  if Assigned(seeNode) then
+//    AddParentLinks(C as TModelEntity, seeNode);
 
   Mi := TModelIterator.Create(C.GetAttributes, ioAlpha);
   if Mi.Count > 0 then
@@ -510,8 +510,8 @@ begin
   if not Assigned(intfNode) then
      intfNode := AddEntity(I.Name);
   seeNode := intfNode.FindNode('seealso');
-  if Assigned(seeNode) then
-    AddParentLinks(I as TModelEntity, seeNode);
+//  if Assigned(seeNode) then
+//    AddParentLinks(I as TModelEntity, seeNode);
 
   Mi := TModelIterator.Create(I.GetAttributes, ioAlpha);
   if Mi.Count > 0 then

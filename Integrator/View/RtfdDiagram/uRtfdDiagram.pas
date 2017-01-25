@@ -28,7 +28,8 @@ uses
   Classes, SysUtils, contnrs, Math, Types,
   Controls, Graphics, LCLIntf, LCLType, IniFiles, Dialogs,
   uViewIntegrator, essConnectPanel, uModelEntity, uModel, uListeners, EssLayout,
-  uDiagramFrame, uRtfdComponents, uIterators, uFeedback, uError, uConfig;
+  uDiagramFrame, uRtfdComponents, uIterators, uFeedback, uError, uConfig,
+  uPathLayout, uLayoutConcepts;
 
 
 type

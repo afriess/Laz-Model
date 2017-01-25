@@ -36,7 +36,7 @@ interface
 uses
   Classes, SysUtils, Math, contnrs,
   Controls,
-  essLayout, essConnectPanel;
+  essLayout, essConnectPanel, uLayoutConnector;
 
 type
   TEdgeList = class;
@@ -134,7 +134,7 @@ var
   L : TList;
   I : integer;
   C : TControl;
-  Con : essConnectPanel.TConnection;
+  Con : TDecoratedConnection;
   Node,FromNode,ToNode : TNode;
 begin
   Nodes := TNodeList.Create(True);
@@ -162,23 +162,24 @@ begin
   try
     for I := 0 to L.Count-1 do
     begin
-      Con := TConnection(L[I]);
-      if (not Con.FFrom.Visible) or (not Con.FTo.Visible) then
+      Con := TDecoratedConnection(L[I]);
+      if (not Con.OwnerEnd.Visible) or (not Con.TargetEnd.Visible) then
         Continue;
 
       //Here the connection is reversed: from=to, to=from
       //This is because the algorithm assumes that everything points downwards, while
       //we want all arrows to point upwards (descendants pointing up to their baseclass).
-      if (Con.FConnectStyle=csNormal) or
-         ((Con.FConnectStyle=csThinDash) and (Con.ArrowStyle=asEmptyClosed)) then
+//      if (Con.FConnectStyle=csNormal) or
+//         ((Con.FConnectStyle=csThinDash) and (Con.ArrowStyle=asEmptyClosed)) then
+      if con.WantMid then
       begin  //Reverse Inheritance-connections and interface connections
-        FromNode := Nodes[ Con.FTo.Tag ];
-        ToNode := Nodes[ Con.FFrom.Tag ];
+        FromNode := Nodes[ Con.TargetEnd.Tag ];
+        ToNode := Nodes[ Con.OwnerEnd.Tag ];
       end
       else
       begin  //Do not reverse Unit-Associations
-        FromNode := Nodes[ Con.FFrom.Tag ];
-        ToNode := Nodes[ Con.FTo.Tag ];
+        FromNode := Nodes[ Con.OwnerEnd.Tag ];
+        ToNode := Nodes[ Con.TargetEnd.Tag ];
       end;
       AddEdge(FromNode,ToNode);
     end;
@@ -552,7 +553,7 @@ end;
 
 procedure TSugiyamaLayout.SetYPositions;
 const
-  VSpacing = 40;
+  VSpacing = 40;    // TODO Make this Diagram Configurable
 var
   Node : TNode;
   I,J : integer;
@@ -576,7 +577,7 @@ end;
 
 procedure TSugiyamaLayout.SetXPositions;
 const
-  HSpacing = 20;
+  HSpacing = 50; // TODO Make this Diagram Configurable
   MaxIter = 20;
 var
   I,J,X,Z,OldZ,BailOut,RegStart,RegCount,MaxAmount,Amount : integer;

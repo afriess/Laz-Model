@@ -38,6 +38,7 @@ uses
   uViewIntegrator in 'Integrator\View\uViewIntegrator.pas',
   uRtfdComponents in 'Integrator\View\RtfdDiagram\uRtfdComponents.pas',
   uRtfdDiagram in 'Integrator\View\RtfdDiagram\uRtfdDiagram.pas',
+  uPathLayout in 'Components\uPathLayout.pas',
   uError in 'System\uError.pas',
   uUseful in 'System\uUseful.pas',
   uModelEntity in 'Model\uModelEntity.pas',

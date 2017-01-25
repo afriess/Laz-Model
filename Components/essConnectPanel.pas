@@ -27,13 +27,13 @@ interface
 uses
   Classes, SysUtils, Contnrs, Math,
   LCLIntf, LCLType, Messages, Graphics, Controls, Forms, Dialogs, ExtCtrls,
-  uViewIntegrator, uRtfdComponents;
+  uViewIntegrator, uRtfdComponents, uLayoutConcepts, uLayoutConnector;
 
 type
   // Available linestyles
   TessConnectionStyle = (csThin, csNormal, csThinDash);
   //Different kinds of arrowheads
-  TessConnectionArrowStyle = (asEmptyOpen,asEmptyClosed);
+  TessConnectionArrowStyle = TArrowStyle;
 
   {
     Specifies a connection between two managed objects.
@@ -45,7 +45,7 @@ type
     ArrowStyle : TessConnectionArrowStyle;
   end;
 
-
+  TBasePathLayout = class;
   {
     Wrapper around a control managed by essConnectPanel
   }
@@ -84,7 +84,10 @@ type
     FBackBitmap: TBitmap;
     TempHidden : TObjectList;
     ClientDragging: Boolean;
-    fNeedCheckSize: Boolean;
+    FNeedCheckSize: Boolean;
+    FPathLayout: TBasePathLayout;
+    FPathStyle :TPathLayoutStyle;
+    procedure SetPathStyle(AValue:TPathLayoutStyle);
     procedure SetSelectedOnly(const Value : boolean);
   protected
     FManagedObjects: TList;
@@ -150,6 +153,8 @@ type
 
     procedure RecalcSize;
 
+    property PathLayout: TBasePathLayout read FPathLayout;
+
     property IsModified: Boolean read FIsModified write FIsModified;
 
     // Bitmap to be used as background
@@ -157,6 +162,8 @@ type
 
     //Only draw selected
     property SelectedOnly : boolean read FSelectedOnly write SetSelectedOnly;
+
+    property PathStyle: TPathLayoutStyle read FPathStyle write SetPathStyle;
   published
     property Align;
     property Alignment;
@@ -209,9 +216,29 @@ type
     property OnStartDrag;
   end;
 
+
+  TBasePathLayout = class
+  private
+    FOwner: TObject;
+  public
+    constructor Create(AOwner: TessConnectPanel);
+    // intermediate which keeps program working.
+    function GetConnection(const AOwner: TControl; const rOwner: TControl; const rTarget: TControl;
+                   WantMid: boolean): TDecoratedConnection; virtual; abstract;
+    // Will be final version
+//     function GetBaseAnchors(A: TAssociation): TDecoratedConnection; overload; virtual; abstract;
+    // stage 2 rearrange anchors according to space available
+    procedure ArrangeAnchors; virtual; abstract;
+    // stage 3 generate paths between finalised points.
+    procedure CalculatePath(con: TDecoratedConnection); virtual; abstract;
+    procedure RefreshPath(con: TDecoratedConnection); virtual; abstract;
+end;
+
 procedure Register;
 
 implementation
+
+uses uPathLayout;
 
 type
   TCrackControl = class(TControl) end;
@@ -362,6 +389,11 @@ begin
   P1 := AngleToPoint( FromRect , PointToAngle(FromRect,Temp) );
 end;
 
+constructor TBasePathLayout.Create(AOwner: TessConnectPanel);
+begin
+  FOwner := AOwner;
+end;
+
 { TessConnectPanel }
 function TessConnectPanel.AddManagedObject(AObject: TControl): TControl;
 var
@@ -426,8 +458,18 @@ function TessConnectPanel.ConnectObjects(Src, Dst: TControl;
   AStyle: TessConnectionStyle; Arrow : TessConnectionArrowStyle): Boolean;
 var
   conn: TConnection;
+  con: TDecoratedConnection;
 begin
-  if (FindManagedControl(Src) <> nil) and (FindManagedControl(Dst) <> nil) and
+
+   con := FPathLayout.GetConnection(self, src, dst, (arrow = asEmptyClosed));
+   con.IsDirty := True;
+   con.Style := TPathStyle(ord(AStyle));
+   con.ArrowStyle := TArrowStyle(ord( Arrow));
+   FConnections.Add(con);
+//   FPathLayout.CalculatePath(con);
+
+
+  {if (FindManagedControl(Src) <> nil) and (FindManagedControl(Dst) <> nil) and
     (Src<>Dst) then
   begin
     conn := TConnection.Create;
@@ -442,6 +484,8 @@ begin
     Result := False;
   end;
   Invalidate;
+}
+
 end;
 
 constructor TessConnectPanel.Create(AOwner: TComponent);
@@ -452,6 +496,7 @@ begin
   Color := clWhite;
   TempHidden := TObjectList.Create(False);
   UseDockManager := True;
+  FPathLayout := TOrthoPathLayout.Create(Self);
 end;
 
 procedure TessConnectPanel.CreateParams(var Params: TCreateParams);
@@ -469,6 +514,8 @@ begin
     FreeAndNil(FManagedObjects);
   if Assigned(FConnections) then
     FreeAndNil(FConnections);
+  if Assigned(FPathLayout) then
+    FreeAndNil(FPathLayout);
   inherited;
 end;
 
@@ -593,8 +640,6 @@ begin
 end;
 
 procedure TessConnectPanel.OnManagedObjectClick(Sender: TObject);
-var
-  inst: TManagedObject;
 begin
 
 end;
@@ -745,10 +790,9 @@ const
   HANDLESIZE: Integer = 5;
 var
   Rect, r2: TRect;
-  p,p1: TPoint;
   TopColor, BottomColor: TColor;
   i: Integer;
-  conn: TConnection;
+  con: TDecoratedConnection;
 
 
   procedure AdjustColors(Bevel: TPanelBevel);
@@ -797,7 +841,12 @@ begin
 
   for i:=0 to FConnections.Count -1 do
   begin
-    conn := (FConnections[i] as TConnection);
+     con := (FConnections[i] as TDecoratedConnection);
+     if con.IsDirty then con.Refresh;
+     con.DrawDecorated(Canvas);
+
+
+{    conn := (FConnections[i] as TConnection);
     if (not Conn.FFrom.Visible) or (not Conn.FTo.Visible) then
       Continue;
     case conn.FConnectStyle of
@@ -818,14 +867,18 @@ begin
         end;
     end;
 
-    CalcShortest(conn.FFrom.BoundsRect,conn.FTo.BoundsRect,p{%H-},p1{%H-});
+    if  Conn.ArrowStyle=asEmptyOpen then
+      CalcConnectionEnds(conn.FFrom.BoundsRect,conn.FTo.BoundsRect,Conn.ArrowStyle=asEmptyClosed, p{%H-},p1{%H-})
+    else
+      CalcShortest(conn.FFrom.BoundsRect,conn.FTo.BoundsRect,p{%H-},p1{%H-});
+
     if FindManagedControl(conn.FFrom).Selected and (not FSelectedOnly) then
       Canvas.Pen.Color := clGreen
     else
       Canvas.Pen.Color := clBlack;
 
     Canvas.Brush.Color := clWhite;
-    DrawArrow(Canvas,p,p1,Conn.ArrowStyle);
+    DrawArrow(Canvas,p,p1,Conn.ArrowStyle);}
   end;
 
   Canvas.Pen.Style := psSolid;
@@ -934,6 +987,11 @@ begin
     can.free;
   end;
   Message.Result := 1;
+end;
+
+procedure TessConnectPanel.SetPathStyle(AValue: TPathLayoutStyle);
+begin
+  //if Assigned(Self.pa
 end;
 
 procedure TessConnectPanel.SetSelectedOnly(const Value : boolean);

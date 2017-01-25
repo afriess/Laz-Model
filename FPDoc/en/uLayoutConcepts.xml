@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uLayoutConcepts">
+      <descr/>
+      <element name="TAnchorPosition">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apTopLeft">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apTopMid">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apTopRight">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apRightUpper">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apRightMid">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apRightLower">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apBottomRight">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apBottomMid">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apBottomLeft">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apLeftLower">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apLeftMid">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apLeftUpper">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apMemberLeft">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPosition.apMemberRight">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorationDisplayStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorationDisplayStyle.ddsNone">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorationDisplayStyle.ddsEndpointOnly">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorationDisplayStyle.ddsAll">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorationPreferedOrientaion">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorationPreferedOrientaion.dpoDontCare">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorationPreferedOrientaion.dpoPreferHorizontal">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorationPreferedOrientaion.dpoPreferVertical">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorationPreferedPosition">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorationPreferedPosition.dppWantStart">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorationPreferedPosition.dppWantEnd">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorationPreferedPosition.dppWantMid">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THorizontalAlign">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THorizontalAlign.haSame">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THorizontalAlign.haLeft">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="THorizontalAlign.haRight">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLinkAnchors">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opNorth">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opNorthEast">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opEast">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opSouthEast">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opSouth">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opSouthWest">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opWest">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOctantPosition.opNorthWest">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoAxis">
+        <short>Main concept for Orthagonal</short>
+        <descr><p>An orthagonal line is any line, chord or ray which is parallel to one of the major axes.</p><p>For 2D diagrams this is limited to  X and Y axes.</p>
+        </descr>
+        <seealso/>
+      </element>
+      <element name="TOrthoAxis.oaVertical">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoAxis.oaHorizontal">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoDir">
+        <short>Orthagonal direction.</short>
+        <descr><p>A  </p>
+        </descr>
+        <seealso/>
+      </element>
+      <element name="TOrthoDir.odLeft">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoDir.odRight">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoDir.odUp">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TOrthoDir.odDown">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPathLayoutStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPathLayoutStyle.plsOrtho">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPathLayoutStyle.plsVector">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPathLayoutStyle.plsRoundedOrtho">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPathStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPathStyle.psThin">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPathStyle.psNormal">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPathStyle.psThinDash">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRelationEnd">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRelationEnd.cdOwner">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TRelationEnd.cdTarget">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStringDecorationLinePos">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStringDecorationLinePos.sdlpStart">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStringDecorationLinePos.sdlpMid">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStringDecorationLinePos.sdlpEnd">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStringDecorationPreferedPos">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStringDecorationPreferedPos.sdppPrefer1">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStringDecorationPreferedPos.sdppPrefer2">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStringPathDecoration">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVerticalAlign">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVerticalAlign.vaSame">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVerticalAlign.vaLower">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TVerticalAlign.vaHigher">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    <short>Helper unit for geometric and layout concepts which can be shared amongst Layout and drawing algos.</short>
+    </module>
+  </package>
+</fpdoc-descriptions>

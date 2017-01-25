@@ -588,6 +588,76 @@
         <descr/>
         <seealso/>
       </element>
+      <element name="TBasePathLayout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TBasePathLayout.FOwner">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TBasePathLayout.ArrangeAnchors">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TBasePathLayout.CalculatePath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TBasePathLayout.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TBasePathLayout.GetConnection">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TBasePathLayout.RefreshPath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TBasePathLayout.SetBaseAnchors">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FNeedCheckSize">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FPathLayout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.FPathStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.PathLayout">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.PathStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TessConnectPanel.SetPathStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
     </module>
   </package>
 </fpdoc-descriptions>

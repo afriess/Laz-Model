@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fpdoc-descriptions>
+  <package name="Laz-Model">
+    <module name="uLayoutConnector">
+      <descr/>
+      <element name="PTLine">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPoint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TAnchorPoints">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TArc">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TArc.FRadius">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TArc.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TArrowDecoration">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TArrowDecoration.FDir">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TArrowDecoration.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TArrowDecoration.Draw">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.Decorations">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.FIsDirty">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.FOwner">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.FOwnerEnd">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.FTargetEnd">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.FWantMid">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.IsDirty">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.OwnerEnd">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.TargetEnd">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.WantMid">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.DrawDecorated">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.Refresh">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoratedConnection.SetEndControls">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoration">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoration.FOrigin">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoration.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecoration.Draw">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorations">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TDecorations.Draw">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TGraphicDecoration">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLine">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLine.Dir">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLine.FDir">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLine.FStartPoint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLine.Pos">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLine.x">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLine.y">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLine.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLine.getX">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLine.getY">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLine.setX">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TLine.setY">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPath.EndPoint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPath.FEndPoint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPath.FStyle">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPath.StartPoint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPath.Style">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPath.ClearPath">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPath.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPath.Destroy">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPath.Draw">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TPath.GetStartPoint">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStringDecoration">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStringDecoration.FCaption">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStringDecoration.Create">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+      <element name="TStringDecoration.Draw">
+        <short/>
+        <descr/>
+        <seealso/>
+      </element>
+    </module>
+  </package>
+</fpdoc-descriptions>
