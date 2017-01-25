@@ -28,7 +28,7 @@ interface
 uses
   Classes,
   Controls, Messages, Forms, ActnList, Menus, StdCtrls, ExtCtrls, Buttons, DefaultTranslator,
-  uViewIntegrator, uListeners, uModelEntity, uModel;
+  uViewIntegrator, uListeners, uModelEntity, uModel, uConst;
 
 
 //const
@@ -115,12 +115,23 @@ begin
   inherited Create(AOwner);
   Self.Model := Model;
   Model.AddListener(IAfterObjectModelListener(Self));
-  VisibilityCombo.ItemIndex := 0;
+
   //Hindra att caption från FileOpenAction syns på knapp, vi vill bara ha glyfen
   OpenButton.Caption:='';
   LayoutButton.Caption:='';
   ScrollBox := TScrollBoxWithNotify.Create(Self);
   ScrollBox.Parent := Self;
+  // i18n combos
+  VisibilityCombo.Items.Clear;
+  VisibilityCombo.Items.Add(rsShowAllMembers_kc);
+  VisibilityCombo.Items.Add(rsHidePrivate_kc);
+  VisibilityCombo.Items.Add(rsHidePrivateAndProtected);
+  VisibilityCombo.Items.Add(rsHideAllMembers);
+  VisibilityCombo.ItemIndex := 0;
+
+  ConnectionsCombo.Items.Clear;
+  ConnectionsCombo.Items.Add(rsInheritanceAndAssociations_kc);
+  ConnectionsCombo.Items.Add(rsInheritanceOnly_kc);
 end;
 
 destructor TDiagramFrame.Destroy;

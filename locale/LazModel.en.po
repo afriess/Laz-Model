@@ -177,9 +177,29 @@ msgstr " files read."
 msgid "Generating documentation..."
 msgstr "Generating documentation..."
 
+#: uconst.rshideallmembers
+msgid "Hide all members"
+msgstr ""
+
+#: uconst.rshideprivateandprotected
+msgid "Hide private + protected"
+msgstr ""
+
+#: uconst.rshideprivate_kc
+msgid "Hide private"
+msgstr ""
+
 #: uconst.rsimplementors_lc
 msgid "implementors"
 msgstr "implementors"
+
+#: uconst.rsinheritanceandassociations_kc
+msgid "Inheritance and associations"
+msgstr ""
+
+#: uconst.rsinheritanceonly_kc
+msgid "Inheritance only"
+msgstr ""
 
 #: uconst.rsinterfaces_lc
 msgid "interfaces"
@@ -209,6 +229,11 @@ msgstr "Reading"
 msgid "Return"
 msgstr "Return"
 
+#: uconst.rsshowallmembers_kc
+msgid "Show all members"
+msgstr ""
+
 #: uconst.rssubclasses_lc
 msgid "subclasses"
 msgstr "subclasses"
+

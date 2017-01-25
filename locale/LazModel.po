@@ -167,8 +167,28 @@ msgstr ""
 msgid "Generating documentation..."
 msgstr ""
 
+#: uconst.rshideallmembers
+msgid "Hide all members"
+msgstr ""
+
+#: uconst.rshideprivateandprotected
+msgid "Hide private + protected"
+msgstr ""
+
+#: uconst.rshideprivate_kc
+msgid "Hide private"
+msgstr ""
+
 #: uconst.rsimplementors_lc
 msgid "implementors"
+msgstr ""
+
+#: uconst.rsinheritanceandassociations_kc
+msgid "Inheritance and associations"
+msgstr ""
+
+#: uconst.rsinheritanceonly_kc
+msgid "Inheritance only"
 msgstr ""
 
 #: uconst.rsinterfaces_lc
@@ -197,6 +217,10 @@ msgstr ""
 
 #: uconst.rsreturn_ic
 msgid "Return"
+msgstr ""
+
+#: uconst.rsshowallmembers_kc
+msgid "Show all members"
 msgstr ""
 
 #: uconst.rssubclasses_lc

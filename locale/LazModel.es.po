@@ -177,9 +177,29 @@ msgstr "archivos leen."
 msgid "Generating documentation..."
 msgstr "Generación de documentación ..."
 
+#: uconst.rshideallmembers
+msgid "Hide all members"
+msgstr ""
+
+#: uconst.rshideprivateandprotected
+msgid "Hide private + protected"
+msgstr ""
+
+#: uconst.rshideprivate_kc
+msgid "Hide private"
+msgstr ""
+
 #: uconst.rsimplementors_lc
 msgid "implementors"
 msgstr "implementadores"
+
+#: uconst.rsinheritanceandassociations_kc
+msgid "Inheritance and associations"
+msgstr ""
+
+#: uconst.rsinheritanceonly_kc
+msgid "Inheritance only"
+msgstr ""
 
 #: uconst.rsinterfaces_lc
 msgid "interfaces"
@@ -209,6 +229,11 @@ msgstr "Lectura"
 msgid "Return"
 msgstr "Volver"
 
+#: uconst.rsshowallmembers_kc
+msgid "Show all members"
+msgstr ""
+
 #: uconst.rssubclasses_lc
 msgid "subclasses"
 msgstr "subclase"
+
