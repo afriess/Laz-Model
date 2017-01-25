@@ -76,7 +76,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="47">
+    <Units Count="51">
       <Unit0>
         <Filename Value="LazModel.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -292,6 +292,22 @@
         <Filename Value="Integrator\Doc\uFPDocGen.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit46>
+      <Unit47>
+        <Filename Value="Components\uPathLayout.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="Components\uLayoutConcepts.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="Components\uLayoutConnector.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="Model\uAssociations.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit50>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
