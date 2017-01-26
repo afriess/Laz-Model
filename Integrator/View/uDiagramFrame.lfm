@@ -1,33 +1,33 @@
 object DiagramFrame: TDiagramFrame
   Left = 0
-  Height = 459
+  Height = 466
   Top = 0
-  Width = 635
+  Width = 897
   Align = alClient
-  ClientHeight = 459
-  ClientWidth = 635
+  ClientHeight = 466
+  ClientWidth = 897
   TabOrder = 0
-  DesignLeft = 329
-  DesignTop = 266
+  DesignLeft = 639
+  DesignTop = 178
   object Panel1: TPanel
     Left = 0
-    Height = 34
+    Height = 27
     Top = 0
-    Width = 635
+    Width = 897
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 34
-    ClientWidth = 635
+    ClientHeight = 27
+    ClientWidth = 897
     TabOrder = 0
     object ConnectionsLabel: TLabel
       AnchorSideTop.Control = ConnectionsCombo
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = ConnectionsCombo
-      Left = 94
-      Height = 18
-      Top = 9
-      Width = 76
+      Left = 111
+      Height = 13
+      Top = 6
+      Width = 59
       Anchors = [akTop, akRight]
       BorderSpacing.Right = 6
       Caption = 'Connections'
@@ -37,10 +37,10 @@ object DiagramFrame: TDiagramFrame
       AnchorSideTop.Control = VisibilityCombo
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = VisibilityCombo
-      Left = 442
-      Height = 18
-      Top = 9
-      Width = 32
+      Left = 450
+      Height = 13
+      Top = 6
+      Width = 24
       Anchors = [akTop, akRight]
       BorderSpacing.Right = 6
       Caption = 'Filter'
@@ -120,11 +120,11 @@ object DiagramFrame: TDiagramFrame
     end
     object VisibilityCombo: TComboBox
       Left = 480
-      Height = 32
+      Height = 21
       Top = 2
       Width = 145
       Enabled = False
-      ItemHeight = 24
+      ItemHeight = 13
       Items.Strings = (
         'Show all members'
         'Hide private'
@@ -138,11 +138,11 @@ object DiagramFrame: TDiagramFrame
     end
     object ConnectionsCombo: TComboBox
       Left = 176
-      Height = 32
+      Height = 21
       Top = 2
       Width = 165
       Enabled = False
-      ItemHeight = 24
+      ItemHeight = 13
       Items.Strings = (
         'Inheritance and associations'
         'Inheritance only'
@@ -151,6 +151,35 @@ object DiagramFrame: TDiagramFrame
       Style = csDropDownList
       TabOrder = 1
       TabStop = False
+    end
+    object PathStyleCombo: TComboBox
+      Left = 752
+      Height = 21
+      Top = 2
+      Width = 99
+      Enabled = False
+      ItemHeight = 13
+      Items.Strings = (
+        'Orthogonal'
+        'Direct'
+        'Rounded'
+      )
+      OnChange = PathStyleComboChange
+      TabOrder = 2
+    end
+    object PathStyleLabel: TLabel
+      AnchorSideTop.Control = PathStyleCombo
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = PathStyleCombo
+      Left = 666
+      Height = 13
+      Top = 6
+      Width = 80
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Right = 6
+      Caption = 'Path Style'
+      ParentColor = False
     end
   end
   object ActionList: TActionList

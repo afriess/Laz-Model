@@ -27,7 +27,7 @@ interface
 uses
   Classes, SysUtils, Contnrs, Types, IniFiles, math,
   Controls, Forms, Graphics,
-  uIntegrator, uModel, uModelEntity, uFeedback, uConfig;
+  uIntegrator, uModel, uModelEntity, uFeedback, uConfig, uLayoutConcepts;
 
 type
 
@@ -55,10 +55,12 @@ type
     FShowAssoc: boolean;
   protected
     FVisibilityFilter: TVisibility;
+    FPathStyle: TPathLayoutStyle;
     FPackage: TAbstractPackage;
     procedure SetVisibilityFilter(const Value: TVisibility); virtual;
     procedure SetPackage(const Value: TAbstractPackage); virtual;
     procedure SetShowAssoc(const Value: boolean); virtual;
+    procedure SetPathStyle(const Value: TPathLayoutStyle); virtual;
     function GetStorage(doCreate : boolean = False) : TCustomIniFile; virtual;
     procedure StoreDiagram; virtual; abstract;
     function FetchDiagram : integer; virtual; abstract;
@@ -89,6 +91,7 @@ type
     property OnUpdateZoom : TNotifyEvent read FOnUpdateZoom write FOnUpdateZoom;
     //True if associations are to be shown
     property ShowAssoc : boolean read FShowAssoc write SetShowAssoc;
+    property PathStyle: TPathLayoutStyle read FPathStyle write SetPathStyle;
   end;
 
   procedure SetCurrentEntity(Value : TModelEntity);
@@ -213,6 +216,11 @@ end;
 procedure TDiagramIntegrator.SetShowAssoc(const Value: boolean);
 begin
   FShowAssoc := Value;
+end;
+
+procedure TDiagramIntegrator.SetPathStyle(const Value: TPathLayoutStyle);
+begin
+  FPathStyle := Value;
 end;
 
 

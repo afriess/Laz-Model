@@ -46,6 +46,7 @@ TNudgeParent = procedure (Item, Parent: TObject; PreferedEnd: TRelationEnd ) of 
       procedure ArrangeAnchors; override;
       procedure CalculatePath(con: TDecoratedConnection); override;
       procedure RefreshPath(con: TDecoratedConnection); override;
+      procedure DrawConnection(con: TDecoratedConnection; ACanvas: TCanvas); override;
   end;
 
  TOrthoPathLayout = class(TBasePathLayout)
@@ -55,6 +56,7 @@ TNudgeParent = procedure (Item, Parent: TObject; PreferedEnd: TRelationEnd ) of 
    procedure ArrangeAnchors; override;
    procedure CalculatePath(con: TDecoratedConnection); override;
    procedure RefreshPath(con: TDecoratedConnection); override;
+   procedure DrawConnection(con: TDecoratedConnection; ACanvas: TCanvas); override;
  end;
 
  TRoundedPathLayout = class(TBasePathLayout)
@@ -64,13 +66,8 @@ TNudgeParent = procedure (Item, Parent: TObject; PreferedEnd: TRelationEnd ) of 
    procedure ArrangeAnchors; override;
    procedure CalculatePath(con: TDecoratedConnection); override;
    procedure RefreshPath(con: TDecoratedConnection); override;
+   procedure DrawConnection(con: TDecoratedConnection; ACanvas: TCanvas); override;
  end;
-
-// this is for testing during initial dev expect this to go
-procedure CalcConnectionEnds(const rOwner: TRect; const rTarget: TRect; WantMid: boolean;
-                              var p: TPoint; var p1: TPoint);
-
-
 
 implementation
 
@@ -208,29 +205,6 @@ begin
 end;
 
 
-//LEGACY
-procedure CalcConnectionEnds(const rOwner: TRect; const rTarget: TRect;
-  WantMid: boolean; var p: TPoint; var p1: TPoint);
-var
-  quad: TOctantPosition;
-  anchors: TLinkAnchors;
-  po,pt: TPoint;
-begin
-   // owner midpoint
-   po.x := (rOwner.Right + rOwner.Left) div 2;
-   po.y := (rOwner.Bottom + rOwner.Top) div 2;
-   // target midpoint
-   pt.x := (rTarget.Right + rTarget.Left) div 2;
-   pt.y := (rTarget.Bottom + rTarget.Top) div 2;
-
-    quad := GetQuadrant(rOwner,rTarget, po, pt, cPathMargin);
-    anchors := OrthoConnectTo(WantMid,quad, po, pt);
-    p := GetRectPoint(rOwner, anchors.Owner);
-    p1 := GetRectPoint(rTarget, anchors.Target);
-
-
-end;
-
 function CreateConnection(const AOwner: TControl; const rOwner: TControl; const rTarget: TControl;
   AWantMid: boolean): TDecoratedConnection;
 var
@@ -263,6 +237,16 @@ var
 
 end;
 
+function CreateVectorConnection(const AOwner: TControl; const rOwner: TControl; const rTarget: TControl;
+  AWantMid: boolean): TDecoratedConnection;
+var
+    ls,le: TLine;
+begin
+   ls := TLine.Create(Origin, odLeft);
+   le := TLine.Create(Origin, odLeft);
+   Result := TDecoratedConnection.Create (AOwner, ls, le, psThin);
+   Result.SetEndControls(rOwner,rTarget);
+end;
 
 // TODO make some of these 'plugable' into a PathLayout??
 // ATM this is OrthoSpecific
@@ -301,6 +285,15 @@ begin
     con.EndPoint.y := p1.y;
     con.EndPoint.Dir := AnchorOrtho[anchors.Target];
 
+end;
+
+procedure UpdateVectorConnection(con: TDecoratedConnection);
+var
+  p1,p2: TPoint;
+begin
+   CalcShortest(con.OwnerEnd.BoundsRect, con.TargetEnd.BoundsRect,p1,p2);
+   con.StartPoint.Pos := p1;
+   con.EndPoint.Pos := p2;
 end;
 
 function IsOrthoInline(Line1, Line2: Tline): boolean;
@@ -406,6 +399,12 @@ begin
 
 end;
 
+procedure TOrthoPathLayout.DrawConnection(con: TDecoratedConnection;
+  ACanvas: TCanvas);
+begin
+    con.DrawDecorated(ACanvas);
+end;
+
 
 { TRoundedPathLayout }
 
@@ -413,7 +412,8 @@ function TRoundedPathLayout.GetConnection(const AOwner: TControl;
   const rOwner: TControl; const rTarget: TControl; WantMid: boolean
   ): TDecoratedConnection;
 begin
-
+   Result := CreateConnection(AOwner, rOwner, rTarget,WantMid);
+   ConnectEndPointsSimpleOrtho(Result);
 end;
 
 procedure TRoundedPathLayout.ArrangeAnchors;
@@ -428,6 +428,15 @@ end;
 
 procedure TRoundedPathLayout.RefreshPath(con: TDecoratedConnection);
 begin
+   con.ClearPath;
+   UpdateConnection(con);
+   ConnectEndPointsSimpleOrtho(con);
+// RoundCorners(con);   // TODO
+end;
+
+procedure TRoundedPathLayout.DrawConnection(con: TDecoratedConnection;
+  ACanvas: TCanvas);
+begin
 
 end;
 
@@ -438,8 +447,7 @@ function TVectorPathLayout.GetConnection(const AOwner: TControl;
   const rOwner: TControl; const rTarget: TControl; WantMid: boolean
   ): TDecoratedConnection;
 begin
-   Result := CreateConnection(AOwner, rOwner, rTarget,WantMid);
-   ConnectEndPointsSimpleOrtho(Result);
+   Result := CreateVectorConnection(AOwner, rOwner, rTarget,WantMid);
 end;
 
 procedure TVectorPathLayout.ArrangeAnchors;
@@ -454,11 +462,15 @@ end;
 
 procedure TVectorPathLayout.RefreshPath(con: TDecoratedConnection);
 begin
-   con.ClearPath;
-   UpdateConnection(con);
-   ConnectEndPointsSimpleOrtho(con);
-// RoundCorners(con);   // TODO
+  UpdateVectorConnection(con);
+end;
 
+procedure TVectorPathLayout.DrawConnection(con: TDecoratedConnection;
+  ACanvas: TCanvas);
+begin
+    con.ClearPath; // required for style switch
+    TPath(con).Draw(ACanvas);  // only draw the path
+    VectorDrawArrow(ACanvas, con.StartPoint.pos, con.EndPoint.Pos, con.ArrowStyle);
 end;
 
 

@@ -53,7 +53,7 @@ public
   constructor Create(StartPoint: TPoint; ADir: TOrthoDir); virtual;
   property x: integer read getX write setX;
   property y: integer read getY write setY;
-  property Pos: TPoint read FStartPoint;
+  property Pos: TPoint read FStartPoint write FStartPoint;
   property Dir: TOrthoDir read FDir write FDir;
 end;
 PTLine = ^TLine;
@@ -202,29 +202,24 @@ end;
 procedure TOrthoArrowDecoration.Draw(ACanvas: TCanvas; AStyle: TArrowStyle);
 var
    p1,p2: TPoint;
-   offsetx, offsety: integer;
 begin
   with ACanvas do
   begin
-     // TODO Arrow Size
-     offsetx:= 10;
-     offsety:=6;
-
      if IsHorizontal[FDir] then
        begin
-         p1.x := FOrigin.x + offsetx * oDir[FDir];
-         p1.y := FOrigin.y + offsety;
+         p1.x := FOrigin.x + cArrowLength * oDir[FDir];
+         p1.y := FOrigin.y + cArrowWidth;
 
-         p2.x := FOrigin.x + offsetx * oDir[FDir] ;
-         p2.y := FOrigin.y - offsety ;
+         p2.x := FOrigin.x + cArrowLength * oDir[FDir] ;
+         p2.y := FOrigin.y - cArrowWidth ;
        end
      else
        begin
-         p1.x := FOrigin.x + offsety ;
-         p1.y := FOrigin.y + offsetx * oDir[FDir];
+         p1.x := FOrigin.x + cArrowWidth ;
+         p1.y := FOrigin.y + cArrowLength * oDir[FDir];
 
-         p2.x := FOrigin.x - offsety ;
-         p2.y := FOrigin.y + offsetx * oDir[FDir];
+         p2.x := FOrigin.x - cArrowWidth ;
+         p2.y := FOrigin.y + cArrowLength * oDir[FDir];
        end;
 
     Pen.Width := 1;

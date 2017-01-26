@@ -232,6 +232,7 @@ type
     // stage 3 generate paths between finalised points.
     procedure CalculatePath(con: TDecoratedConnection); virtual; abstract;
     procedure RefreshPath(con: TDecoratedConnection); virtual; abstract;
+    procedure DrawConnection(con: TDecoratedConnection; ACanvas: TCanvas); virtual; abstract;
 end;
 
 procedure Register;
@@ -248,146 +249,6 @@ begin
   RegisterComponents('Eldean', [TessConnectPanel]);
 end;
 
-
-
-procedure DrawArrow(Canvas:TCanvas; pfrom, pto: TPoint; ArrowStyle : TessConnectionArrowStyle);
-  var
-    HeadLength: Integer;
-    x1,x2: Integer;
-    y1,y2: Integer;
-    xbase: Integer;
-    xLineDelta: Integer;
-    xLineUnitDelta: Double;
-    xNormalDelta: Integer;
-    xNormalUnitDelta: Double;
-    ybase: Integer;
-    yLineDelta: Integer;
-    yLineUnitDelta: Double;
-    yNormalDelta: Integer;
-    yNormalUnitDelta: Double;
-    oldPW: Integer;
-    oldPS: TPenStyle;
-    Tmp1 : double;
-begin
-    x1 := pfrom.x;  // first point
-    y1 := pfrom.y;
-
-    x2 := pto.x;  // second point with arrow
-    y2 := pto.y;
-
-    Canvas.MoveTo(x1,y1);
-    Canvas.LineTo(x2,y2);
-
-    xLineDelta := x2 - x1;
-    yLineDelta := y2 - y1;
-
-    if (xLineDelta=0) and (yLineDelta=0) then exit; // Line is 0 length
-    if (abs(xLineDelta)>20000) or (abs(yLineDelta)>20000) then exit; // Line is too long
-
-    Tmp1 := SQRT( SQR(xLineDelta) + SQR(yLineDelta) );
-    if Tmp1=0 then
-      xLineUnitDelta := 0
-    else
-      xLineUnitDelta := xLineDelta / Tmp1;
-
-    Tmp1 := SQRt( SQR(xLineDelta) + SQR(yLineDelta) );
-    if Tmp1=0 then
-      yLineUnitDelta := 0
-    else
-      yLineUnitDelta := yLineDelta / Tmp1;
-
-    // (xBase,yBase) is where arrow line is perpendicular to base of triangle.
-    HeadLength := 10; // pixels
-    xBase := x2 - Round(HeadLength * xLineUnitDelta);
-    yBase := y2 - Round(HeadLength * yLineUnitDelta);
-
-    xNormalDelta :=  yLineDelta;
-    yNormalDelta := -xLineDelta;
-    xNormalUnitDelta := xNormalDelta / Sqrt( Sqr(xNormalDelta) + Sqr(yNormalDelta) );
-    yNormalUnitDelta := yNormalDelta / Sqrt( Sqr(xNormalDelta) + Sqr(yNormalDelta) );
-
-    oldPW := Canvas.Pen.Width;
-    oldPS := Canvas.Pen.Style;
-    Canvas.Pen.Width := 1;
-    Canvas.Pen.Style := psSolid;
-
-    // Draw the arrow tip
-    case ArrowStyle of
-      asEmptyClosed :
-        Canvas.Polygon([Point(x2,y2),
-          Point(xBase + ROUND(HeadLength*xNormalUnitDelta),
-                yBase + ROUND(HeadLength*yNormalUnitDelta)),
-          Point(xBase - ROUND(HeadLength*xNormalUnitDelta),
-                yBase - ROUND(HeadLength*yNormalUnitDelta)) ]);
-      asEmptyOpen :
-        Canvas.Polyline([Point(xBase + ROUND(HeadLength*xNormalUnitDelta),
-               yBase + ROUND(HeadLength*yNormalUnitDelta)),
-               Point(x2,y2),
-         Point(xBase - ROUND(HeadLength*xNormalUnitDelta),
-               yBase - ROUND(HeadLength*yNormalUnitDelta)) ]);
-    end;
-
-    Canvas.Pen.Width := oldPW;
-    Canvas.Pen.Style := oldPS;
-end;
-
-
-function PointToAngle(R : TRect; P : TPoint) : double;
-var
-  Px,Py : integer;
-begin
-  Px := p.x - ( r.left + (r.Right-r.left) div 2 );
-  Py := p.y - ( r.top + (R.Bottom-R.Top) div 2 );
-  Result := Arctan2(py* (r.Right-r.left) , px* (R.Bottom-R.Top) );
-end;
-
-function AngleToPoint(R : TRect; Angle : double) : TPoint;
-var
-  Si,Co,E : double;
-  X,Y : integer;
-
-  function Range(Min,Max,Value : integer) : integer;
-  begin
-    if (value < min) then
-      value := min;
-    if (value > max) then
-      value := max;
-    Result := Value;
-  end;
-
-begin
-  Si := Sin(Angle);
-  Co := Cos(Angle);
-  E := 0.001;
-  X:=0;
-  Y:=0;
-  if Abs(Si)>E then
-  begin
-    X := Round((1.0 + Co/Abs(si)) / 2.0 * (r.Right-r.left));
-    X := Range(0, (r.Right-r.left), x);
-  end
-  else if Co>=0.0 then
-    X := (r.Right-r.left);
-
-  if Abs(Co)>e then
-  begin
-    Y := Round((1.0 + Si/Abs(co))/2.0 * (R.Bottom-R.Top));
-    Y := range(0, (R.Bottom-R.Top), y);
-  end else if Si>=0 then
-    Y := (R.Bottom-R.Top);
-  Result := Point(R.Left + X,R.Top + Y);
-end;
-
-procedure CalcShortest(FromRect,ToRect : TRect; var P1,P2 : TPoint);
-var
-  Temp : TPoint;
-begin
-  Temp := Point( FromRect.Left + (FromRect.Right-FromRect.Left)div 2, FromRect.Top + (FromRect.Bottom-FromRect.Top)div 2);
-  P2 := AngleToPoint( ToRect , PointToAngle(ToRect,Temp) );
-
-  Temp := Point( ToRect.Left + (ToRect.Right-ToRect.Left)div 2, ToRect.Top + (ToRect.Bottom-ToRect.Top)div 2);
-  P1 := AngleToPoint( FromRect , PointToAngle(FromRect,Temp) );
-end;
 
 constructor TBasePathLayout.Create(AOwner: TessConnectPanel);
 begin
@@ -466,25 +327,6 @@ begin
    con.Style := TPathStyle(ord(AStyle));
    con.ArrowStyle := TArrowStyle(ord( Arrow));
    FConnections.Add(con);
-//   FPathLayout.CalculatePath(con);
-
-
-  {if (FindManagedControl(Src) <> nil) and (FindManagedControl(Dst) <> nil) and
-    (Src<>Dst) then
-  begin
-    conn := TConnection.Create;
-    conn.FFrom := Src;
-    conn.FTo := Dst;
-    conn.FConnectStyle := AStyle;
-    conn.ArrowStyle := Arrow;
-    FConnections.Add(conn);
-    Result := True;
-  end else
-  begin
-    Result := False;
-  end;
-  Invalidate;
-}
 
 end;
 
@@ -843,7 +685,7 @@ begin
   begin
      con := (FConnections[i] as TDecoratedConnection);
      if con.IsDirty then con.Refresh;
-     con.DrawDecorated(Canvas);
+     FPathLayout.DrawConnection(con, Canvas);
 
 
 {    conn := (FConnections[i] as TConnection);
@@ -991,7 +833,18 @@ end;
 
 procedure TessConnectPanel.SetPathStyle(AValue: TPathLayoutStyle);
 begin
-  //if Assigned(Self.pa
+  if AValue <> FPathStyle then
+  begin
+    FPathStyle := AValue;
+    if Assigned(Self.PathLayout) then
+      FPathLayout.Free;
+    case AValue of
+      plsOrtho: FPathLayout := TOrthoPathLayout.Create(Self);
+      plsVector: FPathLayout := TVectorPathLayout.Create(Self);
+      plsRoundedOrtho: FPathLayout := TRoundedPathLayout.Create(Self);
+    end;
+    Invalidate;
+  end
 end;
 
 procedure TessConnectPanel.SetSelectedOnly(const Value : boolean);

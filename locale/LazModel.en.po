@@ -31,6 +31,10 @@ msgstr "Hide"
 msgid "Open selected package in diagram"
 msgstr "Open selected package in diagram"
 
+#: tdiagramframe.pathstylelabel.caption
+msgid "Path Style"
+msgstr ""
+
 #: tmainform.diagram1.caption
 msgid "Diagram"
 msgstr "Diagram"
@@ -169,6 +173,10 @@ msgstr "datatypes"
 msgid "dependencies"
 msgstr "dependencies"
 
+#: uconst.rsdirect_kc
+msgid "Direct"
+msgstr ""
+
 #: uconst.rsfilesread_ending_lc
 msgid " files read."
 msgstr " files read."
@@ -213,6 +221,10 @@ msgstr "Operations"
 msgid "Operation Type"
 msgstr "Operation Type"
 
+#: uconst.rsorthogonal_kc
+msgid "Orthogonal"
+msgstr ""
+
 #: uconst.rspackages_ic
 msgid "Packages"
 msgstr "Packages"
@@ -228,6 +240,10 @@ msgstr "Reading"
 #: uconst.rsreturn_ic
 msgid "Return"
 msgstr "Return"
+
+#: uconst.rsrounded_kc
+msgid "Rounded"
+msgstr ""
 
 #: uconst.rsshowallmembers_kc
 msgid "Show all members"

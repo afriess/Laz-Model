@@ -72,6 +72,7 @@ type
     procedure SetVisibilityFilter(const Value: TVisibility); override;
     procedure CurrentEntityChanged; override;
     procedure SetShowAssoc(const Value: boolean); override;
+    procedure SetPathStyle(const Value: TPathLayoutStyle); override;
   public
     constructor Create(om: TObjectModel; AParent: TWinControl; AFeedback : IEldeanFeedback = nil); override;
     destructor Destroy; override;
@@ -460,7 +461,8 @@ begin
   end;
 end;
 
-procedure TRtfdDiagram.UnitPackageAfterAddChild(Sender, NewChild: TModelEntity);
+procedure TRtfdDiagram.UnitPackageAfterAddChild(Sender: TModelEntity;
+  NewChild: TModelEntity);
 begin
   ErrorHandler.Trace(Format('%s : %s : %s', ['UnitPackageAfterAddChild', ClassName, Sender.Name]));
   if (NewChild is TClass) or (NewChild is TInterface) then
@@ -544,6 +546,7 @@ begin
         Ini.WriteInteger(S,'OffsetY',Frame.ScrollBox.HorzScrollBar.Position);
         Ini.WriteInteger(S,'Visibility', Integer(VisibilityFilter)  );
         Ini.WriteBool(S,'ShowAssoc', ShowAssoc);
+        Ini.WriteInteger(S,'PathStyle', Integer(PathStyle));
 
         //Commit
         try
@@ -605,6 +608,7 @@ begin
         Frame.ScrollBox.HorzScrollBar.Position := Ini.ReadInteger(S,'OffsetY',Frame.ScrollBox.HorzScrollBar.Position);;
         VisibilityFilter := TVisibility(Ini.ReadInteger(S,'Visibility', Integer( Low(TVisibility) ) ));
         ShowAssoc := Ini.ReadBool(S,'ShowAssoc', ShowAssoc);
+        PathStyle := TPathLayoutStyle(Ini.ReadInteger(S,'PathStyle', Integer( Low(TPathLayoutStyle) ) ));;
       end;
 
     finally
@@ -876,6 +880,12 @@ begin
   if Value<>ShowAssoc then
     FHasChanged := True;
   inherited;
+end;
+
+procedure TRtfdDiagram.SetPathStyle(const Value: TPathLayoutStyle);
+begin
+  Panel.PathStyle := Value;
+  inherited SetPathStyle(Value);
 end;
 
 end.

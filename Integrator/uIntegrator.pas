@@ -211,7 +211,8 @@ end;
 initialization
 
 finalization
-  _Integrators.Free;
+  if Assigned(_Integrators) then
+    _Integrators.Free;
 
 end.
 

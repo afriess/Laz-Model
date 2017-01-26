@@ -21,6 +21,10 @@ msgstr "Piilota"
 msgid "Open selected package in diagram"
 msgstr "Avaa valittu paketti kaaviossa"
 
+#: tdiagramframe.pathstylelabel.caption
+msgid "Path Style"
+msgstr ""
+
 #: tmainform.diagram1.caption
 msgid "Diagram"
 msgstr "Kaavio"
@@ -159,6 +163,10 @@ msgstr ""
 msgid "dependencies"
 msgstr ""
 
+#: uconst.rsdirect_kc
+msgid "Direct"
+msgstr ""
+
 #: uconst.rsfilesread_ending_lc
 msgid " files read."
 msgstr ""
@@ -203,6 +211,10 @@ msgstr ""
 msgid "Operation Type"
 msgstr ""
 
+#: uconst.rsorthogonal_kc
+msgid "Orthogonal"
+msgstr ""
+
 #: uconst.rspackages_ic
 msgid "Packages"
 msgstr ""
@@ -217,6 +229,10 @@ msgstr ""
 
 #: uconst.rsreturn_ic
 msgid "Return"
+msgstr ""
+
+#: uconst.rsrounded_kc
+msgid "Rounded"
 msgstr ""
 
 #: uconst.rsshowallmembers_kc

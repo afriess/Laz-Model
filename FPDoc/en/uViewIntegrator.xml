@@ -216,9 +216,11 @@
         <seealso/>
       </element>
       <element name="TViewIntegrator.SetCurrentEntity">
-        <short/>
+        <short>The abiltity to set the Global entity through an integrator or its descendents.</short>
         <descr/>
         <seealso/>
+      </element>
+    <element name="SetCurrentEntity"><short>The abiltity to set the Global entity procedurally from parts of the program which do not have access to a VewIntegrator.</short>
       </element>
     </module>
   </package>

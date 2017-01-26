@@ -71,6 +71,12 @@ resourcestring
   rsInheritanceAndAssociations_kc = 'Inheritance and associations';
   rsInheritanceOnly_kc = 'Inheritance only';
 
+  {PathStyle Combo}
+  rsOrthogonal_kc = 'Orthogonal';
+  rsDirect_kc = 'Direct';
+  rsRounded_kc = 'Rounded';
+
+
 
 const
   ProgName = 'Laz-Model';

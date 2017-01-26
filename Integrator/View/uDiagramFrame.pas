@@ -28,7 +28,7 @@ interface
 uses
   Classes,
   Controls, Messages, Forms, ActnList, Menus, StdCtrls, ExtCtrls, Buttons, DefaultTranslator,
-  uViewIntegrator, uListeners, uModelEntity, uModel, uConst;
+  uViewIntegrator, uListeners, uModelEntity, uModel, uConst, uLayoutConcepts;
 
 
 //const
@@ -37,6 +37,8 @@ uses
 type
   TDiagramFrame = class(TFrame,IBeforeObjectModelListener,IAfterObjectModelListener)
     ActionList: TActionList;
+    PathStyleLabel: TLabel;
+    PathStyleCombo: TComboBox;
     OpenSelectedPackageAction: TAction;
     PackagePopupMenu: TPopupMenu;
     Openselectedpackageindiagram1: TMenuItem;
@@ -51,6 +53,7 @@ type
     ClassInterfacePopupMenu: TPopupMenu;
     Hide2: TMenuItem;
     ConnectionsCombo: TComboBox;
+    procedure PathStyleComboChange(Sender: TObject);
     procedure VisibilityComboChange(Sender: TObject);
     procedure HideDiagramElementActionExecute(Sender: TObject);
     procedure ConnectionsComboChange(Sender: TObject);
@@ -132,6 +135,11 @@ begin
   ConnectionsCombo.Items.Clear;
   ConnectionsCombo.Items.Add(rsInheritanceAndAssociations_kc);
   ConnectionsCombo.Items.Add(rsInheritanceOnly_kc);
+
+  PathStyleCombo.Items.Clear;
+  PathStyleCombo.Items.Add(rsOrthogonal_kc);
+  PathStyleCombo.Items.Add(rsDirect_kc);
+  PathStyleCombo.Items.Add(rsRounded_kc);
 end;
 
 destructor TDiagramFrame.Destroy;
@@ -150,7 +158,7 @@ begin
 
   VisibilityCombo.ItemIndex := Integer(Diagram.VisibilityFilter);
   ConnectionsCombo.ItemIndex := C[ Diagram.ShowAssoc ];
-
+  PathStyleCombo.ItemIndex := Integer(Diagram.PathStyle);
   Bypass := False;
 end;
 
@@ -177,6 +185,11 @@ begin
   end;
 end;
 
+procedure TDiagramFrame.PathStyleComboChange(Sender: TObject);
+begin
+  Diagram.PathStyle := TPathLayoutStyle(PathStyleCombo.ItemIndex);
+end;
+
 procedure TDiagramFrame.ModelBeforeChange(Sender: TModelEntity);
 begin
   //Someone have to do a reset to currententity, so it's done here.
@@ -190,6 +203,7 @@ begin
   HasModel := Model.ModelRoot.GetAllUnitPackages.Count > 0;
   VisibilityCombo.Enabled := HasModel;
   ConnectionsCombo.Enabled := HasModel;
+  PathStyleCombo.Enabled := HasModel;
 end;
 
 procedure TDiagramFrame.HideDiagramElementActionExecute(Sender: TObject);
