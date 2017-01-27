@@ -60,6 +60,7 @@ uses
   uJavaParser in 'Integrator\CodeIO\uJavaParser.pas',
   ufpcParser in 'Integrator\CodeIO\ufpcParser.pas',
   SugiyamaLayout in 'Components\SugiyamaLayout.pas',
+  uLayoutConnector in 'Components\uLayoutConnector.pas',
   uConst in 'System\uConst.pas',
   uAboutForm in 'System\uAboutForm.pas' {AboutForm},
   uSettingsForm in 'System\uSettingsForm.pas' {SettingsForm},

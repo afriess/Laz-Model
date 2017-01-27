@@ -681,47 +681,35 @@ begin
   Canvas.Pen.Color := clBlack;
   Canvas.Pen.Width := 3;
 
+  // Draw connections. recalc on fly if dirty i.e parent of either end is moving
   for i:=0 to FConnections.Count -1 do
   begin
      con := (FConnections[i] as TDecoratedConnection);
      if con.IsDirty then con.Refresh;
      FPathLayout.DrawConnection(con, Canvas);
 
-
-{    conn := (FConnections[i] as TConnection);
-    if (not Conn.FFrom.Visible) or (not Conn.FTo.Visible) then
-      Continue;
-    case conn.FConnectStyle of
-      csThin:
-        begin
-          Canvas.Pen.Width := 1;
-          Canvas.Pen.Style := psSolid;
-        end;
-      csNormal:
-        begin
-          Canvas.Pen.Width := 3;
-          Canvas.Pen.Style := psSolid;
-        end;
-      csThinDash:
-        begin
-          Canvas.Pen.Width := 1;
-          Canvas.Pen.Style := psDash;
-        end;
-    end;
-
-    if  Conn.ArrowStyle=asEmptyOpen then
-      CalcConnectionEnds(conn.FFrom.BoundsRect,conn.FTo.BoundsRect,Conn.ArrowStyle=asEmptyClosed, p{%H-},p1{%H-})
-    else
-      CalcShortest(conn.FFrom.BoundsRect,conn.FTo.BoundsRect,p{%H-},p1{%H-});
-
-    if FindManagedControl(conn.FFrom).Selected and (not FSelectedOnly) then
-      Canvas.Pen.Color := clGreen
-    else
-      Canvas.Pen.Color := clBlack;
-
-    Canvas.Brush.Color := clWhite;
-    DrawArrow(Canvas,p,p1,Conn.ArrowStyle);}
   end;
+
+  // TODO Path optimisations, will need correct handling of IsDirty
+  // which should be set on the connection by the moving Managed object[s]
+  // it should follow roughly below.
+{
+  if not FIsMoving or not AllConnectionsClean then
+  begin
+    for i:=0 to FConnections.Count -1 do
+    begin
+       con := (FConnections[i] as TDecoratedConnection);
+       if con.IsDirty then
+         begin
+           FPathLayout.ArrangeAnchors;  // this is here but not implemented
+          // FPathLayout.RemoveSmallKinks; etc etc
+          // con.IsDirty := False; don't do this yet;
+          // Flag changed
+         end;
+    end;
+    // see if redraw is required
+  end;
+}
 
   Canvas.Pen.Style := psSolid;
   Canvas.Brush.Bitmap := nil;

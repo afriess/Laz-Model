@@ -39,7 +39,7 @@ type
   TErrorHandler = class
   public
     constructor Create;
-    destructor Destroy;
+    destructor Destroy; override;
     procedure SetTraceMode(Mode: TTraceMode);
     procedure Trace(const Msg: string);
   private
@@ -70,6 +70,7 @@ end;
 
 destructor TErrorHandler.Destroy;
 begin
+  inherited;
   if TraceWindow <> nil then
     TraceWindow.Free;
 end;

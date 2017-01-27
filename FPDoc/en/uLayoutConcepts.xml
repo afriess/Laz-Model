@@ -225,7 +225,7 @@
         <seealso/>
       </element>
       <element name="TOrthoDir">
-        <short>Orthagonal direction.</short>
+        <short>Orthogonal direction.</short>
         <descr><p>A  </p>
         </descr>
         <seealso/>

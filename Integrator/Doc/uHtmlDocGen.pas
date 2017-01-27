@@ -122,10 +122,13 @@ begin
 end;
 
 procedure THtmlDocGen.WriteOverview;
+{$IFDEF false}
 var
+
   Sheet : variant;
   S : string;
   F : TFileStream;
+  {$ENDIF}
 begin
   {$IFDEF false}
 

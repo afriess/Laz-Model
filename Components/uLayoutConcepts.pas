@@ -47,6 +47,8 @@ TAnchorPosition = ( apTopLeft, apTopMid, apTopRight,
                     apMemberLeft, apMemberRight
                   );
 
+TAngularRotation = (adClockwise, adAntiClockwise);
+
 TLinkAnchors = record
   Owner: TAnchorPosition;
   Target: TAnchorPosition;
@@ -117,6 +119,8 @@ IsVertical: Array [odLeft..odDown] of boolean =
 IsHorizontal: Array [odLeft..odDown] of boolean =
                      (True, True, False, False);
 
+
+
 {
  Flip direction for Horizontal and vertical
  Reduces case by 2 Less code when lots of points
@@ -160,7 +164,20 @@ function PointToAngle(R : TRect; P : TPoint) : double;
 function AngleToPoint(R : TRect; Angle : double) : TPoint;
 procedure CalcShortest(FromRect,ToRect : TRect; var P1,P2 : TPoint);
 
+function OrthoOffsetPoint(const pt: TPoint; ADir: TOrthoDir; AValue: integer): TPoint;
+
 implementation
+
+function OrthoOffsetPoint(const pt: TPoint; ADir: TOrthoDir; AValue: integer): TPoint;
+begin
+  Result := pt;
+  Case ADir of
+    odLeft: Result.x := Result.x - AValue;
+    odRight: Result.x := Result.x + AValue;
+    odUp: Result.y := Result.y - AValue;
+    odDown: Result.y := Result.y + AValue;
+  end;
+end;
 
 {
   given a target region, a preference for MidPoint for Inheritance,

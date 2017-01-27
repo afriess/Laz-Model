@@ -24,7 +24,7 @@ interface
 
 uses
   Classes, SysUtils, Graphics, Controls, gvector,
-  uLayoutConcepts;
+  uLayoutConcepts, uError;
 
 type
 
@@ -47,10 +47,15 @@ protected
   FDir: TOrthoDir;
   function getX: integer;
   function getY: integer;
+  function DebugString: string; virtual;
   procedure setX(AValue: integer);
   procedure setY(AValue: integer);
+  procedure Shorten(AValue: integer);
+  function GetDirectedLength(ALine: TLine): integer; overload;
+  function GetDirectedLength(APoint: TPoint): integer; overload;
 public
   constructor Create(StartPoint: TPoint; ADir: TOrthoDir); virtual;
+
   property x: integer read getX write setX;
   property y: integer read getY write setY;
   property Pos: TPoint read FStartPoint write FStartPoint;
@@ -62,10 +67,18 @@ PTLine = ^TLine;
   Dir is startpoint tanget for a TArc.
 }
 TArc = Class(TLine)
-protected
+private
+  FRect: TRect;
   FRadius: integer;
+  FAngDir: TAngularRotation;
+  FSAngle: integer;
+  FEAngle: integer;
+  procedure InitialiseArc(EDir: TOrthoDir);
+protected
+  function DebugString: string; override;
 public
-  constructor Create(StartPoint: TPoint; ADir: TOrthoDir; Radius: integer);
+  constructor Create(StartPoint: TPoint; SDir: TOrthoDir; Radius: integer; EDir: TOrthoDir);
+  procedure Draw(ACanvas: TCanvas);
 end;
 
 TPathLines = specialize TVector<TLine>;
@@ -78,12 +91,14 @@ TPathLines = specialize TVector<TLine>;
 TPath = class(TPathLines)
 private
   FEndPoint: TLine;
+  FRounded: boolean;
   FStyle: TPathStyle;
   function GetStartPoint: TLine;
 public
   constructor Create(StartPoint, EndPoint: TLine; Style: TPathStyle);
   destructor Destroy; override;
   procedure ClearPath;
+  procedure RoundCorners(Radius: Integer);
   procedure Draw(Canvas: TCanvas); virtual;
   property StartPoint: TLine read GetStartPoint;
   property EndPoint: TLine read FEndPoint write FEndPoint;
@@ -318,6 +333,7 @@ begin
    inherited Create;
    FStyle := Style;
    FEndPoint := EndPoint;
+   FRounded := False;
    Self.PushBack(StartPoint);
 end;
 
@@ -339,7 +355,110 @@ begin
    TLine(Back).Free;
    PopBack;
   end;
+  FRounded := False;
 end;
+
+procedure TPath.RoundCorners(Radius: Integer);
+var
+   itp,it,itn: Tline;
+   len: integer;
+   fRad: integer;  // Forced Radius
+   dRad: integer;  // Drawn Radius
+   arc: TArc;
+   i: integer;
+   p1: TPoint;
+   Done: boolean;
+
+   function WantRad: integer;
+   begin
+      if fRad > 0 then
+        Result := fRad
+      else
+        Result := Radius;
+   end;
+
+begin
+   if (not FRounded) and (Self.Size > 1) then
+   begin
+     i := 1;
+     itp := Self.Items[i-1];
+     it := Self.Items[i];
+     {$IFDEF DEBUG_PATH_ROUNDING}
+     ErrorHandler.Trace ('New Path Round');
+     ErrorHandler.Trace ('0p: ' + itp.DebugString);
+     ErrorHandler.Trace ('0: ' + it.DebugString);
+     {$ENDIF}
+     fRad := -1;
+     // is first line long enough?
+     len := itp.GetDirectedLength(it);
+     if len < Radius then
+        fRad := len div 2;
+
+     done := false;
+
+     while not Done do
+     begin
+       if (i + 1) < Self.Size then
+         itn :=  Self.Items[i+1]
+       else
+         begin
+           itn := Self.EndPoint;
+           done := true;
+         end;
+       // Get Line length for it -> itn
+       len := it.GetDirectedLength(itn);
+       {$IFDEF DEBUG_PATH_ROUNDING}
+       ErrorHandler.Trace('Pass: ' + IntToStr(i));
+       ErrorHandler.Trace ('1p: ' + itp.DebugString);
+       ErrorHandler.Trace ('1: ' + it.DebugString);
+       ErrorHandler.Trace ('1n: ' + itn.DebugString);
+       ErrorHandler.Trace('Len: ' + IntToStr(len));
+       {$ENDIF}
+
+       // Calculate actual radius plus forced next radius
+       if len > WantRad + Radius then
+         begin
+           dRad := WantRad;
+           fRad := -1;
+         end
+       else
+         if len > fRad * 2 then
+           begin
+             dRad := len div 2;
+             fRad := len div 2;
+           end
+         else
+           begin
+             dRad := fRad;
+             fRad := fRad;
+           end;
+
+       // get start point for the arc
+       p1 := OrthoOffsetPoint(it.Pos, OrthoOpposite[itp.Dir],dRad);
+       // shorten the next line
+       it.Shorten(dRad);
+       // Insert the arc
+       if (dRad > 2) then
+         begin
+           Arc := TArc.Create(p1, itp.Dir, dRad, it.Dir);
+           Self.Insert(i,arc);
+           inc(i);
+         end
+       else
+         fRad :=1;
+       {$IFDEF DEBUG_PATH_ROUNDING}
+       ErrorHandler.Trace ('Arc: ' + Arc.DebugString);
+       ErrorHandler.Trace ('Bp: ' + itp.DebugString);
+       ErrorHandler.Trace ('B: ' + it.DebugString);
+       ErrorHandler.Trace ('Bn: ' + itn.DebugString);
+       {$ENDIF}
+       inc(i);
+       itp := Self.Items[i-1];
+       it := Self.Items[i];
+     end;
+     FRounded := True;
+   end;
+ end;
 
 {
  Default to simple drawing of lines with the supplied pathstyle as a default.
@@ -358,7 +477,17 @@ begin
     // guaranteed to have at least one point from class creation
     MoveTo(TLine(it.Current).FStartPoint);
     while it.MoveNext do
-      LineTo(TLine(it.Current).FStartPoint);
+    begin
+      if (it.Current is TArc) then
+        begin
+          LineTo(TLine(it.Current).FStartPoint);
+          TArc(it.Current).Draw(Canvas);
+          it.MoveNext;
+          MoveTo(TLine(it.Current).FStartPoint);
+        end
+      else
+        LineTo(TLine(it.Current).FStartPoint);
+    end;
     LineTo(FEndPoint.FStartPoint);
   end;
   it.Free;
@@ -366,10 +495,114 @@ end;
 
 { TArc }
 
-constructor TArc.Create(StartPoint: TPoint; ADir: TOrthoDir; Radius: integer);
+procedure TArc.InitialiseArc(EDir: TOrthoDir);
 begin
-   inherited Create(StartPoint, ADir);
+  case FDir of
+    odLeft:
+      if EDir = odUp then
+        begin
+           FSAngle := 270 * 16;
+           FEAngle := -90 * 16;
+           FAngDir := adClockwise;
+           FRect.Left := FStartPoint.x - FRadius;
+           FRect.Right := FStartPoint.x + FRadius;
+           FRect.Bottom := FStartPoint.y;
+           FRect.Top := FStartPoint.y - FRadius - FRadius;
+
+        end
+      else
+        begin
+          FSAngle := 90 * 16;
+          FEAngle := 90 * 16;
+          FAngDir := adAntiClockwise;
+          FRect.Left := FStartPoint.x - FRadius;
+          FRect.Right := FStartPoint.x + FRadius;
+          FRect.Bottom := FStartPoint.y + FRadius + FRadius;
+          FRect.Top := FStartPoint.y;
+        end;
+    odRight:
+      if EDir = odUp then
+        begin
+          FSAngle := 270 * 16;
+          FEAngle := 90 * 16 ;
+           FAngDir := adAntiClockwise;
+           FRect.Left := FStartPoint.x - FRadius;
+           FRect.Right := FStartPoint.x + FRadius;
+           FRect.Bottom := FStartPoint.y;
+           FRect.Top := FStartPoint.y - FRadius - FRadius;
+        end
+      else
+        begin
+          FSAngle := 90 * 16;
+          FEAngle := -90 * 16 ;
+          FAngDir := adClockwise;
+          FRect.Left := FStartPoint.x - FRadius;
+          FRect.Right := FStartPoint.x + FRadius;
+          FRect.Bottom := FStartPoint.y + FRadius + FRadius;
+          FRect.Top := FStartPoint.y;
+        end;
+    odUp:
+      if EDir = odLeft then
+        begin
+          FSAngle := 0;
+          FEAngle := 90 * 16;
+           FAngDir := adAntiClockwise;
+           FRect.Left := FStartPoint.x - FRadius - FRadius;
+           FRect.Right := FStartPoint.x;
+           FRect.Bottom := FStartPoint.y + FRadius;
+           FRect.Top := FStartPoint.y - FRadius;
+        end
+      else
+        begin
+          FSAngle := 180 * 16;
+          FEAngle := -90 * 16;
+          FAngDir := adClockwise;
+          FRect.Left := FStartPoint.x;
+          FRect.Right := FStartPoint.x + FRadius + FRadius;
+          FRect.Bottom := FStartPoint.y + FRadius;
+          FRect.Top := FStartPoint.y - FRadius;
+        end;
+    odDown:
+      if EDir = odLeft then
+        begin
+           FSAngle := 0 * 16;
+           FEAngle := -90 * 16;
+           FAngDir := adClockwise;
+           FRect.Left := FStartPoint.x - FRadius - FRadius;
+           FRect.Right := FStartPoint.x;
+           FRect.Bottom := FStartPoint.y + FRadius;
+           FRect.Top := FStartPoint.y - FRadius;
+        end
+      else
+        begin
+          FSAngle := 180 * 16;
+          FEAngle := 90 * 16;
+          FAngDir := adAntiClockwise;
+          FRect.Left := FStartPoint.x;
+          FRect.Right := FStartPoint.x + FRadius + FRadius;
+          FRect.Bottom := FStartPoint.y + FRadius;
+          FRect.Top := FStartPoint.y - FRadius;
+        end;
+  end;
+
+end;
+
+function TArc.DebugString: string;
+begin
+  Result := Format('x: %d, y: %d, dir: %d, rad: %d',[x,y,integer(FDir), FRadius]);
+end;
+
+constructor TArc.Create(StartPoint: TPoint; SDir: TOrthoDir; Radius: integer;
+  EDir: TOrthoDir);
+begin
+   inherited Create(StartPoint, SDir);
    FRadius := Radius;
+   InitialiseArc(EDir);
+end;
+
+procedure TArc.Draw(ACanvas: TCanvas);
+begin
+  ACanvas.Arc(FRect.Left,FRect.Top,FRect.Right,FRect.Bottom, FSAngle, FEAngle);
 end;
 
 { TLine }
@@ -384,6 +617,11 @@ begin
   Result := FStartPoint.y;
 end;
 
+function TLine.DebugString: string;
+begin
+  Result := Format('x: %d, y: %d, dir: %d',[x,y,integer(FDir)]);
+end;
+
 procedure TLine.setX(AValue: integer);
 begin
    FStartPoint.x := AValue;
@@ -392,6 +630,29 @@ end;
 procedure TLine.setY(AValue: integer);
 begin
   FStartPoint.y := AValue;
+end;
+
+procedure TLine.Shorten(AValue: integer);
+begin
+  case FDir of
+    odLeft: FStartPoint.x := FStartPoint.x - AValue;
+    odRight: FStartPoint.x := FStartPoint.x + AValue;
+    odUp: FStartPoint.y := FStartPoint.y - AValue;
+    odDown: FStartPoint.y := FStartPoint.y + AValue;
+  end;
+end;
+
+function TLine.GetDirectedLength(ALine: TLine): integer;
+begin
+  Result := GetDirectedLength(ALine.Pos);
+end;
+
+function TLine.GetDirectedLength(APoint: TPoint): integer;
+begin
+  if IsHorizontal[Self.Dir] then
+    Result := Abs(FStartPoint.x - APoint.x)
+  else
+    Result := Abs(FStartPoint.y - APoint.y);
 end;
 
 constructor TLine.Create(StartPoint: TPoint; ADir: TOrthoDir);

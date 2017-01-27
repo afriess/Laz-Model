@@ -204,7 +204,6 @@ begin
 
 end;
 
-
 function CreateConnection(const AOwner: TControl; const rOwner: TControl; const rTarget: TControl;
   AWantMid: boolean): TDecoratedConnection;
 var
@@ -370,6 +369,7 @@ begin
 
 end;
 
+const cRoundRadius = 25;
 
 
 { TOrthoPathLayout }
@@ -431,13 +431,13 @@ begin
    con.ClearPath;
    UpdateConnection(con);
    ConnectEndPointsSimpleOrtho(con);
-// RoundCorners(con);   // TODO
+   Con.RoundCorners(cRoundRadius);
 end;
 
 procedure TRoundedPathLayout.DrawConnection(con: TDecoratedConnection;
   ACanvas: TCanvas);
 begin
-
+   con.DrawDecorated(ACanvas);
 end;
 
 

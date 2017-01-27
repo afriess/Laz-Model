@@ -1,7 +1,7 @@
 {
   Laz-Model
-  Copyright (C) 2002  Eldean AB, Peter Söderman, Ville Krumlinde
-  Portions (C) 2016 Peter Dyson. Initial Lazarus port
+  Copyright (C) 2016 Peter Dyson. Initial Lazarus port
+  Portions (C) 2002  Eldean AB, Peter Söderman, Ville Krumlinde
 
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License

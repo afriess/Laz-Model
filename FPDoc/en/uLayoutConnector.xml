@@ -303,6 +303,11 @@
         <descr/>
         <seealso/>
       </element>
+    <element name="TLine.Shorten"><short>Shortens a line at the startpoint by moving x or y by the supplied amount.</short>
+      </element>
+    <element name="TArc.InitialiseArc"><short>Sets the Rect and Direction for canvas arc drawing.</short><descr><p>FDir is directional startpoint tangent.</p><p>EDir is Directional endpoint tangent.</p>
+        </descr>
+      </element>
     </module>
   </package>
 </fpdoc-descriptions>

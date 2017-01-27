@@ -396,12 +396,12 @@ const
 
 function TStructuredDataType.AddAttribute(const NewName: string): TAttribute;
 begin
-
+   Result := nil; //TODO
 end;
 
 function TStructuredDataType.GetAttributes: IModelIterator;
 begin
-
+   Result := nil; //TODO
 end;
 
 { TEnumLiteral }
