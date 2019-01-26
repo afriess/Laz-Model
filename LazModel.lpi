@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="10"/>
+    <Version Value="11"/>
     <PathDelim Value="\"/>
     <General>
       <Flags>
@@ -65,9 +65,16 @@
     </PublishOptions>
     <RunParams>
       <local>
-        <FormatVersion Value="1"/>
         <CommandLineParams Value="--lang fi"/>
       </local>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default">
+          <local>
+            <CommandLineParams Value="--lang fi"/>
+          </local>
+        </Mode0>
+      </Modes>
     </RunParams>
     <RequiredPackages Count="2">
       <Item1>
@@ -317,7 +324,7 @@
     <SearchPaths>
       <IncludeFiles Value="Components;System;Model;Integrator\Code\Delphi;Integrator;CodeProvider;Integrator\CodeIO;Integrator\Code;Integrator\View;Integrator\View\RtfdDiagram;Integrator\Doc;Integrator\CodeIO\JavaClass;Integrator\Export;$(ProjOutDir)"/>
       <Libraries Value="Components"/>
-      <OtherUnitFiles Value="Components;System;Model;Integrator\Code\Delphi;Integrator;CodeProvider;Integrator\CodeIO;Integrator\Code;Integrator\View;Integrator\View\RtfdDiagram;Integrator\Doc;Integrator\CodeIO\JavaClass;Integrator\Export;Integrator\View\LzmTreeEdit;C:\lazarus32\fpc\3.0.0\source\packages\fcl-passrc\src"/>
+      <OtherUnitFiles Value="Components;System;Model;Integrator\Code\Delphi;Integrator;CodeProvider;Integrator\CodeIO;Integrator\Code;Integrator\View;Integrator\View\RtfdDiagram;Integrator\Doc;Integrator\CodeIO\JavaClass;Integrator\Export;Integrator\View\LzmTreeEdit;C:\lazarus32\fpc\3.0.0\source\packages\fcl-passrc\src\"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)\Debug"/>
       <ObjectPath Value="Components"/>
     </SearchPaths>

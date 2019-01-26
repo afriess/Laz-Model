@@ -103,6 +103,8 @@ type
 
 
 implementation
+uses
+  PScanner;
 
 function DelQuot(s:String):String;
    var i:integer;
@@ -477,10 +479,10 @@ begin
              op := ths.AddOperation(TPasType(mems.Items[i]).Name);
              op.SourceY := TPasType(mems.Items[i]).SourceLinenumber;
              AddProcedure(op,TPasProcedure(mems.Items[i]));
-             if (pmStatic in TPasClassProcedure(mems.Items[i]).Modifiers) then
-               op.IsStatic := cotStaticClass
-             else
-               op.IsStatic := cotClass;
+             //if (pmStatic in TPasClassProcedure(mems.Items[i]).Modifiers) then
+             //  op.IsStatic := cotStaticClass
+             //else
+               op.IsStatic := cotClass;  { TODO : static not found in Pastree}
           end;
         'procedure':
         begin
@@ -493,9 +495,9 @@ begin
             op := ths.AddOperation(TPasType(mems.Items[i]).Name);
             op.SourceY := TPasType(mems.Items[i]).SourceLinenumber;
             AddFunction(op, TPasFunction(mems.Items[i]));
-             if (pmStatic in TPasClassFunction(mems.Items[i]).Modifiers) then
-               op.IsStatic := cotStaticClass
-             else
+             //if (pmStatic in TPasClassFunction(mems.Items[i]).Modifiers) then
+             //  op.IsStatic := cotStaticClass; { TODO : static not found in Pastree}
+             //else
                op.IsStatic := cotClass;
           end;
         'function' :
@@ -1008,6 +1010,10 @@ begin
 
   E.Free;
 end;
+
+initialization
+
+  DefaultFileResolverClass := TFileResolver;
 
 end.
 

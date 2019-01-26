@@ -3,7 +3,7 @@ object MainForm: TMainForm
   Height = 526
   Top = 564
   Width = 648
-  ClientHeight = 496
+  ClientHeight = 526
   ClientWidth = 648
   Menu = MainMenu1
   OnActivate = FormActivate
@@ -11,19 +11,18 @@ object MainForm: TMainForm
   OnCreate = FormCreate
   Position = poScreenCenter
   ShowHint = True
-  LCLVersion = '1.7'
   object Panel1: TPanel
     Left = 0
-    Height = 496
+    Height = 526
     Top = 0
     Width = 648
     Align = alClient
-    ClientHeight = 496
+    ClientHeight = 526
     ClientWidth = 648
     TabOrder = 0
     object Splitter1: TSplitter
       Left = 201
-      Height = 474
+      Height = 504
       Top = 1
       Width = 8
       Beveled = True
@@ -31,7 +30,7 @@ object MainForm: TMainForm
     object StatusPanel: TPanel
       Left = 1
       Height = 20
-      Top = 475
+      Top = 505
       Width = 646
       Align = alBottom
       Alignment = taLeftJustify
@@ -44,7 +43,7 @@ object MainForm: TMainForm
     end
     object DiagramPanel: TPanel
       Left = 209
-      Height = 474
+      Height = 504
       Top = 1
       Width = 438
       Align = alClient
@@ -53,12 +52,12 @@ object MainForm: TMainForm
     end
     object LeftPanel: TPanel
       Left = 1
-      Height = 474
+      Height = 504
       Top = 1
       Width = 200
       Align = alLeft
       BevelOuter = bvNone
-      ClientHeight = 474
+      ClientHeight = 504
       ClientWidth = 200
       TabOrder = 2
       object Splitter2: TSplitter
@@ -82,7 +81,7 @@ object MainForm: TMainForm
       end
       object TreePanel: TPanel
         Left = 0
-        Height = 345
+        Height = 375
         Top = 129
         Width = 200
         Align = alClient
@@ -92,8 +91,8 @@ object MainForm: TMainForm
     end
   end
   object MainMenu1: TMainMenu
-    left = 48
-    top = 56
+    Left = 48
+    Top = 56
     object File1: TMenuItem
       Caption = '&File'
       object Open1: TMenuItem

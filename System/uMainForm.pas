@@ -31,6 +31,8 @@ uses
 
 type
 
+  { TMainForm }
+
   TMainForm = class(TForm)
     MainMenu1: TMainMenu;
     File1: TMenuItem;
@@ -67,6 +69,7 @@ type
     procedure FormClose(Sender: TObject; var aAction: TCloseAction);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure OpenFolderActionExecute(Sender: TObject);
   private
 
   public
@@ -88,6 +91,11 @@ begin
   ClassTreeEditForm := TClassTreeEditForm.Create(Self);
   {$ENDIF DEBUG}
   MainModule := TMainModule.Create(Nil);
+end;
+
+procedure TMainForm.OpenFolderActionExecute(Sender: TObject);
+begin
+
 end;
 
 procedure TMainForm.FormActivate(Sender: TObject);
